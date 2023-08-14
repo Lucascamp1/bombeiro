@@ -6,18 +6,24 @@
     <title>Login</title>
 
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
         body{
             background-color: #1a1a1a;
-            padding: 0;
-            width: 0;
-            display: flex;
         }
 
         .login{
             width: 40%;
             height: 60%;
             background-color: #333;
-           
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           border-radius: 4%;
+           box-shadow: 0px 0px 15px #1e90ff;
         }
         .box{
             width: 100vw;
@@ -25,6 +31,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        input{
+            width: 100%;
+            height: 27%;
+            background: #1a1a1a;
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+        form{
+            width: 70%;
+            height: 47%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -38,7 +58,7 @@
                 <input id="senha" type="password" id="password" placeholder="Senha" maxlength="25">
             
                 <button class="fonte1" type="submit">Conecte-se</button>
-                <br><br>
+    
             </form>
 
             <div class="signup">
