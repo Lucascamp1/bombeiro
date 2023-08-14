@@ -9,37 +9,73 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
     <title>Seja Bem Vindo</title>
 </head>
 
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
         background-color: #1a1a1a;
     }
 
-    .welcome {
+    .welcome_texto1 {
         display: flex;
         justify-content: center;
         font-family: 'Inter', sans-serif;
         color: white;
-        margin-top: 5%;
+        margin-top: 7%;
         font-size: 20px;
     }
 
-    .welcome_image{
+    .welcome_image {
         display: flex;
         justify-content: center;
-        margin-top: 1%;
+        margin-top: 4%;
     }
 
-    .welcome_image img{
+    .welcome_image img {
         border-radius: 50%;
+    }
+
+    .welcome_texto2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        margin-top: 6%;
+        font-size: 12px;
+    }
+
+    .welcome_botoes {
+        display: flex;
+        justify-content: center;
+        margin-top: 6%;
+        gap: 100px;
+    }
+
+    .welcome_botoes button {
+        width: 210px;
+        height: 65px;
+        color: #007aff;
+        font-family: 'Inter', sans-serif;
+        font-size: 15px;
+        background-color: transparent;
+        border-radius: 10px;
+        border-color: #007aff;
+        border-width: 3px;
     }
 </style>
 
 <body>
 
-    <div class="welcome">
+    <div class="welcome_texto1">
 
         <div>
             <h1><b>Seja Bem Vindo</b></h1>
@@ -51,6 +87,24 @@
             <img src="../images/avatar_bombeiro.png" width="200px">
         </div>
     </div>
+
+    <div class="welcome_texto2">
+        <div>
+            <h1>Seu nome aplicativo</h1><br><br>
+            <h2>Preencha ocorrências, tenha acesso a<br>históricos e estatísticas </h2>
+        </div>
+    </div>
+
+    <div class="welcome_botoes">
+        <div>
+            <button><b>Entrar</b></button>
+        </div>
+
+        <div>
+            <button><b>Cadastre-se</b></button>
+        </div>
+    </div>
+
 </body>
 
 </html>
