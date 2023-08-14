@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Home</title>
 
     <style>
@@ -15,13 +18,84 @@
 
         body{
             background-color: #1a1a1a;
+            height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: white;
         }
 
-        
+        .menu{
+            background-color: #333333;
+            width: 100%;
+            height: 10%;
+            display: flex;
+        }
+
+        .menu .menu-display-1{
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .menu .noar{
+            margin-top: 5px;
+        }
+
+        .menu .menu-display-2{
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .menu .bombeiro img{
+            border-radius: 50%;
+        }
+
+        .bombeiro{
+            margin-right: 10px;
+        }
+
+        .noar{
+            margin-left: 10px;
+        }
+
+        .texto{
+            height: 20%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .texto pre{
+            font-family: 'Inter', sans-serif;
+        }
 
     </style>
 </head>
 <body>
+
+    <div class="menu">
+        <div class="menu-display-1">
+            <div class="noar">
+                <img src="../images/logo_noar.png" width="65px">
+            </div>
+        </div>
+
+        <div class="menu-display-2">
+            <div class="bombeiro">
+                <img src="../images/avatar_bombeiro.png" width="65px">
+            </div>
+        </div>
+    </div>
+
+    <div class="texto">
+        <pre>Olá, 
+            bombeiro XXX
+        </pre>
+    </div>
+
+
     
 </body>
 </html>
