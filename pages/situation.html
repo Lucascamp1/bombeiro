@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap"
         rel="stylesheet">
     <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Situação Paciente</title>
 </head>
 
@@ -50,7 +51,66 @@
         background-color: #1a1a1a;
         width: 300px;
         height: 70px;
+        border-radius: 10px;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
+
+    .consciente_meio {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inconsciente {
+        background-color: #1a1a1a;
+        width: 300px;
+        height: 70px;
+        border-radius: 10px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .inconsciente_meio {
+        display: flex;
+        justify-content: center;
+    }
+
+    .consciente h4 {
+        color: white;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .inconsciente h4 {
+        color: white;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .wrapper{
+        margin-top: 5px;
+    }
+
+    input[type="checkbox"]{
+        appearance: none;
+        -webkit-appearance: none;
+        height: 30px;
+        width: 30px;
+        background-color: transparent;
+        background-color: #a3a3a3;
+        border-radius: 5px;
+    }
+
+    input[type=":checkbox"]:after{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "/f00c";
+        font-size: 50px;
+        color: white;
+    }
+
 </style>
 
 <body>
@@ -62,12 +122,35 @@
     </div>
 
     <div class="situacao_quadrado">
-
         <div class="situacao_quadrado1">
-            <div class="consciente"></div>
-            <div class="inconsciente"></div>
-        </div>
 
+            <div class="consciente_meio">
+                <div class="consciente">
+                    <div class="consciente_texto">
+                        <h4>Consciente</h4>
+                    </div>
+
+                    <div class="wrapper">
+                        <input type="checkbox" id="check">
+                        <label for="check"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inconsciente_meio">
+                <div class="inconsciente">
+                    <div class="consciente_texto">
+                        <h4>Inconsciente</h4>
+                    </div>
+
+                    <div class="wrapper">
+                            <input type="checkbox" id="check">
+                            <label for="check"></label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </body>
 
