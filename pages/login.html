@@ -1,115 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=UTF-8>
+    <!-- Linkagem -->
+    <title>login</title>
+    <!-- Titulo -->
+    <link href="" rel="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <title>Login</title>
+    <!-- Fonte -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <!-- media -->
+    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
+    <!--Imagem icon-->
 
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: #1a1a1a;
-            font-family: 'Inter', sans-serif;
-            color: white;
-        }
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #1A1A1A;
+        display: flex;
+    }
+    /* Espaço bloco login */
+    .box{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: rgba(0, 255, 255, 0.514); */
+    }
+    .espaco_log{
+        width: 46vw;
+        height: 56vh;
+        background-color: #333333;
+        border-radius: 4%;
+        box-shadow: 0px 0px 15px #1E90FF;;
+        flex-direction: column;
+    }
+    /* Espaço para o titulo */
+    .titulo{
+        display: flex;
+        width: 100%;
+        height: 9%;
+        margin-top: 9%;
+        justify-content: center;
+        align-items: center;
+        /* background-color: rgba(0, 255, 255, 0.233); */
+    }
+    .login{
+        color: white;
+        font-family: 'Inter', sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    /* Espaço para as entradas de dados */
+    .formi{
+        display: flex;
+        justify-content: center;
+        margin-top: 7%;
+    }
+    .espaco_dados{
+        display: flex;
+        flex-direction: column;
+        width: 88%;
+        height: 18vh;
+        /* margin-top: 3%; */
+        justify-content: space-between;
+        /* align-items: center; */
+        background-color: rgba(31, 209, 209, 0);
+    }
+    input{
+        padding: 5%;
+        font-family: 'Inter', sans-serif;
+        width: 90%;
+        height: 1vh;
+        border-radius: 8px;
+        background-color: #1A1A1A;
+        border: 1px solid #1A1A1A;
+    }
+    /* Espaço para o botão de entrada */
+    .botao{
+        display: flex;
+        width: 100%;
+        height: 10%;
+        margin-top: 8%;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-conec{
+        background: #1e90ff;
+        width: 88%;
+        height: 6vh;
+        border-radius: 25px;
+        border: 1px solid #1e90ff;
+        color: white;
+        font-size: 15px;
+    }
+    /* Link */
+    .registro1{
+        display: flex;
+        width: 100%;
+        height: 8vh;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 4%;
+        font-family: 'Inter', sans-serif;
+    }
+    .link{
+        color: #1E90FF;
+        text-decoration: none;
+    }
+    .small_letters_registro{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 14px;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+    }
+        
 
-        .login{
-            width: 40%;
-            height: 60%;
-            background-color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-           border-radius: 4%;
-           box-shadow: 0px 0px 15px #1e90ff;
-           /* justify-content: center; */
+    /* Responsivo */
+    @media screen and (max-width:770px) {
+            .espaco_log{
+                width: 74vw;
+                height: 52vh;
+            }
+            .espaco_dados{
+                height: 17vh;
+            }
+            .botao{
+                margin-top: 10%;
+            }
+            .titulo{
+                margin-top: 7%;
+            }
         }
-        .box{
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        input{
-            width: 100%;
-            height: 22%;
-            background: #1a1a1a;
-            border-radius: 8px;
-            border: 1px solid #1a1a1a;
-            padding: 5%;
-        }
-        form{
-            width: 70%;
-            height: 47%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            top: 21%;
-        }
-        .botao1{
-            background: #1e90ff;
-            width: 100%;
-            height: 22%;
-            border-radius: 25px;
-            border: 1px solid #1e90ff;
-            color: white;
-            font-size: 15px;
-        }
-        .signup{
-            display: flex;
-            flex-direction: column;
-            color: white;
-            font-size: 14px;
-            justify-content: space-around;
-            align-items: center;
-            gap: 10px;
-            position: relative;
-            top: 25%;
-        }
-        .titulo{
-            position: relative;
-            top: 11%;
-        }
-        input:focus{
-            border-color: transparent;
-        }
-        a{
-            color: #1e90ff;
-            text-decoration: none;
-        }
-    </style>
+</style>
+
 </head>
 <body>
     <div class="box">
-        <div class="login">
-            
-           <div class="titulo"><h1>Conecte-se</h1></div>
-            <form action="">
-                <input id="matricula" type="text" placeholder="Matricula">
-
-                <input id="senha" type="password" id="password" placeholder="Senha" maxlength="25">
-            
-                <button class="botao1" type="submit"><b>Conecte-se</b></button>
-    
-            </form>
-
-            <div class="signup">
-                <p>Esqueceu sua senha?</p>
-                <p>Não tem cadastro? <a class="link" href="">Cadastre-se</a></p>
-
-            </div>
+       <div class="espaco_log">
+                <div class="titulo">
+                    <div class="login">Conecte-se</div>
+                </div>
+                <form class="formi" action="" method="post">
+                    <div class="espaco_dados">
+                        <input id="matricula" type="text" name="" placeholder="Matricula">
+                        <input id="senha" type="password" name="" placeholder="Senha" maxlength="25">
+                    </div>   
+                </form>
+                <div class="botao">
+                    <button class="btn-conec" type="submit">CONECTE-SE</button>
+                </div>
+                <div class="registro1">
+                    <div class="small_letters_registro">
+                        <div>Esqueceu sua senha?</div>
+                        <div>Não tem cadastro? <a class="link" href="">Cadastre-se</a></div>
+                    </div>
+                </div>
         </div>
-    </div>
-    
+    </div>    
 </body>
 </html>

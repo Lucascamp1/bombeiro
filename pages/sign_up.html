@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
     <!-- media -->
-    <link rel="icon" href="" type="image/png">
+    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
     <!--Imagem icon-->
 
 <style>
@@ -23,11 +23,7 @@
         background-color: #1A1A1A;
         display: flex;
     }
-
-    /* body * {
-        box-sizing: border-box;
-    } */
-
+    /* Espaço bloco cadastro */
     .box{
         width: 100vw;
         height: 100vh;
@@ -37,14 +33,14 @@
         /* background-color: rgba(0, 255, 255, 0.514); */
     }
     .espaco_cadas{
-        width: 50vw;
-        height: 76vh;
+        width: 46vw;
+        height: 66vh;
         background-color: #333333;
         border-radius: 4%;
         box-shadow: 0px 0px 15px #1E90FF;;
         flex-direction: column;
     }
-
+    /* Espaço para o titulo */
     .titulo{
         display: flex;
         width: 100%;
@@ -60,24 +56,22 @@
         font-size: 2em;
         font-weight: bold;
     }
-
+    /* Espaço para as entradas de dados */
     .formi{
         display: flex;
         justify-content: center;
     }
-
     .espaco_dados{
         display: flex;
         flex-direction: column;
         width: 88%;
-        height: 42vh;
+        height: 37vh;
         /* margin-top: 3%; */
         justify-content: center;
         align-items: center;
         background-color: rgba(31, 209, 209, 0);
     }
-
-    .L01{
+    label{
         width: 100%;
         height: 4vh;
         margin-top: 3%;
@@ -85,7 +79,6 @@
         font-family: 'Inter', sans-serif;
         background-color: rgba(58, 31, 209, 0);
     }
-
     input{
         padding: 5%;
         font-family: 'Inter', sans-serif;
@@ -95,13 +88,12 @@
         background-color: #1A1A1A;
         border: 1px solid #1A1A1A;
     }
-  
-
+    /* Espaço para o botão de entrada */
     .botao{
         display: flex;
         width: 100%;
         height: 10%;
-        margin-top: 3%;
+        margin-top: 6%;
         justify-content: center;
         align-items: center;
     }
@@ -114,8 +106,7 @@
         color: white;
         font-size: 15px;
     }
-
-
+    /* Link */
     .registro1{
         display: flex;
         width: 100%;
@@ -123,11 +114,28 @@
         justify-content: center;
         align-items: center;
         color: white;
+        font-family: 'Inter', sans-serif;
     }
-    
-    
-    
-
+    .link_login{
+        color: #1E90FF;
+        text-decoration: none;
+    }
+    /* Responsivo */
+    @media screen and (max-width:770px) {
+            .espaco_cadas{
+                width: 74vw;
+                height: 58vh;
+            }
+            .espaco_dados{
+                height: 33vh;
+            }
+            .botao{
+                margin-top: 5%;
+            }
+            .titulo{
+                margin-top: 7%;
+            }
+        }
 </style>
 
 </head>
@@ -137,22 +145,22 @@
                 <div class="titulo">
                     <div class="cadastro">Cadastro</div>
                 </div>
-                <form class="formi" action="/cadastro" method="post">
+                <form class="formi" action="" method="post">
                     <div class="espaco_dados">
-                        <label for="espaço-nome" class="L01">Matrícula</label>
-                        <input type="text" name="nome" placeholder="Nome Completo" class="I01">
-                        <label for="espaço-email"class="L01">Username</label>
-                        <input type="text" name="email" placeholder="E-mail" class="I01">
-                        <label for="espaço-senha" class="L01">Senha</label>
-                        <input type="password" name="password" placeholder="Senha" class="I01">
+                        <label for="espaço-nome">Matrícula</label>
+                        <input type="text" name="nome" placeholder="Nome Completo">
+                        <label for="espaço-email">Username</label>
+                        <input type="text" name="email" placeholder="E-mail">
+                        <label for="espaço-senha">Senha</label>
+                        <input type="password" name="password" placeholder="Senha">
                     </div>   
                 </form>
                 <div class="botao">
                     <button class="btn-login" type="submit">SIGN UP</button>
                 </div>
                 <div class="registro1">
-                    <p class="small-letters registro">Have you already have an account? <a href="login.html" class="">Log in!</a>
-                    </p>
+                    <div class="small-letters registro">Have you already have an account? <a href="login.html" class="link_login">Log in!</a>
+                    </div>
                 </div>
         </div>
     </div>    
