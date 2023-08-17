@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
     <title>Home</title>
 
     <style>
@@ -63,12 +64,77 @@
         .texto{
             height: 20%;
             display: flex;
-            justify-content: flex-start;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        .texto .ola{
+            font-size: 24px;
+            opacity: 0.8;
+        }
+
+        .texto .bombeiro{
+            font-size: 20px;
+            font-weight: 600;
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        .central{
+            height: 35%;
+            display: flex;
+            justify-content: center;
             align-items: center;
         }
 
-        .texto pre{
-            font-family: 'Inter', sans-serif;
+        .central .redcard{
+            height: 82%;
+            width: 84%;
+            background-color: #E45952;
+            border-radius: 10px;
+            opacity: 1;
+            display: flex;
+        }
+
+        .card-texto, .card-imagem{
+            width: 50%;
+        }
+
+        .redcard .texto-titulo{
+            font-size: 48px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+        .redcard .texto-subtitulo{
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+
+        .rodape{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 35%;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .rodape .bluecard, .purplecard{
+            height: 67%;
+            width: 36%;
+            border-radius: 10px;
+        }
+
+        .bluecard{
+            background-color: #35BFE2;
+        }
+
+        .purplecard{
+            background-color: #AA7AE4;
         }
 
     </style>
@@ -90,12 +156,37 @@
     </div>
 
     <div class="texto">
-        <pre>Olá, 
-            bombeiro XXX
-        </pre>
+        <div class="texto-block" style="margin-top: 20px;">
+            <div class="ola">Olá,</div>
+            <div class="bombeiro">Bombeiro Robson</div>
+        </div>
     </div>
 
+    <div class="central">
 
-    
+        <div class="redcard">
+            <div class="card-texto">
+                <div class="texto-block">
+                    <div class="texto-titulo">Nova Ocorrência</div>
+                    <div class="texto-subtitulo">Registre os dados do paciente</div> 
+                </div> 
+            </div>
+               
+            <div class="card-imagem"></div>
+        </div>
+
+    </div>
+
+    <div class="rodape">
+
+        <div class="bluecard">
+            <div class="card-texto"></div>
+            <div class="card-imagem"></div>
+        </div>
+
+        <div class="purplecard"></div>
+        
+    </div>
+
 </body>
 </html>
