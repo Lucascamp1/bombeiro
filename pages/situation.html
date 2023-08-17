@@ -12,6 +12,22 @@
     <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Situação Paciente</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const checkboxes = document.querySelectorAll('.checkbox-container input[type="checkbox"]');
+
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    checkboxes.forEach(function(otherCheckbox) {
+                        if (otherCheckbox !== checkbox) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 
 <style>
@@ -89,28 +105,68 @@
         font-family: 'Inter', sans-serif;
     }
 
-    .wrapper{
-        margin-top: 5px;
+    .consciente_texto{
+        margin-top: -7px;
+    }
+    .checkbox-container {
+        display: flex;
+        position: relative;
+        margin-left: 2;
+        padding-left: 30px;
+        margin-left: 150px;
+        margin-top: -20px;
+        /* Espaço para o checkbox personalizado */
+        margin-bottom: 10px;
+        cursor: pointer;
+
     }
 
-    input[type="checkbox"]{
-        appearance: none;
-        -webkit-appearance: none;
-        height: 30px;
-        width: 30px;
+    .checkbox-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
         background-color: transparent;
-        background-color: #a3a3a3;
-        border-radius: 5px;
+        border: 2px solid #ffffff;
+        border-radius: 3px;
     }
 
-    input[type=":checkbox"]:after{
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "/f00c";
-        font-size: 50px;
-        color: white;
+    .checkbox-container:hover .checkmark {
+        background-color: #ddd;
     }
 
+    .checkbox-container input:checked+.checkmark {
+        background-color: #ffffff;
+        border: none;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .checkbox-container input:checked+.checkmark:after {
+        display: block;
+    }
+
+    .checkbox-container .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid rgb(0, 0, 0);
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
 </style>
 
 <body>
@@ -128,11 +184,10 @@
                 <div class="consciente">
                     <div class="consciente_texto">
                         <h4>Consciente</h4>
-                    </div>
-
-                    <div class="wrapper">
-                        <input type="checkbox" id="check">
-                        <label for="check"></label>
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -141,11 +196,10 @@
                 <div class="inconsciente">
                     <div class="consciente_texto">
                         <h4>Inconsciente</h4>
-                    </div>
-
-                    <div class="wrapper">
-                            <input type="checkbox" id="check">
-                            <label for="check"></label>
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
                 </div>
             </div>
