@@ -94,6 +94,8 @@
             border-radius: 10px;
             opacity: 1;
             display: flex;
+            /* position: relative; */
+            cursor: pointer;
         }
 
         .card-texto, .card-imagem{
@@ -113,6 +115,19 @@
             margin-top: 5px;
             margin-left: 30px;
         }
+/* 
+        .redcard .circle{
+            height: 90%;
+            width: 30%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 50%;
+            background-color: #890202;
+            opacity: 0.58;
+            -webkit-clip-path: circle(63.2% at 52% 45%);
+            clip-path: circle(63.2% at 52% 45%);
+        } */
 
         .rodape{
             display: flex;
@@ -139,9 +154,19 @@
         }
 
         .bluecard, .purplecard .texto-titulo{
-            font-size: 32px;
+            font-size: 28px;
             font-weight: bold;
             text-align: center;
+        }
+
+        .bluecard .texto-titulo{
+            margin-right: 15%;
+        }
+
+        .bluecard .card-texto, .purplecard .card-texto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
     </style>
@@ -179,18 +204,28 @@
                 </div> 
             </div>
                
-            <div class="card-imagem"></div>
+            <div class="card-imagem">
+                <!-- <div class="circle"></div> -->
+            </div>
         </div>
+
+        <script>
+            var redcard = document.getElementsByClassName('redcard');
+
+            redcard.addEventListener("click", function(){
+                window.location.href = "https://g1.globo.com/";
+            });
+        </script>
 
     </div>
 
     <div class="rodape">
 
         <div class="bluecard">
+            <div class="card-imagem"></div> 
             <div class="card-texto">
                 <div class="texto-titulo">Histórico de Ocorrências</div>
             </div>
-            <div class="card-imagem"></div>
         </div>
 
         <div class="purplecard">
