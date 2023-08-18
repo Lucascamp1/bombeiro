@@ -14,16 +14,12 @@
 </head>
 
 <style>
-    * {
+    body {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        background-color: #1A1A1A;
+        display: flex;
     }
-
-    body {
-        background-color: #1a1a1a;
-    }
-
     .welcome_texto1 {
         display: flex;
         justify-content: center;
@@ -32,17 +28,14 @@
         margin-top: 7%;
         font-size: 20px;
     }
-
     .welcome_image {
         display: flex;
         justify-content: center;
         margin-top: 4%;
     }
-
     .welcome_image img {
         border-radius: 50%;
     }
-
     .welcome_texto2 {
         display: flex;
         justify-content: center;
@@ -52,14 +45,12 @@
         margin-top: 6%;
         font-size: 12px;
     }
-
     .welcome_botoes {
         display: flex;
         justify-content: center;
         margin-top: 6%;
         gap: 100px;
     }
-
     .welcome_botoes button {
         width: 210px;
         height: 65px;
@@ -71,46 +62,45 @@
         border-color: #007aff;
         border-width: 3px;
     }
-
     .botao_welcome:hover{
         background-color: #007aff;
         color: white;
     }
-
+    /* @media screen and (max-width:770px) {
+            .Responsivo{
+                /* justify-content: center;
+                align-items: center; */
+            }
+        } 
+    Responsivo
 </style>
 
 <body>
-
-    <div class="welcome_texto1">
-
-        <div>
-            <h1><b>Seja Bem Vindo</b></h1>
+    <div class="Responsivo">
+        <div class="welcome_texto1">
+            <div>
+                <h1><b>Seja Bem Vindo</b></h1>
+            </div>
         </div>
-    </div>
-
-    <div class="welcome_image">
-        <div>
-            <img src="../images/avatar_bombeiro.png" width="200px">
+        <div class="welcome_image">
+            <div>
+                <img src="../images/avatar_bombeiro.png" width="200px">
+            </div>
         </div>
-    </div>
-
-    <div class="welcome_texto2">
-        <div>
-            <h1>Seu novo aplicativo</h1><br><br>
-            <h2>Preencha ocorrências, tenha acesso a<br>históricos e estatísticas </h2>
+        <div class="welcome_texto2">
+            <div>
+                <h1>Seu novo aplicativo</h1><br><br>
+                <h2>Preencha ocorrências, tenha acesso a<br>históricos e estatísticas </h2>
+            </div>
         </div>
-    </div>
-
-    <div class="welcome_botoes">
-        <div>
-            <button class="botao_welcome"><b>Entrar</b></button>
+        <div class="welcome_botoes">
+            <div>
+                <button class="botao_welcome"><b>Entrar</b></button>
+            </div>
+            <div>
+                <button class="botao_welcome"><b>Cadastre-se</b></button>
+            </div>
         </div>
-
-        <div>
-            <button class="botao_welcome"><b>Cadastre-se</b></button>
-        </div>
-    </div>
-
+    </div>    
 </body>
-
 </html>
