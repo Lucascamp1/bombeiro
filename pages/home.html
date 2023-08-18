@@ -127,6 +127,7 @@
             height: 67%;
             width: 36%;
             border-radius: 10px;
+            display: flex;
         }
 
         .bluecard{
@@ -135,6 +136,12 @@
 
         .purplecard{
             background-color: #AA7AE4;
+        }
+
+        .bluecard, .purplecard .texto-titulo{
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
         }
 
     </style>
@@ -180,12 +187,19 @@
     <div class="rodape">
 
         <div class="bluecard">
-            <div class="card-texto"></div>
+            <div class="card-texto">
+                <div class="texto-titulo">Histórico de Ocorrências</div>
+            </div>
             <div class="card-imagem"></div>
         </div>
 
-        <div class="purplecard"></div>
-        
+        <div class="purplecard">
+            <div class="card-texto">
+                <div class="texto-titulo">Espaço do Usuário</div>
+            </div>
+            <div class="card-imagem"></div>
+        </div>
+
     </div>
 
 </body>
