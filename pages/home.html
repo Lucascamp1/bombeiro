@@ -1,120 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
     <title>Home</title>
 
     <style>
-
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body{
+        body {
             background-color: #1a1a1a;
             height: 100vh;
             font-family: 'Inter', sans-serif;
             color: white;
         }
 
-        .menu{
+        .menu {
             background-color: #333333;
             width: 100%;
             height: 10%;
             display: flex;
         }
 
-        .menu .menu-display-1{
+        .menu .menu-display-1 {
             width: 50%;
             display: flex;
             justify-content: flex-start;
             align-items: center;
         }
 
-        .menu .noar{
+        .menu .noar {
             margin-top: 5px;
         }
 
-        .menu .menu-display-2{
+        .menu .menu-display-2 {
             width: 50%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
         }
 
-        .menu .bombeiro img{
+        .menu .bombeiro img {
             border-radius: 50%;
         }
 
-        .bombeiro{
+        .bombeiro {
             margin-right: 10px;
         }
 
-        .noar{
+        .noar {
             margin-left: 10px;
         }
 
-        .texto{
+        .texto {
             height: 20%;
             display: flex;
             align-items: center;
             margin-left: 50px;
         }
 
-        .texto .ola{
+        .texto .ola {
             font-size: 24px;
             opacity: 0.8;
         }
 
-        .texto .bombeiro{
+        .texto .bombeiro {
             font-size: 20px;
             font-weight: 600;
             margin-left: 25px;
             margin-top: 10px;
         }
 
-        .central{
+        .central {
             height: 35%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .central .redcard{
+        .central .redcard {
             height: 82%;
             width: 84%;
             background-color: #E45952;
             border-radius: 10px;
             opacity: 1;
             display: flex;
+            cursor: pointer;
         }
 
-        .card-texto, .card-imagem{
+        .card-texto,
+        .card-imagem {
             width: 50%;
         }
 
-        .redcard .texto-titulo{
+        .redcard .texto-titulo {
             font-size: 48px;
             font-weight: 600;
             margin-top: 30px;
             margin-left: 30px;
         }
 
-        .redcard .texto-subtitulo{
+        .redcard .texto-subtitulo {
             font-size: 24px;
             font-weight: 600;
             margin-top: 5px;
             margin-left: 30px;
         }
 
-        .rodape{
+        .card-imagem{
+            display: flex;
+            justify-content: flex-end;  
+        }
+
+        .redcard img {
+            height: 28vh;
+        }
+
+        .redcard .card-imagem{
+            margin-top: 0.6%;
+        }
+
+        .rodape {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -123,29 +140,93 @@
             margin-right: 20px;
         }
 
-        .rodape .bluecard, .purplecard{
+        .rodape .bluecard,
+        .purplecard {
             height: 67%;
             width: 36%;
             border-radius: 10px;
             display: flex;
         }
 
-        .bluecard{
+        .bluecard {
             background-color: #35BFE2;
         }
 
-        .purplecard{
+        .purplecard {
             background-color: #AA7AE4;
         }
 
-        .bluecard, .purplecard .texto-titulo{
-            font-size: 32px;
+        .bluecard,
+        .purplecard .texto-titulo {
+            font-size: 28px;
             font-weight: bold;
             text-align: center;
         }
 
+        .bluecard .card-texto,
+        .purplecard .card-texto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-imagem-special{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 7.5%;
+            margin-left: 0.1%;
+        }
+
+        .bluecard img{
+            height: 20vh;
+            border-radius: 7px;
+        }
+
+        .purplecard img{
+            height: 21vh;
+            border-radius: 7px;
+        }
+
+        .purplecard .card-imagem{
+            margin-top: 5%;
+        }
+
+        @media screen and (max-width: 770px) {
+            
+            .redcard img {
+                height: 25vh;
+            }
+
+            .redcard .card-imagem{
+                margin-top: 5.6%;
+            }
+
+            .bluecard img{
+                height: 16vh;
+            }
+
+            .card-imagem-special{
+                margin-top: 29%;
+                margin-left: 0.2%;
+            }
+
+            .bluecard,
+            .purplecard .texto-titulo {
+                width: 100%;
+            }
+
+            .purplecard img{
+                height: 17vh;
+            }
+
+            .purplecard .card-imagem{
+                margin-top: 25%;
+            }
+
+        }
     </style>
 </head>
+
 <body>
 
     <div class="menu">
@@ -175,11 +256,16 @@
             <div class="card-texto">
                 <div class="texto-block">
                     <div class="texto-titulo">Nova Ocorrência</div>
-                    <div class="texto-subtitulo">Registre os dados do paciente</div> 
-                </div> 
+                    <div class="texto-subtitulo">Registre os dados do paciente</div>
+                </div>
             </div>
-               
-            <div class="card-imagem"></div>
+
+
+            <div class="card-imagem">
+                <div class="align-imagem">
+                    <img src="../images/mais.png">
+                </div>
+            </div>
         </div>
 
     </div>
@@ -187,20 +273,49 @@
     <div class="rodape">
 
         <div class="bluecard">
+            <div class="card-imagem-special">
+                <div class="align-imagem">
+                    <img src="../images/pastas.png">
+                </div>
+            </div>
+
             <div class="card-texto">
                 <div class="texto-titulo">Histórico de Ocorrências</div>
             </div>
-            <div class="card-imagem"></div>
         </div>
 
         <div class="purplecard">
             <div class="card-texto">
                 <div class="texto-titulo">Espaço do Usuário</div>
             </div>
-            <div class="card-imagem"></div>
+
+            <div class="card-imagem">
+                <div class="align-imagem">
+                    <img src="../images/perfil.png">
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <script>
+            var redcard = document.getElementsByClassName('redcard')[0];
+
+            redcard.addEventListener("click", function () {
+                window.location.href = "https://g1.globo.com/";
+            });
+
+            var bluecard = document.getElementsByClassName('bluecard')[0];
+
+            bluecard.addEventListener("click", function () {
+                window.location.href = "https://g1.globo.com/";
+            });
+
+            var purplecard = document.getElementsByClassName('purplecard')[0];
+
+            purplecard.addEventListener("click", function () {
+                window.location.href = "https://g1.globo.com/";
+            });
+    </script>
 </body>
 </html>
