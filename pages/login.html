@@ -27,9 +27,10 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #1A1A1A;
+            background-color: #7d7777;
             display: flex;
         }
+
         /* Espaço bloco login */
         .box {
             width: 100vw;
@@ -39,6 +40,7 @@
             align-items: center;
             /* background-color: rgba(0, 255, 255, 0.514); */
         }
+
         .espaco_log {
             width: 46vw;
             height: 56vh;
@@ -48,6 +50,7 @@
             ;
             flex-direction: column;
         }
+
         /* Espaço para o titulo */
         .titulo {
             display: flex;
@@ -58,18 +61,21 @@
             align-items: center;
             /* background-color: rgba(0, 255, 255, 0.233); */
         }
+
         .login {
             color: white;
             font-family: 'Inter', sans-serif;
             font-size: 2em;
             font-weight: bold;
         }
+
         /* Espaço para as entradas de dados */
         .formi {
             display: flex;
             justify-content: center;
             margin-top: 7%;
         }
+
         .espaco_dados {
             display: flex;
             flex-direction: column;
@@ -80,15 +86,20 @@
             align-items: center;
             background-color: rgba(31, 209, 209, 0);
         }
+
         input {
             padding: 5%;
             font-family: 'Inter', sans-serif;
             width: 90%;
             height: 1vh;
             border-radius: 8px;
-            background-color: #1A1A1A;
+            background-color: #C1C1C1;
             border: 1px solid #1A1A1A;
         }
+        input::placeholder {
+            color: black;
+        }
+
         /* Visuslizção senha */
         /* form i {
             font-size: 19px;
@@ -107,6 +118,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .btn-conec {
             background: #1e90ff;
             width: 88%;
@@ -116,6 +128,7 @@
             color: white;
             font-size: 15px;
         }
+
         /* Link */
         .registro1 {
             display: flex;
@@ -127,10 +140,12 @@
             margin-top: 4%;
             font-family: 'Inter', sans-serif;
         }
+
         .link {
             color: #1E90FF;
             text-decoration: none;
         }
+
         .small_letters_registro {
             display: flex;
             flex-direction: column;
@@ -140,6 +155,7 @@
             align-items: center;
             gap: 10px;
         }
+
         /* Responsivo */
         @media screen and (max-width:770px) {
 
@@ -172,11 +188,12 @@
     </style>
 
 </head>
+
 <body>
     <div class="box">
         <div class="espaco_log">
             <div class="titulo">
-                <div class="login">Conecte-se</div>
+                <div class="login">Log in</div>
             </div>
             <form class="formi" action="" method="post">
                 <div class="espaco_dados">
@@ -186,7 +203,7 @@
                 </div>
             </form>
             <div class="botao">
-                <button class="btn-conec" type="submit">CONECTE-SE</button>
+                <button class="btn-conec" type="submit">Log in</button>
             </div>
             <div class="registro1">
                 <div class="small_letters_registro">
@@ -218,4 +235,5 @@
     </script>
 
 </body>
+
 </html>
