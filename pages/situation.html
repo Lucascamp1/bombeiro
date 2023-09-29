@@ -1,25 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset=UTF-8>
+    <!-- Linkagem -->
     <title>Situação Paciente</title>
+    <!-- Titulo -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Fonte -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <!-- media -->
+    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
+    <!--Imagem icon-->
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
             const checkboxes = document.querySelectorAll('.checkbox-container input[type="checkbox"]');
 
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    checkboxes.forEach(function(otherCheckbox) {
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    checkboxes.forEach(function (otherCheckbox) {
                         if (otherCheckbox !== checkbox) {
                             otherCheckbox.checked = false;
                         }
@@ -27,11 +38,86 @@
                 });
             });
         });
-    </script>
+    </script> -->
+
 </head>
 
 <style>
-    * {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #1A1A1A;
+    }
+
+    .base_situation {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        justify-content: space-between;
+    }
+
+    .situacao_texto1 {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Inter', sans-serif;
+        font-size: 18px;
+        width: 100%;
+        height: 8%;
+        background-color: rgba(0, 255, 255, 0.258);
+        /* margin-top: 18%; */
+    }
+
+    .situacao_quadrado {
+        display: flex;
+        height: 45%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #5e5eb1;
+    }
+
+    .quadrado {
+        display: flex;
+        /* height: 41%; */
+        /* justify-content: center;
+        align-content: center; */
+        width: 65%;
+        height: 75%;
+        background-color: #2f2f8c;
+    }
+
+
+
+
+    /* Detalhes botão voltar */
+    .espaço_botao {
+        display: flex;
+        width: 100%;
+        height: 14%;
+        justify-content: right;
+        background-color: rgba(0, 255, 255, 0.145);
+
+    }
+
+    .botao {
+        display: flex;
+        /* height: 50%; */
+        align-items: center;
+        margin-right: 10%;
+    } 
+
+
+    /* .situacao_quadrado {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+    } */
+
+
+    /* * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -39,30 +125,30 @@
 
     body {
         background-color: #1a1a1a;
-    }
+    } */
 
-    .situacao_texto1 {
+    /* .situacao_texto1 {
         color: white;
         display: flex;
         justify-content: center;
         font-family: 'Inter', sans-serif;
         font-size: 18px;
         margin-top: 18%;
-    }
+    } */
 
-    .situacao_quadrado {
+    /* .situacao_quadrado {
         display: flex;
         justify-content: center;
         margin-top: 5%;
-    }
+    } */
 
-    .situacao_quadrado1 {
-        background-color: #333;
-        width: 420px;
-        height: 250px;
-        border-radius: 15px;
-    }
-
+    /* .situacao_quadrado1 {
+            background-color: #333;
+            width: 420px;
+            height: 250px;
+            border-radius: 15px;
+        } */
+    /* 
     .consciente {
         background-color: #1a1a1a;
         width: 300px;
@@ -105,9 +191,10 @@
         font-family: 'Inter', sans-serif;
     }
 
-    .consciente_texto{
+    .consciente_texto {
         margin-top: -7px;
     }
+
     .checkbox-container {
         display: flex;
         position: relative;
@@ -116,12 +203,12 @@
         margin-left: 150px;
         margin-top: -20px;
         /* Espaço para o checkbox personalizado */
-        margin-bottom: 10px;
+    /* margin-bottom: 10px;
         cursor: pointer;
 
-    }
+    } */
 
-    .checkbox-container input {
+    /* .checkbox-container input {
         position: absolute;
         opacity: 0;
         cursor: pointer;
@@ -167,16 +254,75 @@
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
     }
+
+    */
+
+
+    /* @media screen and (max-width:770px) {
+
+        .situacao_texto1 {
+            color: white;
+            display: flex;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            margin-top: 43%;
+        }
+
+    } */
 </style>
 
 <body>
+    <div class="base_situation">
+        <div class="situacao_texto1">
+            <div>
+                <h1>Situação do Paciente</h1>
+            </div>
+        </div>
 
-    <div class="situacao_texto1">
-        <div>
-            <h1>Situação do Paciente</h1>
+        <div class="situacao_quadrado">
+            <div class="quadrado">
+                <h1>olá</h1>
+            </div>
+        </div>
+        <div class="espaço_botao">
+            <div class="botao">
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+            </div>
         </div>
     </div>
+    <!-- <div class="situacao_quadrado1">
 
+            <div class="consciente_meio">
+                <div class="consciente">
+                    <div class="consciente_texto">
+                        <h4>Consciente</h4>
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inconsciente_meio">
+                <div class="inconsciente">
+                    <div class="consciente_texto">
+                        <h4>Inconsciente</h4>
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div> -->
+    </div>
+
+
+
+    <!-- 
     <div class="situacao_quadrado">
         <div class="situacao_quadrado1">
 
@@ -206,6 +352,9 @@
 
         </div>
     </div>
+     -->
+
+
 </body>
 
 </html>
