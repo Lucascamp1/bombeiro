@@ -62,6 +62,22 @@
             border-bottom: 2px solid rgb(6, 108, 243);
             width: 20%;
         }
+
+        .text-line2 {
+            background: transparent;
+            color: white;
+            border: none;
+            text-align: center;
+            border-bottom: 2px solid rgb(6, 108, 243);
+        }
+
+        .text-line3{
+            background: transparent;
+            color: white;
+            border: none;
+            border-bottom: 2px solid rgb(6, 108, 243);
+            width: 68%;
+        }
     </style>
 </head>
 
@@ -180,14 +196,14 @@
                             <label class="card-text mb-0 col-5 p-0">É O PRIMEIRO FILHO?</label>
                             <div class="container d-flex gap-4 p-0 ms-4">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefaultpre"
+                                    <input class="form-check-input" type="radio" name="flexRadioDefaultprimeiro"
                                         id="flexRadioDefault1">
                                     <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefaultpre"
+                                    <input class="form-check-input" type="radio" name="flexRadioDefaultprimeiro"
                                         id="flexRadioDefault2" checked>
                                     <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
@@ -226,16 +242,158 @@
                     <label class="card-text mb-0 col-12 p-0 mt-2">TEMPO DAS CONTRAÇÕES?</label>
                     <br>
                     <div class="container p-0">
-                            <label class="card-text">DURAÇÃO:</label>
-                            <input type="text" class="text-line">
+                        <label class="card-text">DURAÇÃO:</label>
+                        <input type="text" class="text-line">
 
-                            <label class="card-text">INTERVALO:</label>
-                            <input type="text" class="text-line">
+                        <label class="card-text">INTERVALO:</label>
+                        <input type="text" class="text-line">
                     </div>
 
                 </div>
 
-                <div class="card col-9 mt-4"></div>
+                <div class="card col-9 mt-4 d-flex flex-column justify-content-center">
+                    <div class="container d-flex gap-4 p-0">
+                        <label class="card-text mb-0">SENTE PRESSÃO NA REGIÃO DO QUADRIL OU VONTADE DE EVACUAR?</label>
+
+
+                        <div class="form-check mx-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefaulteva"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label card-text" for="flexRadioDefault1">
+                                SIM
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefaulteva"
+                                id="flexRadioDefault2" checked>
+                            <label class="form-check-label card-text" for="flexRadioDefault2">
+                                NÃO
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-9 mt-4 d-flex flex-column justify-content-center">
+                    <div class="container d-flex gap-4 p-0">
+                        <label class="card-text mb-0">JÁ HOUVE RUPTURA DA BOLSA?</label>
+
+                        <div class="form-check mx-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefaultbolsa"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label card-text" for="flexRadioDefault1">
+                                SIM
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefaultbolsa"
+                                id="flexRadioDefault2" checked>
+                            <label class="form-check-label card-text" for="flexRadioDefault2">
+                                NÃO
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-9 mt-4 d-flex flex-column justify-content-center">
+                    <div class="container d-flex gap-4 p-0">
+                        <label class="card-text mb-0">FOI FEITO INSPEÇÃO VISUAL?</label>
+
+                        <div class="form-check mx-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefaultvisual"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label card-text" for="flexRadioDefault1">
+                                SIM
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefaultvisual"
+                                id="flexRadioDefault2" checked>
+                            <label class="form-check-label card-text" for="flexRadioDefault2">
+                                NÃO
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-9 mt-4 d-flex flex-column justify-content-center">
+                    <div class="container d-flex p-0">
+
+
+                        <div class="container d-flex p-0">
+
+                            <div class="container d-flex gap-4 p-0">
+
+                                <div class="container d-flex p-0">
+                                    <label class="card-text mb-0 col-5 p-0">PARTO REALIZADO?</label>
+                                    <div class="container d-flex gap-4 p-0 ml-3">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefaultparto"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label card-text" for="flexRadioDefault1">
+                                                SIM
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefaultparto"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label card-text" for="flexRadioDefault2">
+                                                NÃO
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container d-flex p-0" style="margin-left: 13%;">
+                                    <div class="container p-0">
+                                        <label class="card-text">HORA DO NASCIMENTO:</label>
+                                        <input type="text" class="text-line2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-9 mt-4 d-flex flex-column justify-content-center">
+                    <div class="container d-flex p-0">
+
+
+                        <div class="container d-flex p-0">
+
+                            <div class="container d-flex gap-4 p-0">
+
+                                <div class="container d-flex p-0">
+                                    <label class="card-text mb-0 col-5 p-0">SEXO DO BEBÊ</label>
+                                    <div class="container d-flex gap-4 p-0 ml-3">
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefaultparto"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label card-text" for="flexRadioDefault1">
+                                                SIM
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefaultparto"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label card-text" for="flexRadioDefault2">
+                                                NÃO
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="container d-flex p-0" style="margin-left: 13%;">
+                                    <div class="container p-0">
+                                        <label class="card-text">NOME DO BEBÊ:</label>
+                                        <input type="text" class="text-line3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
