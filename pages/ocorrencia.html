@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ocorrencia</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
@@ -18,134 +18,304 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <style>
-        * {
+        body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
+            background-color: #7d7777;
+            display: flex;
             background-color: #c1c1c1;
-            height: 100vh;
             font-family: 'Inter', sans-serif;
             color: white;
         }
 
-        #nav{
+
+        /* * {
+            box-sizing: border-box;
+        } */
+
+
+        .base {
+            width: 100vw;
+            height: 145vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nav {
             background-color: #333333;
         }
+
         .casa {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            height: 98%;
+            height: 100%;
             width: 100%;
+            margin-bottom: 2%;
         }
 
-        .column{
-            width: 40%; 
+        .column {
+            display: flex;
+            flex-direction: column;
+            width: 43%;
+            height: 100vh;
             box-sizing: border-box;
-            padding: 10px;
-            /* margin-bottom: 20px; */
-            height: 100%;
+            padding: 12px;
+            justify-content: space-between;
+            /* margin-bottom: 20px;
+            height: 100%; */
         }
 
         .block {
             background-color: #333333;
-            margin-bottom: 14px;
+            /* margin-bottom: 14px; */
             height: 8%;
             display: flex;
             align-items: center;
+            border-radius: 10px;
         }
-        .container-ultimo{
+
+        .descrition {
+            display: flex;
+            /* width: 20%; */
+            height: 65%;
+            justify-content: space-between;
+        }
+
+        .container-ultimo {
+            display: flex;
             background-color: #333333;
             width: 88%;
             margin-left: 6%;
             height: 17%;
         }
+
+        .text-area{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 18vh;
+            justify-content: center;
+        }
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
     </style>
-</head>  
+</head>
+
 <body>
-     <nav class="navbar navbar-dark" id="nav">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"> <img src="../images/avatar_bombeiro.png" width="60px"></a> 
-        <p class="navbar-title mt-3">TIPO DE OCORRÊNCIA (PRÉ-HOSPITALAR)</p>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
+    <!-- Corpo intero -->
+    <div class="base">
+        <!--  Menu -->
+        <nav class="navbar navbar-dark" id="nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <img src="../images/avatar_bombeiro.png" width="60px"></a>
+                <p class="navbar-title mt-3">TIPO DE OCORRÊNCIA (PRÉ-HOSPITALAR)</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CATEGORIAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PERFIL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SAIR</a>
+                            </li>
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CATEGORIAS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">PERFIL</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">SAIR</a>
-                        </li>
-                </div>
             </div>
-        </div>
-    </nav>
-    <!-- <div class="container">oi
-        <div class="row">
-            <div class="col-6">
-                <div class="container card"></div>
-            </div>
-            <div class="col-6">
-                <div class="container card"></div>
-            </div>
-        </div>
-    </div> -->
-    <div class="casa mt-4">
+        </nav>
+        <!-- CheckBox -->
+        <div class="casa mt-4">
             <div class="column">
                 <div class="block px-3">
-                    <div class="descrition d-flex" style="gap: 134px; width: 100%;">CAUSADO POR ANIMAIS 
+                    <div class="descrition d-flex" style="gap: 133px; width: 100%;">CAUSADO POR ANIMAIS
                         <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         </div>
                     </div>
                 </div>
                 <div class="block px-3">
-                    <div>COM MEIO DE TRANSPORTE</div>
+                    <div class="descrition d-flex" style="width: 100%; gap: 101px;">COM MEIO DE TRANSPORTE
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
                 </div>
-                <div class="block px-3"><div>DESMORONAMENTO/DESLIZAMENTO</div></div>
-                <div class="block px-3"><div>EMERGÊNCIA MÉDICA</div></div>
-                <div class="block px-3"><div>QUEDA DE ALTURA 2M</div></div>
-                <div class="block px-3"><div>TENTATIVA DE SUICÍDIO</div></div>
-                <div class="block px-3"><div>QUEDA PRÓPRIA ALTURA</div></div>
-                <div class="block px-3"><div>AFOGAMENTO</div></div>
-                <div class="block px-3"><div>AGRESSÃO</div></div>
-                <div class="block px-3"><div>ATROPELAMENTO</div></div>    
-               
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 31px;">DESMORONAMENTO/ DESLIZAMENTO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">EMERGÊNCIA MÉDICA
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">QUEDA DE ALTURA 2M
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 154px;">TENTATIVA DE SUICÍDIO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 69px;">QUEDA PRÓPRIA ALTURA
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">AFOGAMENTO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">AGRESSÃO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 108px;">ATROPELAMENTO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="column">
-                <div class="block px-3"><div>CHOQUE ELÉTRICO</div></div>
-                <div class="block px-3"><div>DESABAMENTO</div></div>
-                <div class="block px-3"><div>DOMÉSTICO</div></div>
-                <div class="block px-3"><div>ESPORTIVO</div></div>
-                <div class="block px-3"><div>INTOXICAÇÃO</div></div>
-                <div class="block px-3"><div>QUEDA BICICLETA</div></div>
-                <div class="block px-3"><div>QUEDA MOTO</div></div>
-                <div class="block px-3"><div>QUEDA NÍVEL<2M</div></div>
-                <div class="block px-3"><div>TRABALHO</div></div>
-                <div class="block px-3"><div>TRANSFERÊNCIA</div></div>
-                
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 90px;">CHOQUE ELÉTRICO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">DESABAMENTO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">DOMÉSTICO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">ESPORTIVO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">INTOXICAÇÃO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">QUEDA BICICLETA
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">QUEDA MOTO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 115px;">QUEDA NÍVEL 2M
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">TRABALHO
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
+                <div class="block px-3">
+                    <div class="descrition d-flex" style="width: 100%; gap: 120px;">TRANSFERÊNCIA
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                    </div>
+                </div>
             </div>
-  </div>
-  <div class="container-ultimo p-4"><div>OUTRO</div></div>
+        </div>
+        <!-- Caixa texto -->
+        <div class="container-ultimo p-3">
+            <div class="text-area">OUTRO
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                        style="height: 100%;"></textarea>
+                    <label for="floatingTextarea">Outro</label>
+                </div>
+            </div>
+        </div>
+        <!-- Botão Voltar e Proxima -->
+        <div class="espaço_botao">
+            <div class="botao">
+                <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
