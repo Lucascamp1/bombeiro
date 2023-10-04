@@ -36,7 +36,7 @@
 
         .base {
             width: 100vw;
-            height: 145vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
         }
@@ -49,7 +49,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            height: 100%;
+            height: 100vh;
             width: 100%;
             margin-bottom: 2%;
         }
@@ -82,15 +82,21 @@
             justify-content: space-between;
         }
 
+        .esptext {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .container-ultimo {
             display: flex;
             background-color: #333333;
-            width: 88%;
-            margin-left: 6%;
-            height: 17%;
+            width: 91%;
+            height: 98%;
+            border-radius: 10px;
         }
 
-        .text-area{
+        .text-area {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -100,7 +106,7 @@
         .espaço_botao {
             display: flex;
             width: 100%;
-            height: 18vh;
+            height: 15vh;
             justify-content: center;
         }
 
@@ -109,6 +115,10 @@
             justify-content: space-between;
             align-items: center;
             width: 90%;
+        }
+
+        .form-floating {
+            margin-top: 9px;
         }
     </style>
 </head>
@@ -298,12 +308,14 @@
             </div>
         </div>
         <!-- Caixa texto -->
-        <div class="container-ultimo p-3">
-            <div class="text-area">OUTRO
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                        style="height: 100%;"></textarea>
-                    <label for="floatingTextarea">Outro</label>
+        <div class="esptext">
+            <div class="container-ultimo p-3">
+                <div class="text-area">OUTRO
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                            style="height: 100%;"></textarea>
+                        <label for="floatingTextarea mt-3">Outro</label>
+                    </div>
                 </div>
             </div>
         </div>
