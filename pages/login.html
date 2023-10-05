@@ -4,18 +4,16 @@
 <head>
     <meta charset=UTF-8>
     <!-- Linkagem -->
-    <title>login</title>
+    <title>Situação Paciente</title>
     <!-- Titulo -->
-    <link href="" rel="">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap"
-        rel="stylesheet">
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Fonte -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
@@ -23,210 +21,79 @@
     <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
     <!--Imagem icon-->
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #7d7777;
-            display: flex;
-        }
-
-        /* Espaço bloco login */
-        .box {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* background-color: rgba(0, 255, 255, 0.514); */
-        }
-
-        .espaco_log {
-            width: 50vw;
-            height: 50vh;
-            background-color: #333333;
-            border-radius: 4%;
-            box-shadow: 0px 0px 15px #1E90FF;
-            flex-direction: column;
-        }
-
-        /* Espaço para o titulo */
-        .titulo {
-            display: flex;
-            width: 100%;
-            height: 9%;
-            margin-top: 9%;
-            justify-content: center;
-            align-items: center;
-            /* background-color: rgba(0, 255, 255, 0.233); */
-        }
-
-        .login {
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-size: 2em;
-            font-weight: bold;
-        }
-
-        /* Espaço para as entradas de dados */
-        .formi {
-            display: flex;
-            justify-content: center;
-            margin-top: 7%;
-        }
-
-        .espaco_dados {
-            display: flex;
-            flex-direction: column;
-            width: 88%;
-            height: 18vh;
-            /* margin-top: 3%; */
-            justify-content: space-between;
-            align-items: center;
-            background-color: rgba(31, 209, 209, 0);
-        }
-
-        input {
-            padding: 5%;
-            font-family: 'Inter', sans-serif;
-            width: 90%;
-            height: 1vh;
-            border-radius: 8px;
-            background-color: #C1C1C1;
-            border: 1px solid #1A1A1A;
-        }
-        input::placeholder {
-            color: black;
-        }
-
-        /* Visuslizção senha */
-        /* form i {
-            font-size: 19px;
-            cursor: pointer;
-            position: absolute;
-            left: 640px;
-            color: rgb(255, 255, 255);
-            margin-top: 99px;
-        }  */
-        /* Espaço para o botão de entrada */
-        .botao {
-            display: flex;
-            width: 100%;
-            height: 10%;
-            margin-top: 8%;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .btn-conec {
-            background: #1e90ff;
-            width: 88%;
-            height: 6vh;
-            border-radius: 25px;
-            border: 1px solid #1e90ff;
-            color: white;
-            font-size: 15px;
-        }
-
-        /* Link */
-        .registro1 {
-            display: flex;
-            width: 100%;
-            height: 8vh;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            margin-top: 4%;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .link {
-            color: #1E90FF;
-            text-decoration: none;
-        }
-
-        .small_letters_registro {
-            display: flex;
-            flex-direction: column;
-            color: white;
-            font-size: 14px;
-            justify-content: space-around;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Responsivo */
-        @media screen and (max-width:770px) {
-
-            .espaco_log {
-                width: 74vw;
-                height: 46vh;
-            }
-
-            .espaco_dados {
-                height: 17vh;
-            }
-
-            .botao {
-                margin-top: 10%;
-            }
-
-            .titulo {
-                margin-top: 7%;
-            }
-
-            form i {
-                font-size: 23px;
-                cursor: pointer;
-                position: absolute;
-                left: 542px;
-                color: rgb(255, 255, 255);
-                margin-top: 126px;
-            }
-        }
-    </style>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #7d7777;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .fundo {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteiner {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-group {
+        color: white;
+        width: 584px;
+        height: 454px;
+        background-color: #333333;
+        box-shadow: 0px 0px 15px #1E90FF;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .fw-bold {
+        height: 15%;
+        font-size: 42px;
+        margin-bottom: 22px;
+    }
+
+    .form-control {
+        width: 80%;
+        margin-bottom: 47px;
+        height: 13%;
+    }
+
+    .btn{
+        width:115px;
+    }
+</style>
 
 <body>
-    <div class="box">
-        <div class="espaco_log">
-            <div class="titulo">
-                <div class="login">Log in</div>
-            </div>
-            <form class="formi" action="" method="post">
-                <div class="espaco_dados">
-                    <input id="matricula" type="text" name="" placeholder="Nome">
-                    <input id="senha" type="password" name="" placeholder="Senha" maxlength="25">
-                    <!-- <i class="bi bi-eye-slash" id="togglePassword"></i> -->
+    <div class="fundo">
+        <div class="conteiner">
+            <div class="form-group">
+                <div class="login mt-3 fw-bold">LOGIN
                 </div>
-            </form>
-            <div class="botao">
-                <button class="btn-conec" type="submit">Log in</button>
+                <input type="text" class="form-control" id="matricula" aria-describedby="emailHelp" placeholder="Nome">
+                <input type="password" class="form-control" id="senha" aria-describedby="emailHelp" placeholder="Senha">
+                <div class="botao">
+                    <button type="submit" class="btn btn-outline-primary btn-lg">Login</button>
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        // const togglePassword = document
-        //     .querySelector('#togglePassword');
-
-        // const password = document.querySelector('#password');
-
-        // togglePassword.addEventListener('click', () => {
-
-        //     // Toggle the type attribute using
-        //     // getAttribure() method
-        //     const type = password
-        //         .getAttribute('type') === 'password' ?
-        //         'text' : 'password';
-
-        //     password.setAttribute('type', type);
-
-        //     // Toggle the eye and bi-eye icon
-        //     this.classList.toggle('bi-eye');
-        // });
-    </script>
-
 </body>
 
 </html>
