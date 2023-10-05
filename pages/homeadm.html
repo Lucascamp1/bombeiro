@@ -95,7 +95,48 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:rgba(219, 74, 238, 0.522) ;
+        }
+
+        .redcard {
+            height: 82%;
+            width: 84%;
+            background-color: #dc6825;
+            border-radius: 10px;
+            opacity: 1;
+            justify-content:space-between;
+            display: flex;
+            cursor: pointer;
+        }
+
+        .texto-titulo{
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+
+        .texto-subtitulo{
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+        .card-imagem {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .redcard img {
+            height: 26vh;
+        }
+
+        .redcard .card-imagem {
+            margin-top: 0.6%;
+        }
+
+        .align-imagem{
+            display: flex;
+            justify-items: last baseline;
         }
 
 
@@ -103,12 +144,50 @@
         .rodape {
             display: flex;
             justify-content: center;
-            /* justify-content: space-evenly; */
+            justify-content: space-evenly;
             align-items: center;
             height: 39%;
-            background-color: #AA7AE4;
         }
-       
+
+        .bluecard{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 67%;
+            width: 36%;
+            border-radius: 10px;
+            display: flex; 
+            background-color: #da911d;
+        }
+
+        .purplecard{
+            height: 67%;
+            width: 36%;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3eb140;
+        }
+
+        .card-texto{
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        .texto-titulo-pb {
+            display: flex;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            align-items:center;
+            align-items: center;
+        }
+
+
+
+
     </style>
 </head>
 
@@ -117,7 +196,7 @@
         <nav class="navbar navbar-dark fixed-top" id="nav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"> <img src="../images/avatar_bombeiro.png" width="60px"></a>
-                <p class="navbar-title mt-3 fw-bold">HOME</p>
+                <p class="navbar-title mt-3 fw-bold">HOME ADM</p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
@@ -155,13 +234,13 @@
         </div>
         <div class="central">
             <div class="redcard">
-                <!-- <div class="card-texto">
+                <div class="card-texto">
                     <div class="texto-block">
-                        <div class="texto-titulo">Nova Ocorrência</div>
-                        <div class="texto-subtitulo">Registre os dados do paciente</div>
+                        <div class="texto-titulo">Dashboard</div>
+                        <div class="texto-subtitulo">Visualizae estatísticas e dados</div>
                     </div>
                 </div>
-                <div class="card-imagem">
+                <!-- <div class="card-imagem">
                     <div class="align-imagem">
                         <img src="../images/mais.png">
                     </div>
@@ -169,26 +248,26 @@
             </div>
         </div>
         <div class="rodape">
-            <!-- <div class="bluecard">
-                <div class="card-imagem-special">
+            <div class="bluecard">
+                <!-- <div class="card-imagem-special">
                     <div class="align-imagem">
                         <img src="../images/pastas.png">
                     </div>
-                </div>
+                </div> -->
                 <div class="card-texto">
-                    <div class="texto-titulo">Histórico de Ocorrências</div>
+                    <div class="texto-titulo-pb">Histórico de Ocorrências</div>
                 </div>
             </div>
             <div class="purplecard">
                 <div class="card-texto">
-                    <div class="texto-titulo">Espaço do Usuário</div>
+                    <div class="texto-titulo-pb">Espaço do Adiministrador</div>
                 </div>
-                <div class="card-imagem">
+                <!-- <div class="card-imagem">
                     <div class="align-imagem">
                         <img src="../images/perfil.png">
                     </div>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
     </div>
     <script>

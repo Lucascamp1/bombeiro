@@ -4,7 +4,7 @@
 <head>
     <meta charset=UTF-8>
     <!-- Linkagem -->
-    <title>Home</title>
+    <title>Home-Adm</title>
     <!-- Titulo -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -52,9 +52,11 @@
         .base_home {
             display: flex;
             flex-direction: column;
+            /* justify-content: center; */
             height: 100vh;
             width: 100vw;
-            justify-content: space-between;
+            /* background-color: rgba(127, 255, 212, 0.296); */
+            /* justify-content: space-between; */
         }
 
         /* Texto Olá  */
@@ -62,18 +64,17 @@
         .texto {
             display: flex;
             margin-top: 87px;
-            height: 13%;
+            height: 14%;
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            background-color: rgba(128, 0, 128, 0.405);
+            color: #333333;
         }
 
         .texto-block {
             display: flex;
             width: 96%;
             flex-direction: column;
-            background-color: #e4595276;
         }
 
         .texto .ola {
@@ -88,160 +89,105 @@
             margin-top: 10px;
         }
 
-        /* Dados bloco central */
+        /* Dados central */
         .central {
-            height: 35%;
+            height: 39%;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color:aquamarine ;
         }
 
-        .central .redcard {
+        .redcard {
             height: 82%;
             width: 84%;
             background-color: #E45952;
             border-radius: 10px;
             opacity: 1;
+            justify-content:space-between;
             display: flex;
             cursor: pointer;
         }
 
-        .card-texto,
-        .card-imagem {
-            width: 50%;
-        }
-
-        .redcard .texto-titulo {
+        .texto-titulo{
             font-size: 30px;
             font-weight: 600;
             margin-top: 30px;
             margin-left: 30px;
         }
 
-        .redcard .texto-subtitulo {
+        .texto-subtitulo{
             font-size: 24px;
             font-weight: 600;
             margin-top: 5px;
             margin-left: 30px;
         }
-
         .card-imagem {
             display: flex;
             justify-content: flex-end;
         }
 
         .redcard img {
-            height: 28vh;
+            height: 26vh;
         }
 
         .redcard .card-imagem {
             margin-top: 0.6%;
         }
 
+        .align-imagem{
+            display: flex;
+            justify-items: last baseline;
+        }
+
+
         /* Dados rodapé */
         .rodape {
             display: flex;
+            justify-content: center;
             justify-content: space-evenly;
             align-items: center;
-            height: 35%;
-            margin-left: 20px;
-            margin-right: 20px;
-            background-color: #AA7AE4;
+            height: 39%;
         }
 
-        .rodape .bluecard,
-        .purplecard {
+        .bluecard{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 67%;
+            width: 36%;
+            border-radius: 10px;
+            display: flex; 
+            background-color: #35BFE2;
+        }
+
+        .purplecard{
             height: 67%;
             width: 36%;
             border-radius: 10px;
             display: flex;
-        }
-
-        .bluecard {
-            background-color: #35BFE2;
-        }
-
-        .purplecard {
+            justify-content: center;
+            align-items: center;
             background-color: #AA7AE4;
         }
 
-        .bluecard,
-        .purplecard .texto-titulo {
+        .card-texto{
+            display: flex;
+            /* align-items: center;
+            justify-content: center; */
+        }
+
+        .texto-titulo-pb {
+            display: flex;
             font-size: 28px;
             font-weight: bold;
             text-align: center;
-        }
-
-        .bluecard .card-texto,
-        .purplecard .card-texto {
-            display: flex;
-            justify-content: center;
+            align-items:center;
             align-items: center;
         }
 
-        .card-imagem-special {
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 7.5%;
-            margin-left: 0.1%;
-        }
 
-        .bluecard img {
-            height: 20vh;
-            border-radius: 7px;
-        }
 
-        .purplecard img {
-            height: 21vh;
-            border-radius: 7px;
-        }
 
-        .purplecard .card-imagem {
-            margin-top: 5%;
-        }
-
-        @media screen and (max-width: 770px) {
-
-            .redcard img {
-                height: 25vh;
-            }
-
-            .redcard .card-imagem {
-                margin-top: 5.6%;
-            }
-
-            .bluecard img {
-                height: 16vh;
-            }
-
-            .card-imagem-special {
-                margin-top: 29%;
-                margin-left: 0.2%;
-            }
-
-            .bluecard,
-            .purplecard .texto-titulo {
-                width: 100%;
-            }
-
-            .purplecard img {
-                height: 17vh;
-            }
-
-            .purplecard .card-imagem {
-                margin-top: 25%;
-            }
-
-            .rodape .bluecard,
-            .purplecard {
-                height: 67%;
-                width: 36%;
-                border-radius: 10px;
-                display: flex;
-            }
-
-        }
     </style>
 </head>
 
@@ -250,7 +196,7 @@
         <nav class="navbar navbar-dark fixed-top" id="nav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"> <img src="../images/avatar_bombeiro.png" width="60px"></a>
-                <p class="navbar-title mt-3 fw-bold">HOME</p>
+                <p class="navbar-title mt-3 fw-bold">HOME ADM</p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
@@ -281,47 +227,47 @@
             </div>
         </nav>
         <div class="texto">
-            <!-- <div class="texto-block" style="">
+            <div class="texto-block">
                 <div class="ola">Olá,</div>
-                <div class="bombeiro">Bombeiro Robson</div>
-            </div> -->
+                <div class="bombeiro">Adimin Robson</div>
+            </div>
         </div>
         <div class="central">
-            <!-- <div class="redcard">
+            <div class="redcard">
                 <div class="card-texto">
                     <div class="texto-block">
                         <div class="texto-titulo">Nova Ocorrência</div>
                         <div class="texto-subtitulo">Registre os dados do paciente</div>
                     </div>
                 </div>
-                <div class="card-imagem">
+                <!-- <div class="card-imagem">
                     <div class="align-imagem">
                         <img src="../images/mais.png">
                     </div>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
         <div class="rodape">
-            <!-- <div class="bluecard">
-                <div class="card-imagem-special">
+            <div class="bluecard">
+                <!-- <div class="card-imagem-special">
                     <div class="align-imagem">
                         <img src="../images/pastas.png">
                     </div>
-                </div>
+                </div> -->
                 <div class="card-texto">
-                    <div class="texto-titulo">Histórico de Ocorrências</div>
+                    <div class="texto-titulo-pb">Histórico de Ocorrências</div>
                 </div>
             </div>
             <div class="purplecard">
                 <div class="card-texto">
-                    <div class="texto-titulo">Espaço do Usuário</div>
+                    <div class="texto-titulo-pb">Espaço do Usuário</div>
                 </div>
-                <div class="card-imagem">
+                <!-- <div class="card-imagem">
                     <div class="align-imagem">
                         <img src="../images/perfil.png">
                     </div>
-                </div>
-            </div> -->
+                </div> -->
+            </div>
         </div>
     </div>
     <script>
