@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -27,9 +27,13 @@
 
         body {
             background-color: #c1c1c1;
-            height: 100vh;
             font-family: 'Inter', sans-serif;
             color: white;
+        }
+        
+        .form-control:focus {
+            border-color: red;
+            box-shadow: 0 0 0 0.2rem rgba(241, 13, 13, 0.3);
         }
 
         #nav {
@@ -38,7 +42,6 @@
 
         .card {
             background-color: #333333;
-            height: 100px;
         }
 
         .card-text {
@@ -60,11 +63,12 @@
             border-bottom: 2px solid rgb(6, 108, 243);
             width: 10%;
         }
-
     </style>
 </head>
 
 <body>
+    <div class="container-fluid p-0">
+
     <nav class="navbar navbar-dark" id="nav">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
@@ -95,112 +99,173 @@
                             <a class="nav-link" href="#">SAIR</a>
                         </li>
                 </div>
+        </nav>
+
+        <form action="">
+
+            <div class="container-fluid">
+
+                <div class="form-group">
+
+                    <div class="row d-flex flex-column align-items-center">
+
+                        <div class="card col-9 mt-5" style="padding: 12px;" >
+                            <label class="card-text">O QUE ACONTECEU (SINAIS E SINTOMAS)</label>
+                            <div class="form-floating">
+                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">ACONTECEU OUTRAS VEZES?</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimes"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimes"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-9 mt-4" style="padding: 12px;">
+                            <label class="card-text">A QUANTO TEMPO ISTO ACONTECEU?</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+                        <div class="card col-9 mt-4" style="height: 172px;">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0 mt-3">POSSUI ALGUM PROBLEMA DE SAÚDE?</label>
+
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+
+                            <label class="card-text mt-3">QUAIS?</label>
+                            <div class="form-floating">
+                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="card col-9 mt-4" style="height: 210px;">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0 mt-3">FAZ USO DE MEDICAÇÃO</label>
+
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="medicacao"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="medicacao" id="flexRadioDefault2"
+                                        checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="container d-flex p-0">
+                                <label class="card-text mb-0 p-0 mt-3">HORÁRIO DA ÚLTIMA MEDICAÇÃO</label>
+                                <input type="text" class="text-line-personality ms-3">
+                            </div>
+
+                            <label class="card-text mt-3">QUAIS?</label>
+                            <div class="form-floating">
+                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="card col-9 mt-4">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0 mt-3">POSSUI ALGUM PROBLEMA DE SAÚDE?</label>
+
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+
+                            <label class="card-text mt-3">QUAIS?</label>
+                            <div class="form-floating">
+                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="card col-9 mt-4">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0 mt-3">sdfsdfsdfsdf?</label>
+
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+
+                            <label class="card-text mt-3">QUAIS?</label>
+                            <div class="form-floating">
+                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
-
-    <form action="">
-
-        <div class="container-fluid">
-
-            <div class="row d-flex flex-column align-items-center">
-
-                <div class="card col-9 mt-5" style="height: 130px;">
-                    <label class="card-text mt-3">O QUE ACONTECEU (SINAIS E SINTOMAS)</label>
-                    <div class="form-floating">
-                        <textarea class="form-control pt-2" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    </div>
-                </div>
-
-                <div class="card col-9 mt-4 d-flex flex-column justify-content-center">
-                    <div class="container d-flex gap-4 p-0">
-
-                        <label class="card-text mb-0">ACONTECEU OUTRAS VEZES?</label>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="anotherTimes" id="flexRadioDefault1">
-                            <label class="form-check-label card-text" for="flexRadioDefault1">
-                                SIM
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="anotherTimes" id="flexRadioDefault2"
-                                checked>
-                            <label class="form-check-label card-text" for="flexRadioDefault2">
-                                NÃO
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card col-9 mt-4">
-                    <label class="card-text mt-3">A QUANTO TEMPO ISTO ACONTECEU?</label>
-                    <input type="text" class="text-line">
-                </div>
-
-                <div class="card col-9 mt-4" style="height: 172px;">
-                    <div class="container d-flex gap-4 p-0">
-
-                        <label class="card-text mb-0 mt-3">POSSUI ALGUM PROBLEMA DE SAÚDE?</label>
-
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio" name="healthProblem" id="flexRadioDefault1">
-                            <label class="form-check-label card-text" for="flexRadioDefault1">
-                                SIM
-                            </label>
-                        </div>
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio" name="healthProblem" id="flexRadioDefault2"
-                                checked>
-                            <label class="form-check-label card-text" for="flexRadioDefault2">
-                                NÃO
-                            </label>
-                        </div>
-                    </div>
-
-                    <label class="card-text mt-3">QUAIS?</label>
-                    <div class="form-floating">
-                        <textarea class="form-control pt-2" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    </div>
-                </div>
-
-                <div class="card col-9 mt-4" style="height: 210px;">
-                    <div class="container d-flex gap-4 p-0">
-
-                        <label class="card-text mb-0 mt-3">FAZ USO DE MEDICAÇÃO</label>
-
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio" name="medicacao" id="flexRadioDefault1">
-                            <label class="form-check-label card-text" for="flexRadioDefault1">
-                                SIM
-                            </label>
-                        </div>
-                        <div class="form-check mt-3">
-                            <input class="form-check-input" type="radio" name="medicacao" id="flexRadioDefault2"
-                                checked>
-                            <label class="form-check-label card-text" for="flexRadioDefault2">
-                                NÃO
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="container d-flex p-0">
-                        <label class="card-text mb-0 p-0 mt-3">QUE HORAS INICIARAM AS CONTRAÇÕES?</label>
-                        <input type="text" class="text-line-personality ms-3">
-                    </div>
-
-                    <label class="card-text mt-3">QUAIS?</label>
-                    <div class="form-floating">
-                        <textarea class="form-control pt-2" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    </div>
-                </div>
-
-                <div class="card col-9 mt-4"></div>
-                <div class="card col-9 mt-4"></div>
-            </div>
-        </div>
-    </form>
-
+        </form>
+    </div>
+</div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
