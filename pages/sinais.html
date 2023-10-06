@@ -67,7 +67,28 @@
         #satura{
             width: 32%;
         }
-
+        .perfusao{
+            width: 48%;
+            background-color: #333333;
+            box-shadow: 0px 0px 15px #1E90FF;
+            border-radius: 18px;
+            display: flex;
+        }
+        .normal_anormal{
+            width: 48%;
+            background-color: #333333;
+             box-shadow: 0px 0px 15px #1E90FF;
+             border-radius: 18px;
+        }
+        .linha5{
+            display: flex;
+            height: 8%;
+            justify-content: space-between;
+        }
+        .form-check{
+            display: flex;
+            align-items: center;
+        }
 </style>
 </head>
 <body>
@@ -145,7 +166,15 @@
             </div>
            
             <div class="linha5">
+                <div class="perfusao">
+                    <span class="d-flex align-items-center pl-3" >PERFUSÃO:</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                </div>
+                <div class="normal_anormal">
 
+                </div>
             </div>
         </div>
     </div>
