@@ -30,7 +30,7 @@
             font-family: 'Inter', sans-serif;
             color: white;
         }
-        
+
         .form-control:focus {
             border-color: red;
             box-shadow: 0 0 0 0.2rem rgba(241, 13, 13, 0.3);
@@ -69,36 +69,36 @@
 <body>
     <div class="container-fluid p-0">
 
-    <nav class="navbar navbar-dark" id="nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
-            <p class="nav-title mt-3 fw-bold">ANAMNESE DA EMERGÊNCIA MÉDICA</p>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CATEGORIAS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">PERFIL</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">SAIR</a>
-                        </li>
-                </div>
+        <nav class="navbar navbar-dark" id="nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
+                <p class="nav-title mt-3 fw-bold">ANAMNESE DA EMERGÊNCIA MÉDICA</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">CATEGORIAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">PERFIL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">SAIR</a>
+                            </li>
+                    </div>
         </nav>
 
         <form action="">
@@ -120,154 +120,212 @@
                                 <label class="card-text mb-0">FEZ PRÉ-NATAL?</label>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="anotherTimes"
+                                    <input class="form-check-input" type="radio" name="anotherTimesnatal"
                                         id="flexRadioDefault1">
                                     <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="anotherTimes"
+                                    <input class="form-check-input" type="radio" name="anotherTimesnatal"
                                         id="flexRadioDefault2" checked>
                                     <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
-
-                            
                             </div>
-                            
+                            <br>
                             <label class="card-text">NOME DO MÉDICO</label>
                             <input type="text" class="text-line">
                         </div>
 
-                        <div class="card col-9 mt-4" style="padding: 12px;">
-                            <label class="card-text">A QUANTO TEMPO ISTO ACONTECEU?</label>
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">EXISTE POSSIBILIDADE DE COMPLICAÇÕES?</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimescomplicacoes"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimescomplicacoes"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">É O PRIMEIRO FILHO?</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesfilho"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesfilho"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+
+
+                            </div>
+                            <br>
+                            <label class="card-text">QUANTOS?</label>
                             <input type="text" class="text-line">
                         </div>
 
-                        <div class="card col-9 mt-4" style="height: 172px;">
+                        <div class="card col-9 mt-4" style="padding: 12px;">
+                            <label class="card-text">QUE HORAS INICIARAM AS CONTRAÇÕES?</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+                        <div class="card col-9 mt-4" style="padding: 12px;">
+                            <label class="card-text">TEMPO DAS CONTRAÇÕES:</label>
+                            <br>
+                            <label class="card-text">DURAÇÃO:</label>
+                            <input type="text" class="text-line">
+                            <br>
+                            <label class="card-text">INTERVALO:</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="card-text mb-0 mt-3">POSSUI ALGUM PROBLEMA DE SAÚDE?</label>
+                                <label class="card-text mb-0">SENTE PRESSÃO NA REGIÃO DO QUADRIL OU VONTADE DE
+                                    EVACUAR?</label>
 
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimespressao"
                                         id="flexRadioDefault1">
                                     <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimespressao"
                                         id="flexRadioDefault2" checked>
                                     <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
                             </div>
-
-                            <label class="card-text mt-3">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
-                                    id="floatingTextarea"></textarea>
-                            </div>
                         </div>
 
-                        <div class="card col-9 mt-4" style="height: 210px;">
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="card-text mb-0 mt-3">FAZ USO DE MEDICAÇÃO</label>
+                                <label class="card-text mb-0">JÁ HOUVE RUPTURA DA BOLSA?</label>
 
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="medicacao"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesbolsa"
                                         id="flexRadioDefault1">
                                     <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="medicacao" id="flexRadioDefault2"
-                                        checked>
-                                    <label class="form-check-label card-text" for="flexRadioDefault2">
-                                        NÃO
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="container d-flex p-0">
-                                <label class="card-text mb-0 p-0 mt-3">HORÁRIO DA ÚLTIMA MEDICAÇÃO</label>
-                                <input type="text" class="text-line-personality ms-3">
-                            </div>
-
-                            <label class="card-text mt-3">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
-                                    id="floatingTextarea"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="card col-9 mt-4">
-                            <div class="container d-flex gap-4 p-0">
-
-                                <label class="card-text mb-0 mt-3">POSSUI ALGUM PROBLEMA DE SAÚDE?</label>
-
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="healthProblem"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label card-text" for="flexRadioDefault1">
-                                        SIM
-                                    </label>
-                                </div>
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesbolsa"
                                         id="flexRadioDefault2" checked>
                                     <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
                             </div>
-
-                            <label class="card-text mt-3">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
-                                    id="floatingTextarea"></textarea>
-                            </div>
                         </div>
 
-                        <div class="card col-9 mt-4">
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="card-text mb-0 mt-3">sdfsdfsdfsdf?</label>
+                                <label class="card-text mb-0">FOI FEITO INSPEÇÃO VISUAL?</label>
 
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesvisual"
                                         id="flexRadioDefault1">
                                     <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="healthProblem"
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesvisual"
                                         id="flexRadioDefault2" checked>
                                     <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
                             </div>
+                        </div>
 
-                            <label class="card-text mt-3">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" placeholder="Leave a comment here"
-                                    id="floatingTextarea"></textarea>
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">PARTO REALIZADO?</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesparto"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesparto"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
                             </div>
+                            <br>
+                            <label class="card-text">HORA DO NASCIMENTO:</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">SEXO DO BEBÊ</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimessexo"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimessexo"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                            <label class="card-text">NOME DO BEBÊ</label>
+                            <input type="text" class="text-line">
                         </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
-</div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
