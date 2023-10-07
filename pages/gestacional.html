@@ -4,7 +4,7 @@
 <head>
     <meta charset=UTF-8>
     <!-- Linkagem -->
-    <title>Anamnese na Emergência Médica</title>
+    <title>Anamnese Gestacional</title>
     <!-- Titulo -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
@@ -24,39 +24,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
     <style>
-        /*Início do código CSS*/
-
-        /*Resetando estilos da página*/
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /*Definindo fundo e tipo da fonte da página*/
         body {
             background-color: #c1c1c1;
             font-family: 'Inter', sans-serif;
+            color: white;
         }
 
-        /*Definindo cor da Navbar*/
+        .form-control:focus {
+            border-color: red;
+            box-shadow: 0 0 0 0.2rem rgba(241, 13, 13, 0.3);
+        }
+
         #nav {
             background-color: #333333;
         }
 
-        /*Definindo cor dos cards*/
         .card {
             background-color: #333333;
         }
 
-        /*Definindo cor da fonte da página*/
-        .text {
+        .card-text {
             color: white;
         }
 
-        /*Desconstruindo o textfield*/
         .text-line {
             background: transparent;
             color: white;
@@ -64,7 +61,6 @@
             border-bottom: 2px solid rgb(6, 108, 243);
         }
 
-        /*Desconstruindo o textarea*/
         .text-line-personality {
             background: transparent;
             color: white;
@@ -73,33 +69,10 @@
             border-bottom: 2px solid rgb(6, 108, 243);
             width: 10%;
         }
-
-        /*Definindo o estilo do input quando estiver sob foco*/
-        .form-control:focus {
-            border-color: rgb(6, 108, 243);
-            box-shadow: 0 0 0 0.1rem rgb(6, 108, 243);
-        }
-
-        /* Definindo estilos dos botões do rodapé */
-        .espaço_botao {
-            display: flex;
-            width: 100%;
-            height: 15vh;
-            justify-content: center;
-        }
-
-        .botao {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-        }
     </style>
 </head>
 
 <body>
-
-    <!-- container geral -->
     <div class="container-fluid p-0">
 
         <!-- navbar -->
@@ -194,183 +167,234 @@
             </div>
         </nav>
 
-        <!-- início do form -->
         <form action="">
 
-            <!-- container dos cards -->
             <div class="container-fluid">
 
                 <div class="form-group">
 
                     <div class="row d-flex flex-column align-items-center">
 
-                        <!-- card dos sintomas -->
-                        <div class="card col-9 mt-5" style="padding: 16px;">
-                            <label class="text">O QUE ACONTECEU (SINAIS E SINTOMAS)</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="sintomaTextarea"></textarea>
+                        <div class="card col-9 mt-4" style="padding: 12px;">
+                            <label class="card-text">PERÍODO DA GESTAÇÃO</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">FEZ PRÉ-NATAL?</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesnatal"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesnatal"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                            <label class="card-text">NOME DO MÉDICO</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">EXISTE POSSIBILIDADE DE COMPLICAÇÕES?</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimescomplicacoes"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        SIM
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimescomplicacoes"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        NÃO
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="text mb-0">ACONTECEU OUTRAS VEZES?</label>
+                                <label class="card-text mb-0">É O PRIMEIRO FILHO?</label>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="outrasVezes" id="aconteceuSim">
-                                    <label class="form-check-label text" for="aconteceuSim">
+                                    <input class="form-check-input" type="radio" name="anotherTimesfilho"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="outrasVezes" id="aconteceuNao">
-                                    <label class="form-check-label text" for="aconteceuNao">
+                                    <input class="form-check-input" type="radio" name="anotherTimesfilho"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
-                            </div>
-                        </div>
 
-                        <!-- card a quanto tempo aconteceu -->
-                        <div class="card col-9 mt-4" style="padding: 16px;">
-                            <label class="text">A QUANTO TEMPO ISTO ACONTECEU?</label>
+
+                            </div>
+                            <br>
+                            <label class="card-text">QUANTOS?</label>
                             <input type="text" class="text-line">
                         </div>
 
-                        <!-- card problema de saude -->
-                        <div class="card col-9 mt-4" style="padding: 16px;">
+                        <div class="card col-9 mt-4" style="padding: 12px;">
+                            <label class="card-text">QUE HORAS INICIARAM AS CONTRAÇÕES?</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+                        <div class="card col-9 mt-4" style="padding: 12px;">
+                            <label class="card-text">TEMPO DAS CONTRAÇÕES:</label>
+                            <br>
+                            <label class="card-text">DURAÇÃO:</label>
+                            <input type="text" class="text-line">
+                            <br>
+                            <label class="card-text">INTERVALO:</label>
+                            <input type="text" class="text-line">
+                        </div>
+
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="text mb-0">POSSUI ALGUM PROBLEMA DE SAÚDE?</label>
+                                <label class="card-text mb-0">SENTE PRESSÃO NA REGIÃO DO QUADRIL OU VONTADE DE
+                                    EVACUAR?</label>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="problemaSaude" id="problemaSim">
-                                    <label class="form-check-label text" for="problemaSim">
+                                    <input class="form-check-input" type="radio" name="anotherTimespressao"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="problemaSaude" id="problemaNao">
-                                    <label class="form-check-label text" for="problemaNao">
+                                    <input class="form-check-input" type="radio" name="anotherTimespressao"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
-                            </div>
-
-                            <label class="text" style="margin-top: 16px;">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="problemasTextarea"></textarea>
                             </div>
                         </div>
 
-                        <!-- card medicacao -->
-                        <div class="card col-9 mt-4" style="padding: 16px;">
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="text mb-0">FAZ USO DE MEDICAÇÃO</label>
+                                <label class="card-text mb-0">JÁ HOUVE RUPTURA DA BOLSA?</label>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="medicacao" id="medicacaoSim">
-                                    <label class="form-check-label text" for="medicacaoSim">
+                                    <input class="form-check-input" type="radio" name="anotherTimesbolsa"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="medicacao" id="medicacaoNao">
-                                    <label class="form-check-label text" for="medicacaoNao">
+                                    <input class="form-check-input" type="radio" name="anotherTimesbolsa"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
-                            </div>
-
-                            <label class="text" style="margin-top: 16px;">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="medicacao"></textarea>
-                            </div>
-
-                            <div class="container d-flex p-0">
-                                <label class="text mb-0 p-0" style="margin-top: 16px;">HORÁRIO DA ÚLTIMA
-                                    MEDICAÇÃO</label>
-                                <input type="text" class="text-line-personality ms-3">
                             </div>
                         </div>
 
-                        <!-- card alergias -->
-                        <div class="card col-9 mt-4" style="padding-bottom: 16px;">
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="text mb-0 mt-3">ALÉRGICO A ALGUMA COISA?</label>
+                                <label class="card-text mb-0">FOI FEITO INSPEÇÃO VISUAL?</label>
 
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alergia" id="alergiaSim">
-                                    <label class="form-check-label text" for="alergiaSim">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesvisual"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alergia" id="alergiaNao">
-                                    <label class="form-check-label text" for="alergiaNao">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesvisual"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
-                            </div>
-
-                            <label class="text mt-3">ESPECIFIQUE</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="alergiaTextarea"></textarea>
                             </div>
                         </div>
 
-                        <!-- card alimento -->
-                        <div class="card col-9 mt-4" style="padding-bottom: 12px;">
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
                             <div class="container d-flex gap-4 p-0">
 
-                                <label class="text mb-0 mt-3">INGERIU ALIMENTO LÍQUIDO NAS ÚLTIMAS 6 HORAS?</label>
+                                <label class="card-text mb-0">PARTO REALIZADO?</label>
 
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alimento" id="alimentoSim">
-                                    <label class="form-check-label text" for="alimentoSIm">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesparto"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
                                         SIM
                                     </label>
                                 </div>
-
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alimento" id="alimentoNao">
-                                    <label class="form-check-label text" for="alimentoNao">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimesparto"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
                                         NÃO
                                     </label>
                                 </div>
                             </div>
+                            <br>
+                            <label class="card-text">HORA DO NASCIMENTO:</label>
+                            <input type="text" class="text-line">
+                        </div>
 
-                            <div class="container d-flex p-0">
-                                <label class="text mb-0 p-0" style="margin-top: 16px;">QUE HORAS?</label>
-                                <input type="text" class="text-line-personality ms-3">
+                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
+                            <div class="container d-flex gap-4 p-0">
+
+                                <label class="card-text mb-0">SEXO DO BEBÊ</label>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimessexo"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label card-text" for="flexRadioDefault1">
+                                        MASC
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="anotherTimessexo"
+                                        id="flexRadioDefault2">
+                                    <label class="form-check-label card-text" for="flexRadioDefault2">
+                                        FEM
+                                    </label>
+                                </div>
                             </div>
+                            <br>
+                            <label class="card-text">NOME DO BEBÊ</label>
+                            <input type="text" class="text-line">
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-
-        <!-- botoes do rodapé -->
-        <div class="espaço_botao">
-            <div class="botao">
-                <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
-                <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
-            </div>
-        </div>
-
     </div>
-
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

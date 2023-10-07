@@ -1,100 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset=UTF-8>
-    <!-- Linkagem -->
-    <title>Equipe</title>
-    <!-- Titulo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Bombeiro</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- Fonte -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
-    <!-- media -->
     <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
-    <!--Imagem icon-->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #c1c1c1;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
+
+        .form-control:focus {
+            border-color: red;
+            box-shadow: 0 0 0 0.2rem rgba(241, 13, 13, 0.3);
+        }
+
+        #nav {
+            background-color: #333333;
+        }
+
+        #box {
+            background-color: #333333;
+            width: 90%;
+            height: 90%;
+            border-radius: 10px;
+        }
+
+        .card-text {
+            color: white;
+        }
+
+        #botao {
+            background-color: #333333;
+        }
+
+        #botao:hover {
+            background-color: rgb(21, 138, 50);
+        }
+
+        #genero {
+            width: 100%;
+            height: 6%;
+            border-radius: 5px;
+        }
+
+        #dataNascimento {
+            width: 100%;
+            height: 6%;
+            border-radius: 5px;
+        }
+    </style>
 </head>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #C1C1C1;
-        font-family: 'Inter', sans-serif;
-    }
-
-    #nav {
-        background-color: #333333;
-    }
-
-    .container-fluid {
-        display: flex;
-        flex-wrap: inherit;
-        align-items: center;
-        justify-content: space-between;
-        margin-left: 12px;
-    }
-
-    .espaco {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .blocos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        height: 50%;
-        justify-content: space-between;
-        background-color: rgba(0, 255, 255, 0.685);
-    }
-
-    .nomes {
-        display: flex;
-        width: 60%;
-        height: 95%;
-        border-radius: 5%;
-        align-items: center;
-        justify-content: center;
-        background-color: #333333;
-    }
-
-    .dados {
-        display: flex;
-        width: 35%;
-        height: 95%;
-        border-radius: 5%;
-        background-color: #333333;
-    }
-
-    .interno {
-        display: flex;
-        justify-content: space-between;
-        width: 98%;
-        height: 90%;
-        background-color: aqua;
-    }
-</style>
 
 <body>
-    <nav class="navbar navbar-dark fixed-top" id="nav">
+    <!-- navbar -->
+    <nav class="navbar navbar-dark" id="nav">
         <div class="container-fluid">
-            <img src="../images/avatar_bombeiro.png" width="50px">
-            <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
+            <p class="nav-title mt-3 fw-bold text">CADASTRO DO BOMBEIRO</p>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">
@@ -170,10 +154,10 @@
                                 <li><a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="list-style-type: none">
                             <a class="nav-link" href="#">PERFIL</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="list-style-type: none">
                             <a class="nav-link" href="#">SAIR</a>
                         </li>
                     </ul>
@@ -181,40 +165,65 @@
             </div>
         </div>
     </nav>
-    <div class="espaco">
-        <div class="blocos">
-            <div class="nomes">
-                <div class="interno">
-                    <div class="entrada">
-                        <div class="consciente_texto">
-                            <h4>Consciente</h4>
-                            <label class="checkbox-container">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="entrada">
 
-                    </div>
-                    <div class="entrada">
+    <form action="">
+        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+            <div class="container-fluid" id="box">
+                <br>
+                <label class="card-text mb-2">Nome Completo</label>
+                <input type="text" class="form-control" id="nome" aria-describedby="name">
+                <br>
+                <label class="card-text mb-2">Username</label>
+                <input type="text" class="form-control" id="username" aria-describedby="username">
+                <br>
+                <label class="card-text mb-2">Email</label>
+                <input type="text" class="form-control" id="email" aria-describedby="email">
+                <br>
+                <label class="card-text mb-2">Matrícula</label>
+                <input type="text" class="form-control" id="matricula" aria-describedby="matricula">
+                <br>
+                <label class="card-text mb-2">Gênero</label>
+                <br>
+                <select name="genero" id="genero">
+                    <option value="" disabled selected hidden></option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+                <br>
+                <br>
+                <label class="card-text mb-2">Data de Nascimento</label>
+                <br>
+                <input type="text" id="dataNascimento" oninput="mascaraData(this)" maxlength="10">
 
-                    </div>
-                    <div class="entrada">
-
-                    </div>
-                    <div class="entrada">
-
-                    </div>
-                </div>
-            </div>
-            <div class="dados">
 
             </div>
         </div>
+
+    </form>
+
+    <div class="d-flex justify-content-center">
+        <div>
+            <button class="btn btn-secondary" id="botao">Cadastrar</button>
+        </div>
     </div>
+    <script>
+        function mascaraData(input) {
+            var valor = input.value.replace(/\D/g, '');
+            if (valor.length <= 2) {
+                input.value = valor;
+            } else if (valor.length <= 4) {
+                input.value = valor.slice(0, 2) + '/' + valor.slice(2);
+            } else if (valor.length <= 8) {
+                input.value = valor.slice(0, 2) + '/' + valor.slice(2, 4) + '/' + valor.slice(4);
+            } else {
+                input.value = valor.slice(0, 2) + '/' + valor.slice(2, 4) + '/' + valor.slice(4, 8);
+            }
+        }
+    </script>
 
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
