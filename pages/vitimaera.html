@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset=UTF-8>
     <!-- Linkagem -->
@@ -53,6 +52,19 @@
     #row {
         justify-content: space-around;
     }
+
+    .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            justify-content: center;
+        }
+    .botao {
+         display: flex;
+        justify-content: space-between;
+         align-items: center;
+        width: 90%;
+        }
 </style>
 
 <body>
@@ -100,35 +112,70 @@
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">CONDUTOR CARRO</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">CONDUTOR CARRO</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">CONDUTOR MOTO</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">CONDUTOR MOTO</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">CLÍNICO</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">CLINICO</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">GESTANTE</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">GESTANTE</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">TRAUMA</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">TRAUMA</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">PASS. BAN FRENTE</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">PASS.BAN.FRENTE</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">PAS. BCO. TRÁS</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">PAS.BCO.TRÁS</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">PAS. MOTO</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">PAS.MOTO</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
-                <div class="col-6">
-                    <div class="p-4">PEDESTRE</div>
+                <div class="col-6 d-flex p-4 justify-content-between">
+                    <span class="d-flex">PEDESTRE</span>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="espaço_botao">
+            <div class="botao">
+                <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
