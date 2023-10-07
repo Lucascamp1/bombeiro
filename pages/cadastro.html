@@ -40,10 +40,10 @@
             background-color: #333333;
         }
 
-        .box {
+        #box {
             background-color: #333333;
-            width: 65%;
-            height: 60%;
+            width: 90%;
+            height: 90%;
             border-radius: 10px;
         }
 
@@ -51,178 +51,175 @@
             color: white;
         }
 
-        .selects {
-            background-color: white;
-            color: black;
-            border-radius: 10px;
-            width: 90%;
-            height: 60%;
-        }
-
-        @media (min-width: 768px) {
-            .custom-margin-top {
-                margin-top: -50px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .custom-margin-top {
-                margin-top: -20px;
-            }
-        }
-
-        #botao{
+        #botao {
             background-color: #333333;
         }
 
-        #botao:hover{
+        #botao:hover {
             background-color: rgb(21, 138, 50);
+        }
+
+        #genero {
+            width: 100%;
+            height: 6%;
+            border-radius: 5px;
+        }
+
+        #dataNascimento {
+            width: 100%;
+            height: 6%;
+            border-radius: 5px;
         }
     </style>
 </head>
 
 <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-dark" id="nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
-            <p class="nav-title mt-3 fw-bold text">CADASTRO DO BOMBEIRO</p>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                CATEGORIAS
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS
-                                        ENCONTRADOS SUSPEITOS</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">SINAIS E SINTOMAS</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
-                                        CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item" style="list-style-type: none">
-                            <a class="nav-link" href="#">PERFIL</a>
-                        </li>
-                        <li class="nav-item" style="list-style-type: none">
-                            <a class="nav-link" href="#">SAIR</a>
-                        </li>
-                    </ul>
+        <!-- navbar -->
+        <nav class="navbar navbar-dark" id="nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
+                <p class="nav-title mt-3 fw-bold text">ANAMNESE DA EMERGÊNCIA MÉDICA</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    CATEGORIAS
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS
+                                            ENCONTRADOS SUSPEITOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">SINAIS E SINTOMAS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
+                                            CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none">
+                                <a class="nav-link" href="#">PERFIL</a>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none">
+                                <a class="nav-link" href="#">SAIR</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
     <form action="">
         <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
-            <div class="box container-fluid">
+            <div class="container-fluid" id="box">
                 <br>
                 <label class="card-text mb-2">Nome Completo</label>
-                <input type="text" class="form-control" id="matricula" aria-describedby="name">
+                <input type="text" class="form-control" id="nome" aria-describedby="name">
                 <br>
                 <label class="card-text mb-2">Username</label>
-                <input type="text" class="form-control" id="matricula" aria-describedby="username">
+                <input type="text" class="form-control" id="username" aria-describedby="username">
                 <br>
                 <label class="card-text mb-2">Email</label>
-                <input type="text" class="form-control" id="matricula" aria-describedby="email">
+                <input type="text" class="form-control" id="email" aria-describedby="email">
                 <br>
+                <label class="card-text mb-2">Matrícula</label>
+                <input type="text" class="form-control" id="matricula" aria-describedby="matricula">
+                <br>
+                <label class="card-text mb-2">Gênero</label>
+                <br>
+                <select name="genero" id="genero">
+                    <option value="" disabled selected hidden></option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                </select>
+                <br>
+                <br>
+                <label class="card-text mb-2">Data de Nascimento</label>
+                <br>
+                <input type="text" id="dataNascimento" oninput="mascaraData(this)" maxlength="10">
 
-                <div class="container p-0 d-inline-flex">
-                    <div class="col-4 p-0">
-                        <label class="card-text mb-2">Gênero</label>
-                        <br>
-                        <select name="genero" id="genero" class="selects">
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                        </select>
-                    </div>
 
-                    <div class="col-4 p-0">
-                        <label class="card-text mb-2">Data de Nascimento</label>
-                        <br>
-                        <input type="date" id="dataNascimento" class="selects">
-                    </div>
-
-                    <div class="col-4 p-0">
-                        <label class="card-text mb-2">Matrícula</label>
-                        <br>
-                        <input type="number" id="matricula" class="selects">
-                    </div>
-                </div>
             </div>
         </div>
+
     </form>
 
-    <div class="d-flex justify-content-center custom-margin-top">
+    <div class="d-flex justify-content-center">
         <div>
             <button class="btn btn-secondary" id="botao">Cadastrar</button>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
+    <script>
+        function mascaraData(input) {
+          var valor = input.value.replace(/\D/g, '');
+          if (valor.length <= 2) {
+            input.value = valor;
+          } else if (valor.length <= 4) {
+            input.value = valor.slice(0, 2) + '/' + valor.slice(2);
+          } else if (valor.length <= 8) {
+            input.value = valor.slice(0, 2) + '/' + valor.slice(2, 4) + '/' + valor.slice(4);
+          } else {
+            input.value = valor.slice(0, 2) + '/' + valor.slice(2, 4) + '/' + valor.slice(4, 8);
+          }
+        }
+      </script>
 </body>
 
 </html>
