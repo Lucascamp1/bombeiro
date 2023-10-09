@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Bombeiro</title>
+    <title>Cadastro de Bombeiro</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
@@ -31,9 +31,10 @@
             color: white;
         }
 
-        .form-control:focus {
-            border-color: red;
-            box-shadow: 0 0 0 0.2rem rgba(241, 13, 13, 0.3);
+        .form-control:focus,
+        .form-select:focus {
+            border-color: rgb(6, 108, 243);
+            box-shadow: 0 0 0 0.1rem rgb(6, 108, 243);
         }
 
         #nav {
@@ -68,6 +69,18 @@
             width: 100%;
             height: 6%;
             border-radius: 5px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px){
+            .geral{
+                height: 70vh !important;
+            }
+        }
+
+        @media screen and (max-width: 767px){
+            .geral{
+                height: 100vh !important;
+            }
         }
     </style>
 </head>
@@ -165,7 +178,7 @@
     </nav>
 
     <form action="">
-        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="container d-flex justify-content-center align-items-center geral" style="height: 100vh;">
             <div class="container-fluid" id="box" style="padding-top: 16px; padding-bottom: 16px;">
                 <label class="card-text mb-2">Nome Completo</label>
                 <input type="text" class="form-control" id="nome" aria-describedby="name">
@@ -181,16 +194,15 @@
                 <br>
                 <label class="card-text mb-2">Gênero</label>
                 <br>
-                <select name="genero" id="genero" style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
+                <select class="form-select" name="genero" id="genero" style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
                     <option value="" disabled selected hidden></option>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
                 </select>
                 <br>
-                <br>
                 <label class="card-text mb-2">Data de Nascimento</label>
                 <br>
-                <input type="text" id="dataNascimento" oninput="mascaraData(this)" maxlength="10" style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
+                <input type="text" id="dataNascimento" class="form-control" oninput="mascaraData(this)" maxlength="10" style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
 
             </div>
         </div>
@@ -198,7 +210,7 @@
 
     <div class="d-flex justify-content-center">
         <div>
-            <button class="btn btn-secondary" id="botao">Cadastrar</button>
+            <button class="btn btn-primary btn-lg">Cadastrar</button>
         </div>
     </div>
     <script>
