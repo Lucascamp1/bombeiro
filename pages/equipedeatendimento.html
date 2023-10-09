@@ -42,8 +42,8 @@
 
         #box {
             background-color: #333333;
-            width: 50%;
-            height: 52%;
+            /* width: 50%; */
+            /* height: 52%; */
             border-radius: 10px;
         }
 
@@ -53,8 +53,8 @@
 
         .box2 {
             background-color: #333333;
-            width: 40%;
-            height: 70%;
+            /* width: 40%; */
+            /* height: 70%; */
             border-radius: 10px;
         }
 
@@ -157,21 +157,21 @@
     </nav>
 
     <form action="">
-        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh; gap: 5%;">
 
-            <div class="box2 container-fluid">
+            <div class="box2 container-fluid" style="padding: 20px;">
+
+                <input type="number" class="form-control" id="nome" aria-describedby="name" placeholder="NºUSB">
                 <br>
-                <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="NºUSB">
+                <input type="number" class="form-control" id="nome" aria-describedby="name" placeholder="NºOCORRÊNCIA">
                 <br>
-                <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="NºOCORRÊNCIA">
-                <br>
-                <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="NºDESPACHANTE">
+                <input type="number" class="form-control" id="nome" aria-describedby="name" placeholder="NºDESPACHANTE">
                 <br>
                 <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="H.CH">
                 <br>
-                <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="KM FINAL">
+                <input type="number" class="form-control" id="nome" aria-describedby="name" placeholder="KM FINAL">
                 <br>
-                <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="COD. SIA/SUS">
+                <input type="number" class="form-control" id="nome" aria-describedby="name" placeholder="COD. SIA/SUS">
                 <br>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="anotherTimescod1" id="flexRadioDefault1">
@@ -187,20 +187,19 @@
                     </label>
                 </div>
             </div>
-            <div class="container-fluid" id="box">
-                <br>
+            <div class="container-fluid" id="box" style="padding: 20px;">
                 <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="M">
                 <br>
-                <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="S1">
+                <input type="text" class="form-control" id="username" aria-describedby="name" placeholder="S1">
                 <br>
 
-                <input type="text" class="form-control" id="email" aria-describedby="email" placeholder="S2">
+                <input type="text" class="form-control" id="email" aria-describedby="name" placeholder="S2">
                 <br>
 
-                <input type="number" class="form-control" id="matricula" aria-describedby="matricula" placeholder="S3">
+                <input type="text" class="form-control" id="matricula" aria-describedby="name" placeholder="S3">
                 <br>
 
-                <input type="number" class="form-control" id="matricula" aria-describedby="matricula"
+                <input type="text" class="form-control" id="matricula" aria-describedby="name"
                     placeholder="Demandante">
             </div>
 
