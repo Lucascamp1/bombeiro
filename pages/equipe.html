@@ -83,10 +83,22 @@
 
     .interno {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         width: 98%;
         height: 90%;
-        background-color: aqua;
+        /* background-color: aqua; */
+    }
+    .entrada{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95%;
+        width: 95%;
+    }
+    .form-control{
+    height: 65%;
     }
 </style>
 
@@ -185,23 +197,20 @@
             <div class="nomes">
                 <div class="interno">
                     <div class="entrada">
-                        <div class="consciente_texto">
-                            <h4>Consciente</h4>
-                            <label class="checkbox-container">
-                            </label>
-                        </div>
+                        <input type="text" class="form-control" id="nome" aria-describedby="name" placeholder="M">
                     </div>
                     <div class="entrada">
-
+                        <input type="text" class="form-control" id="username" aria-describedby="username" placeholder="S1">
                     </div>
                     <div class="entrada">
-
+                        <input type="text" class="form-control" id="email" aria-describedby="email" placeholder="S2">
                     </div>
                     <div class="entrada">
-
+                        <input type="number" class="form-control" id="matricula" aria-describedby="matricula" placeholder="S3">
                     </div>
                     <div class="entrada">
-
+                        <input type="number" class="form-control" id="matricula" aria-describedby="matricula"
+                    placeholder="Demandante">
                     </div>
                 </div>
             </div>
