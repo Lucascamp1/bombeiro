@@ -26,7 +26,7 @@
         crossorigin="anonymous"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const checkboxes = document.querySelectorAll('.checkbox-container input[type="checkbox"]');
+            const checkboxes = document.querySelectorAll('.block input[type="checkbox"]');
 
             checkboxes.forEach(function (checkbox) {
                 checkbox.addEventListener('change', function () {
@@ -44,11 +44,21 @@
 
 <style>
     body {
+
         margin: 0;
         padding: 0;
-        background-color: #C1C1C1;
-        color: white;
+        display: flex;
+        background-color: #c1c1c1;
         font-family: 'Inter', sans-serif;
+        color: white;
+    }
+
+    .base_situation {
+        width: 100vw;
+        height: 100vh;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
     }
 
     /* Detalhes nav */
@@ -56,104 +66,11 @@
         background-color: #333333;
     }
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top: 10%;
-    }
-
-    /* Detalhes corpo */
-
-    .base_situation {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        width: 100vw;
-        justify-content: space-between;
-    }
-
-    .dupla {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 75vh;
-        margin-top: 87px;
-    }
-
-    .situacao_texto1 {
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        font-family: 'Inter', sans-serif;
-        font-size: 18px;
-        width: 100%;
-        height: 20%;
-    }
-
-    .situacao_quadrado {
-        display: flex;
-        height: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .quadrado {
-        display: flex;
-        background-color: #7F7F7F;
-        border-radius: 15px;
-        margin-top: 4%;
-        width: 543px;
-        height: 372px;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .consciente {
-        background-color: #1a1a1a;
-        width: 80%;
-        height: 28%;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-family: 'Inter', sans-serif;
-        /* justify-content: space-around; */
-    }
-
-    .inconsciente {
-        background-color: #1a1a1a;
-        width: 80%;
-        height: 28%;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-family: 'Inter', sans-serif;
-    }
-
-    .consciente_texto {
-        display: flex;
-        width: 80%;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-between;
-
-
-    }
-
     /* Detalhes botão voltar */
     .espaço_botao {
         display: flex;
         width: 100%;
-        height: 19%;
+        height: 9%;
         justify-content: right;
         justify-content: center;
         /* background-color: rgba(0, 255, 255, 0.164); */
@@ -166,69 +83,51 @@
         width: 90%;
     }
 
-
-
-    .checkbox-container {
+    .casa {
         display: flex;
-        position: relative;
-        margin-left: 2;
-        padding-left: 30px;
-        margin-left: 150px;
-        margin-top: -8px;
-        /* /Espaço para o checkbox personalizado */
-        margin-bottom: 10px;
-        cursor: pointer;
-
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 90vh;
+        width: 100vw;
+        margin-bottom: 2%;
     }
 
-    .checkbox-container input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-
+    .column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 78%;
+        height: 55%;
+        border-radius: 20px;
+        background-color: #7F7F7F;
     }
 
-    .checkmark {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 20px;
-        width: 20px;
-        background-color: transparent;
-        border: 2px solid #ffffff;
-        border-radius: 3px;
+    .block {
+        display: flex;
+        height: 90%;
+        width: 79%;
+        /* background: aquamarine; */
+        justify-content: space-evenly;
+        flex-direction: column;
     }
 
-    .checkbox-container:hover .checkmark {
-        background-color: #ddd;
+    .descrition {
+        display: flex;
+        width: 100%;
+        height: 25%;
+        justify-content: space-between;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: #333333;
     }
 
-    .checkbox-container input:checked+.checkmark {
-        background-color: #ffffff;
-        border: none;
+    .esp {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
     }
-
-    .checkmark:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-
-    .checkbox-container input:checked+.checkmark:after {
-        display: block;
-    }
-
-    .checkbox-container .checkmark:after {
-        left: 8px;
-        top: 3px;
-        width: 5px;
-        height: 10px;
-        border: solid rgb(0, 0, 0);
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-    }
-
-
 </style>
 
 <body>
@@ -263,7 +162,8 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS ENCONTRADOS SUSPEITOS</a></li>
+                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS
+                                            ENCONTRADOS SUSPEITOS</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -287,7 +187,8 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
+                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
+                                            CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
@@ -321,25 +222,22 @@
                 </div>
             </div>
         </nav>
-        <div class="dupla">
-            <div class="situacao_quadrado">
-                <div class="quadrado">
-                    <div class="consciente">
-                        <div class="consciente_texto">
-                            <h4 style="margin-bottom: 0;">Consciente</h4>
-                            <label class="checkbox-container">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
+        <div class="casa mt-9">
+            <div class="column">
+                <div class="block px-10">
+                    <div class="descrition d-flex" style="">
+                        <div class="esp">INCONSCIENTE
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
-                    <div class="inconsciente">
-                        <div class="consciente_texto">
-                            <h4 style="margin-bottom: 0;">Inconsciente</h4>
-                            <label class="checkbox-container">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
+
+                    <div class="descrition d-flex" style="">
+                        <div class="esp">CONSCIENTE
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
