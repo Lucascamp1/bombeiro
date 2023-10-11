@@ -55,7 +55,7 @@
         width: 584px;
         height: 454px;
         background-color: #333333;
-       
+
         border-radius: 20px;
         display: flex;
         align-items: center;
@@ -75,25 +75,25 @@
         height: 13%;
     }
 
-    .btn{
-        width:115px;
+    .btn {
+        width: 115px;
     }
 </style>
 
 <body>
     <div class="fundo">
         <div class="conteiner">
+            <form action="processamento_login.php" method="post"></form>
             <div class="form-group">
-                <form action="processamento_login.php" method="post">
-                    <div class="login mt-3 fw-bold">LOGIN
-                    </div>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
-                    <div class="botao">
-                        <button type="submit" class="btn btn-outline-primary btn-lg" name="submit-button">Login</button>
-                    </div>
-                </form>
+                <div class="login mt-3 fw-bold">LOGIN
+                </div>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+                <div class="botao">
+                    <button type="submit" class="btn btn-outline-primary btn-lg" name="submit-button">Login</button>
+                </div>
             </div>
+            </form>
         </div>
     </div>
 </body>
