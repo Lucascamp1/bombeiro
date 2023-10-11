@@ -70,14 +70,21 @@
     .btn{
         width:115px;
     }
+    .form-login {
+        height: 584px;
+        width: 454px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
 <body>
     <div class="fundo">
         <div class="conteiner">
             <div class="form-group">
-                <form action="processamento_login.php" method="post">
-                    <div class="login mt-3 fw-bold">LOGIN
-                    </div>
+                <form class="form-login" action="processamento_login.php" method="post">
+                    <div class="login fw-bold">LOGIN</div>
                     <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
                     <div class="botao">
