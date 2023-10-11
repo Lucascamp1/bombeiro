@@ -2,10 +2,10 @@
         include('dbconnect.php'); /*arquivo de conexão com o bando de dados*/
 
         if(isset($_POST['submit-button'])) {
-            $email = $_POST['email']; /*name do email-input*/
-            $senha = $_POST['senha']; /*name do password-input*/
+            $username = $_POST['username_bombeiro']; /*name do email-input*/
+            $senha = $_POST['password_bombeiro']; /*name do password-input*/
             
-            $sql = "SELECT email, senha FROM usuario WHERE email = '$email' && senha = '$senha'"; /*informações de tabela e campos de acordo como seu BD*/
+            $sql = "SELECT username_bombeiro, password_bombeiro FROM usuario WHERE username_bombeiro = '$username' && senha = '$senha'"; /*informações de tabela e campos de acordo como seu BD*/
             $result = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($result) > 0) { 
