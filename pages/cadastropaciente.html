@@ -18,6 +18,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.1/jquery.inputmask.min.js"></script>
+
     <style>
         * {
             margin: 0;
@@ -56,6 +59,10 @@
 
         #nome {
             width: 100%;
+        }
+
+        #nome1 {
+            width: 30%;
         }
 
         .accordion-item {
@@ -198,18 +205,23 @@
                         <br>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="anotherTimescod1" id="flexRadioDefault1">
-                            <label class="form-check-label card-text" for="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="documentType" id="cpfRadio">
+                            <label class="form-check-label card-text" for="cpfRadio">
                                 CPF
                             </label>
                         </div>
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="anotherTimescod" id="flexRadioDefault1">
-                            <label class="form-check-label card-text" for="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="documentType" id="rgRadio">
+                            <label class="form-check-label card-text" for="rgRadio">
                                 RG
                             </label>
                         </div>
+                        <br>
+                        <div id="inputContainer"></div>
+                        <br>
+                        <label class="card-text">Telefone</label>
+                        <input type="text" class="form-control" id="nome1" aria-describedby="name">
                     </div>
                 </div>
             </div>
@@ -222,14 +234,44 @@
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
+                        <div class="container" id="box1">
+                            <label class="card-text">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="name">
+                            <br>
+                            <label class="card-text">Idade</label>
+                            <br>
+                            <input type="number" id="age" name="age" min="0" max="120">
+                            <br>
+                            <br>
+                            <label class="card-text">Sexo</label>
+                            <br>
+                            <select name="genero" id="genero"
+                                style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
+                                <option value="" disabled selected hidden></option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                            <br>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="documentType" id="cpfRadio1">
+                                <label class="form-check-label card-text" for="cpfRadio">
+                                    CPF
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="documentType" id="rgRadio1">
+                                <label class="form-check-label card-text" for="rgRadio">
+                                    RG
+                                </label>
+                            </div>
+                            <br>
+                            <div id="inputContainer1"></div>
+                            <br>
+                            <label class="card-text">Telefone</label>
+                            <input type="text" class="form-control" id="nome1" aria-describedby="name">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,14 +284,14 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It's also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
+                        <div class="container" id="box1">
+                            <label class="card-text">Nome do Hospital</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="name">
+                            <br>
+                            <label class="card-text">Local da Ocorrência</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="name">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,6 +300,38 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
+
+        <script>
+            document.getElementById('cpfRadio').addEventListener('click', function () {
+                if (this.checked) {
+                    document.getElementById('inputContainer').innerHTML = '<input type="text" id="cpfInput" placeholder="000.000.000-00">';
+                    $('#cpfInput').inputmask('000.000.000-00');
+                }
+            });
+
+            document.getElementById('rgRadio').addEventListener('click', function () {
+                if (this.checked) {
+                    document.getElementById('inputContainer').innerHTML = '<input type="text" id="rgInput" placeholder="00.000.000-0">';
+                    $('#rgInput').inputmask('00.000.000-0');
+                }
+            });
+        </script>
+
+        <script>
+            document.getElementById('cpfRadio1').addEventListener('click', function () {
+                if (this.checked) {
+                    document.getElementById('inputContainer1').innerHTML = '<input type="text" id="cpfInput" placeholder="000.000.000-00">';
+                    $('#cpfInput1').inputmask('000.000.000-00');
+                }
+            });
+
+            document.getElementById('rgRadio1').addEventListener('click', function () {
+                if (this.checked) {
+                    document.getElementById('inputContainer1').innerHTML = '<input type="text" id="rgInput" placeholder="00.000.000-0">';
+                    $('#rgInput1').inputmask('00.000.000-0');
+                }
+            });
+        </script>
 </body>
 
 </html>
