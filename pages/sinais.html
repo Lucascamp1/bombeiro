@@ -60,7 +60,7 @@
 
         .sinais {
             background-color: #333333;
-            width: 75%;
+            width: 85%;
             height: 75%;
             padding: 22px;
             display: flex;
@@ -86,11 +86,11 @@
         }
 
         #satura {
-            width: 32%;
+            width: 31%;
         }
 
         .perfusao {
-            width: 42%;
+            width: 36%;
             background-color: #333333;
             box-shadow: 0px 0px 15px #1E90FF;
             border-radius: 18px;
@@ -100,7 +100,7 @@
         }
 
         .normal_anormal {
-            width: 33%;
+            width: 31%;
             background-color: #333333;
             box-shadow: 0px 0px 15px #1E90FF;
             border-radius: 18px;
@@ -110,8 +110,8 @@
 
         .linha5 {
             display: flex;
-            height: 8%;
-            justify-content: space-evenly;
+            height: 7%;
+            justify-content: space-around;
         }
 
         .form-check {
@@ -133,39 +133,62 @@
             align-items: center;
             width: 90%;
         }
-        .checks{
+
+        .checks {
             display: flex;
         }
-        @media screen and (min-width: 768px) and (max-width: 1024px){
-            #pressao { 
-            width: 27% !important;
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            #pressao {
+                width: 30% !important;
+
+            }
+
+            #pulso {
+                width: 26%;
+            }
 
         }
-        #pulso {
-            width: 21%;
-        }
 
-        }
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 768px) {
 
-            .perfusao{
-                width: 60%;
+            .perfusao {
+                width: 51%;
                 gap: 7px;
             }
 
-            .linha5 {
-            display: block;
-            
-            
+            .normal_anormal {
+                padding-left: 22px !important;
+                width: 40% !important;
+                justify-content: space-around !important;
+                /* margin-top: 40px; */
+            }
         }
-        .normal_anormal{
-            padding-left: 22px !important;
-            width: 60% !important;
-            justify-content: space-around !important;
-            margin-top: 40px;
+        .form{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100%;
         }
-        }
+        
+        @media screen and (max-width: 767px){
+            #temperatura{
+                width: 20%;
+            }
 
+            .linha5{
+                display: block;
+            }
+
+            .perfusao{
+                width: 100%;
+            }
+
+            .normal_anormal{
+                width: 100% !important;
+            }
+        }
     </style>
 </head>
 
@@ -174,8 +197,8 @@
 
         <nav class="navbar navbar-dark" id="nav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="../images/avatar_bombeiro.png" width="60px"></a>
-                <p class="navbar-title mt-3 fw-bold">SINAIS VITAIS</p>
+                <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
+                <p class="navbar-title mt-3 fw-bold text">SINAIS VITAIS</p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
@@ -191,91 +214,154 @@
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    CATEGORIAS
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS
+                                            ENCONTRADOS SUSPEITOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">SINAIS E SINTOMAS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
+                                            CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a></li>
+                                </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">CATEGORIAS</a>
-                            </li>
-                            <li class="nav-item">
+                            <li class="nav-item" style="list-style-type: none">
                                 <a class="nav-link" href="#">PERFIL</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" style="list-style-type: none">
                                 <a class="nav-link" href="#">SAIR</a>
                             </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </nav>
         <div class="fundo">
+
             <div class="sinais">
-                <div class="linha1">
-                    <div class="grupo1">
-                        <span>PRESSÃO ARTERIAL:</span>
-                        <input type="text" class="text-line" id="pressao">
-                        <span>X</span>
-                        <input type="text" class="text-line" id="pressao">
-                        <span>mmHg</span>
-                    </div>
-                </div>
-
-                <div class="linha2">
-                    <div class="grupo2">
-                    <span>PULSO:</span>
-                    <input type="text" class="text-line" id="pulso">
-                    <span>B.C.P.M/RESPIRAÇÃO:</span>
-                    <input type="text" class="text-line" id="pulso">
-                    <span>M.R.M</span>
-                </div>
-                </div>
-
-                <div class="linha3">
-                    <div class="grupo3">
-                    <span>SATURAÇÃO:</span>
-                    <input type="text" class="text-line" id="satura">
-                    <span class="htg">%  /   HTG:</span>
-                    <input type="text" class="text-line" id="satura">
-                </div>
-                </div>
-
-                <div class="linha4">
-                    <div class="grupo4">
-                    <span>TEMPERATURA:</span>
-                    <input type="text" class="text-line" id="temperatura">
-                    <span>C°</span>
-                </div>
-                </div>
-
-                <div class="linha5">
-                    <div class="perfusao">
-                        <span class="d-flex align-items-center" >PERFUSÃO:</span>
-                        <div class="checks">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <span><2SEG</span>
-                        </div>  
-                        <div class="checks"> 
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                            <span>>2SEG</span>
-                        </div> 
-                </div>
-                <div class="normal_anormal d-flex pl-2">
-                    <div class="d-flex" style="gap: 10px;">
-                        <span>NORMAL</span>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <form class="form" action="">
+                    <div class="linha1">
+                        <div class="grupo1">
+                            <span>PRESSÃO ARTERIAL:</span>
+                            <input type="text" class="text-line" id="pressao">
+                            <span>X</span>
+                            <input type="text" class="text-line" id="pressao">
+                            <span>mmHg</span>
                         </div>
                     </div>
-                    <div class="d-flex" style="gap: 10px;">
-                        <span>ANORMAL</span>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+
+                    <div class="linha2">
+                        <div class="grupo2">
+                            <span>PULSO:</span>
+                            <input type="text" class="text-line" id="pulso">
+                            <span>B.C.P.M/RESPIRAÇÃO:</span>
+                            <input type="text" class="text-line" id="pulso">
+                            <span>M.R.M</span>
                         </div>
                     </div>
-                </div>
-                </div>
+
+                    <div class="linha3">
+                        <div class="grupo3">
+                            <span>SATURAÇÃO:</span>
+                            <input type="text" class="text-line" id="satura">
+                            <span class="htg">% / HTG:</span>
+                            <input type="text" class="text-line" id="satura">
+                        </div>
+                    </div>
+
+                    <div class="linha4">
+                        <div class="grupo4">
+                            <span>TEMPERATURA:</span>
+                            <input type="text" class="text-line" id="temperatura">
+                            <span>C°</span>
+                        </div>
+                    </div>
+
+                    <div class="linha5">
+                        <!-- <div> -->
+                        <div class="perfusao">
+                            <span class="d-flex align-items-center">PERFUSÃO:</span>
+                            <div class="checks">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>
+                                
+                                <span><2SEG</span>
+                            </div>
+                            <div class="checks">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>
+                                <span>>2SEG</span>
+                            </div>
+                        </div>
+                        <div class="normal_anormal d-flex pl-2">
+                            <div class="d-flex" style="gap: 10px;">
+                                <span>NORMAL</span>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>
+                            </div>
+                            <div class="d-flex" style="gap: 10px;">
+                                <span>ANORMAL</span>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </form>
             </div>
+
         </div>
         <!-- Botão Voltar e Proxima -->
         <div class="espaço_botao">
