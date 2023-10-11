@@ -5,7 +5,7 @@
             $username = $_POST['username']; /*name do email-input*/
             $senha = $_POST['password']; /*name do password-input*/
             
-            $sql = "SELECT username, password FROM usuario WHERE username = '$username' && password = '$senha'"; /*informações de tabela e campos de acordo como seu BD*/
+            $sql = "SELECT username, password FROM usuario WHERE username_bombeiro = '$username' && password_bombeiro = '$senha'"; /*informações de tabela e campos de acordo como seu BD*/
             $result = mysqli_query($conn, $sql);
             
             if (mysqli_num_rows($result) > 0) { 
