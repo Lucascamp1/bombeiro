@@ -56,7 +56,7 @@
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            height: 192vh;
+            /* height: 192vh; */
             width: 100%;
             margin-bottom: 2%;
         }
@@ -64,18 +64,26 @@
         .column {
             display: flex;
             flex-direction: column;
-            width: 43%;
-            height: 196vh;
-            margin-top: -3px;
+            width: 95%;
+            /* height: 196vh; */
+            /* margin-top: -3px; */
             box-sizing: border-box;
             padding: 12px;
             justify-content: space-between;
         }
 
+        .container-fluid-linha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         .block {
             background-color: #333333;
-            margin-bottom: 14px; 
-            height: 8%;
+            padding: 10px;
+            /* margin-bottom: 2px; */
+            height: 85%;
+            width: 45%;
             display: flex;
             align-items: center;
             border-radius: 10px;
@@ -83,8 +91,9 @@
 
         .descrition {
             display: flex;
-            /* width: 20%; */
+            width: 20%;
             justify-content: space-between;
+            align-items: center;
         }
 
 
@@ -105,6 +114,49 @@
 
         .form-floating {
             margin-top: 9px;
+        }
+
+        @media screen and (min-width: 360px) and (max-width: 613px) {
+
+            .casa {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 2%;
+            }
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                width: 95%;
+                box-sizing: border-box;
+                padding: 12px;
+                justify-content: space-between;
+            }
+
+            .container-fluid-linha {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .block {
+                background-color: #333333;
+                padding: 10px;
+                /* margin-bottom: 2px; */
+                height: 85%;
+                margin-bottom: 10px;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+            }
+
+
+
+
         }
     </style>
 </head>
@@ -149,312 +201,358 @@
         <!-- CheckBox -->
         <div class="casa mt-4">
             <div class="column">
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">ABDOMEM SENSÍVEL OU RÍGIDO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha" >
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">ABDOMEM SENSÍVEL OU RÍGIDO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">AFUNDAMENTO DE CRÂNIO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">AGITAÇÃO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">AGITAÇÃO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">AMNÉSIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">ANGINA DE PEITO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">ANGINA DE PEITO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">APNÉIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">BRADICARDIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">BRADICARDIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">BRADIPNÉIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">BRONCO-ASPIRADO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">BRONCO-ASPIRADO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">CEFALÉIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">CIANOSE
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">CIANOSE
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">CONVULSÃO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DECORTICAÇÃO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">DECORTICAÇÃO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">DEFORMIDADE
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DESCEREBRAÇÃO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">DESCEREBRAÇÃO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">DESMAIO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DESVIO DE TRAQUÉIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">DESVIO DE TRAQUÉIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">DISPNÉIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">EDEMA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">ESFISEMA SUBCUTÂNEO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">ENFISEMA SUBCUTÃNEO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">ÊSTASE DE JUGULAR
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">FACE PÁLIDA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">FACE PÁLIDA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">HEMORRAGIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">HIPERTENSÃO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">HIPERTENSÃO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">HIPOTENSÃO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">NÁUSEAS E VÔMITOS
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">NASORAGIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">ÓBITO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">OTORRÉIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">OTORRAGIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">O.V.A.C.E
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">PARADA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">PRIAPRISMO
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">PRURIDO NA PELE
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">PUPILAS
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">SEDE
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">SINAL DE BATTLE
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">SINAL DE GUAXINIM
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">SUADORES
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">TAQUIPNÉIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">TAQUICARDIA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="column">
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">AFUNDAMENTO DE CRÂNIO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <div class="container-fluid-linha">
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">TONTURA
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block px-3">
+                        <div class="descrition d-flex" style="width: 100%;">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">AMNÉSIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">APINÉIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">BRADIPNÉIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">CEFALÉIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">CONVULSÃO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DEFOMIDADE
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DESMAIO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DISPNÉIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">EDEMA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">ESTASE DE JUGULAR
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">HEMORRAGIA
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">HIPOTENSÃO
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-                <div class="block px-3">
-                    <div class="descrition d-flex" style="width: 100%;">DOR LOCAL
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
             </div>
         </div>
         <!-- Botão Voltar e Proxima -->
