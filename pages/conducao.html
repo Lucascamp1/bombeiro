@@ -90,6 +90,12 @@
                 width: 50% !important;
             }
         }
+
+        @media screen and (min-width: 667px) {
+            .card {
+                width: 40% !important;
+            }
+        }
     </style>
 </head>
 
@@ -197,20 +203,28 @@
                     <div class="row d-flex flex-column align-items-center">
 
                         <div class="container align-items-center card mt-4" style="padding: 12px;">
-                            <label class="card-text">SENTADA</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                    name="um">
+                            <div class="d-flex">
+                                <label class="card-text me-3">SENTADA</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault"
+                                        name="um">
+                                </div>
                             </div>
-                            <label class="card-text">SEMI-SENTADA</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                    name="dois">
+
+                            <div class="d-flex">
+                                <label class="card-text me-3">SEMI-SENTADA</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault"
+                                        name="um">
+                                </div>
                             </div>
-                            <label class="card-text">DEITADA</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                    name="tres">
+
+                            <div class="d-flex">
+                                <label class="card-text me-3">DEITADA</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="" id="flexCheckDefault"
+                                        name="um">
+                                </div>
                             </div>
                         </div>
                         <br>
@@ -226,7 +240,7 @@
                                         <div class="gray-box">
                                             <div class="d-flex align-items-center">
                                                 <label class="fonte">
-                                                    <input type="checkbox" name="escolher">
+                                                    <input type="radio" name="escolher">
                                                     CRÍTICO
                                                 </label>
                                             </div>
@@ -239,7 +253,7 @@
                                         <div class="gray-box">
                                             <div class="d-flex align-items-center">
                                                 <label class="fonte">
-                                                    <input type="checkbox" name="escolher">
+                                                    <input type="radio" name="escolher">
                                                     INSTAVEL
                                                 </label>
                                             </div>
@@ -254,7 +268,7 @@
                                         <div class="gray-box">
                                             <div class="d-flex align-items-center">
                                                 <label class="fonte">
-                                                    <input type="checkbox" name="escolher">
+                                                    <input type="radio" name="escolher">
                                                     ESTÁVEL
                                                 </label>
                                             </div>
@@ -267,7 +281,7 @@
                                         <div class="gray-box">
                                             <div class="d-flex align-items-center">
                                                 <label class="fonte">
-                                                    <input type="checkbox" name="escolher">
+                                                    <input type="radio" name="escolher">
                                                     POTENCIALMENTE ESTAVEL
                                                 </label>
                                             </div>
