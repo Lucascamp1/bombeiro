@@ -1,435 +1,585 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset=UTF-8>
+  <head>
+    <meta charset="UTF-8" />
     <!-- Linkagem -->
     <title>Anamnese Médica</title>
     <!-- Titulo -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <!-- Fonte -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <!-- media -->
-    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
+    <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png" />
     <!--Imagem icon-->
 
     <style>
-        /*Início do código CSS*/
+      /*Início do código CSS*/
 
-        /*Resetando estilos da página*/
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /*Resetando estilos da página*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        /*Definindo fundo e tipo da fonte da página*/
-        body {
-            background-color: #c1c1c1;
-            font-family: 'Inter', sans-serif;
-        }
+      /*Definindo fundo e tipo da fonte da página*/
+      body {
+        background-color: #c1c1c1;
+        font-family: "Inter", sans-serif;
+      }
 
-        /*Definindo cor da Navbar*/
-        #nav {
-            background-color: #333333;
-        }
+      /*Definindo cor da Navbar*/
+      #nav {
+        background-color: #333333;
+      }
 
-        /*Definindo cor dos cards*/
-        .card {
-            background-color: #333333;
-        }
+      /*Definindo cor dos cards*/
+      .card {
+        background-color: #333333;
+      }
 
-        /*Definindo cor da fonte da página*/
-        .text {
-            color: white;
-        }
+      /*Definindo cor da fonte da página*/
+      .text {
+        color: white;
+      }
 
-        /*Desconstruindo o textfield*/
-        .text-line {
-            background: transparent;
-            color: white;
-            border: none;
-            border-bottom: 2px solid rgb(6, 108, 243);
-        }
+      /*Desconstruindo o textfield*/
+      .text-line {
+        background: transparent;
+        color: white;
+        border: none;
+        border-bottom: 2px solid rgb(6, 108, 243);
+      }
 
-        /*Desconstruindo o textarea*/
-        .text-line-personality {
-            background: transparent;
-            color: white;
-            border: none;
-            text-align: center;
-            border-bottom: 2px solid rgb(6, 108, 243);
-            width: 10%;
-        }
+      /*Desconstruindo o textarea*/
+      .text-line-personality {
+        background: transparent;
+        color: white;
+        border: none;
+        text-align: center;
+        border-bottom: 2px solid rgb(6, 108, 243);
+        width: 10%;
+      }
 
-        /*Definindo o estilo do input quando estiver sob foco*/
-        .form-control:focus {
-            border-color: rgb(6, 108, 243);
-            box-shadow: 0 0 0 0.1rem rgb(6, 108, 243);
-        }
+      /*Definindo o estilo do input quando estiver sob foco*/
+      .form-control:focus {
+        border-color: rgb(6, 108, 243);
+        box-shadow: 0 0 0 0.1rem rgb(6, 108, 243);
+      }
 
-        /* Definindo estilos dos botões do rodapé */
-        .espaço_botao {
-            display: flex;
-            width: 100%;
-            height: 15vh;
-            justify-content: center;
-        }
+      /* Definindo estilos dos botões do rodapé */
+      .espaço_botao {
+        display: flex;
+        width: 100%;
+        height: 15vh;
+        justify-content: center;
+      }
 
-        .botao {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 90%;
-        }
+      .botao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- container geral -->
     <div class="container-fluid p-0">
-
-        <!-- navbar -->
-        <nav class="navbar navbar-dark" id="nav">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
-                <p class="navbar-title mt-3 fw-bold text">ANAMNESE DA EMERGÊNCIA MÉDICA</p>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    CATEGORIAS
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS
-                                            ENCONTRADOS SUSPEITOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">SINAIS E SINTOMAS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
-                                            CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item" style="list-style-type: none">
-                                <a class="nav-link" href="#">PERFIL</a>
-                            </li>
-                            <li class="nav-item" style="list-style-type: none">
-                                <a class="nav-link" href="#">SAIR</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- navbar -->
+      <nav class="navbar navbar-dark" id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="../images/avatar_bombeiro.png" width="60px"
+          /></a>
+          <p class="navbar-title mt-3 fw-bold text">
+            ANAMNESE DA EMERGÊNCIA MÉDICA
+          </p>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
             </div>
-        </nav>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    >TELA DE INÍCIO</a
+                  >
+                </li>
 
-        <!-- início do form -->
-        <form action="">
-
-            <!-- container dos cards -->
-            <div class="container-fluid">
-
-                <div class="form-group">
-
-                    <div class="row d-flex flex-column align-items-center">
-
-                        <!-- card dos sintomas -->
-                        <div class="card col-9 mt-5" style="padding: 16px;">
-                            <label class="text">O QUE ACONTECEU (SINAIS E SINTOMAS)</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="sintomaTextarea"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
-                            <div class="container d-flex gap-4 p-0">
-
-                                <label class="text mb-0">ACONTECEU OUTRAS VEZES?</label>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="outrasVezes" id="aconteceuSim">
-                                    <label class="form-check-label text" for="aconteceuSim">
-                                        SIM
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="outrasVezes" id="aconteceuNao">
-                                    <label class="form-check-label text" for="aconteceuNao">
-                                        NÃO
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- card a quanto tempo aconteceu -->
-                        <div class="card col-9 mt-4" style="padding: 16px;">
-                            <label class="text">A QUANTO TEMPO ISTO ACONTECEU?</label>
-                            <input type="text" class="text-line">
-                        </div>
-
-                        <!-- card problema de saude -->
-                        <div class="card col-9 mt-4" style="padding: 16px;">
-                            <div class="container d-flex gap-4 p-0">
-
-                                <label class="text mb-0">POSSUI ALGUM PROBLEMA DE SAÚDE?</label>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="problemaSaude" id="problemaSim">
-                                    <label class="form-check-label text" for="problemaSim">
-                                        SIM
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="problemaSaude" id="problemaNao">
-                                    <label class="form-check-label text" for="problemaNao">
-                                        NÃO
-                                    </label>
-                                </div>
-                            </div>
-
-                            <label class="text" style="margin-top: 16px;">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="problemasTextarea"></textarea>
-                            </div>
-                        </div>
-
-                        <!-- card medicacao -->
-                        <div class="card col-9 mt-4" style="padding: 16px;">
-                            <div class="container d-flex gap-4 p-0">
-
-                                <label class="text mb-0">FAZ USO DE MEDICAÇÃO</label>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="medicacao" id="medicacaoSim">
-                                    <label class="form-check-label text" for="medicacaoSim">
-                                        SIM
-                                    </label>
-                                </div>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="medicacao" id="medicacaoNao">
-                                    <label class="form-check-label text" for="medicacaoNao">
-                                        NÃO
-                                    </label>
-                                </div>
-                            </div>
-
-                            <label class="text" style="margin-top: 16px;">QUAIS?</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="medicacao"></textarea>
-                            </div>
-
-                            <div class="container d-flex p-0">
-                                <label class="text mb-0 p-0" style="margin-top: 16px;">HORÁRIO DA ÚLTIMA
-                                    MEDICAÇÃO</label>
-                                <input type="text" class="text-line-personality ms-3" id="timeInput1">
-                            </div>
-                        </div>
-
-                        <!-- card alergias -->
-                        <div class="card col-9 mt-4" style="padding-bottom: 16px;">
-                            <div class="container d-flex gap-4 p-0">
-
-                                <label class="text mb-0 mt-3">ALÉRGICO A ALGUMA COISA?</label>
-
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alergia" id="alergiaSim">
-                                    <label class="form-check-label text" for="alergiaSim">
-                                        SIM
-                                    </label>
-                                </div>
-
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alergia" id="alergiaNao">
-                                    <label class="form-check-label text" for="alergiaNao">
-                                        NÃO
-                                    </label>
-                                </div>
-                            </div>
-
-                            <label class="text mt-3">ESPECIFIQUE</label>
-                            <div class="form-floating">
-                                <textarea class="form-control pt-2" id="alergiaTextarea"></textarea>
-                            </div>
-                        </div>
-
-                        <!-- card alimento -->
-                        <div class="card col-9 mt-4" style="padding-bottom: 12px;">
-                            <div class="container d-flex gap-4 p-0">
-
-                                <label class="text mb-0 mt-3">INGERIU ALIMENTO LÍQUIDO NAS ÚLTIMAS 6 HORAS?</label>
-
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alimento" id="alimentoSim">
-                                    <label class="form-check-label text" for="alimentoSIm">
-                                        SIM
-                                    </label>
-                                </div>
-
-                                <div class="form-check mt-3">
-                                    <input class="form-check-input" type="radio" name="alimento" id="alimentoNao">
-                                    <label class="form-check-label text" for="alimentoNao">
-                                        NÃO
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="container d-flex p-0">
-                                <label class="text mb-0 p-0" style="margin-top: 16px;">QUE HORAS?</label>
-                                <input type="text" class="text-line-personality ms-3" id="timeInput">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    CATEGORIAS
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li>
+                      <a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        style="white-space: break-spaces"
+                        >PROBLEMAS ENCONTRADOS SUSPEITOS</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">SINAIS E SINTOMAS</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >AVALIAÇÃO DO PACIENTE (GLASGOW)</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >LOCALIZAÇÃO DOS TRAUMAS</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="#"
+                        style="white-space: break-spaces"
+                        >FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >PROCEDIMENTOS EFETUADOS</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >OBSERVAÇÕES IMPORTANTES</a
+                      >
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >AVALIAÇÃO DA CINEMÁTICA</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item" style="list-style-type: none">
+                  <a class="nav-link" href="#">PERFIL</a>
+                </li>
+                <li class="nav-item" style="list-style-type: none">
+                  <a class="nav-link" href="#">SAIR</a>
+                </li>
+              </ul>
             </div>
-        </form>
-
-        <!-- botoes do rodapé -->
-        <div class="espaço_botao">
-            <div class="botao">
-                <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
-                <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
-            </div>
+          </div>
         </div>
+      </nav>
 
+      <!-- início do form -->
+      <form action="">
+        <!-- container dos cards -->
+        <div class="container-fluid">
+          <div class="form-group">
+            <div class="row d-flex flex-column align-items-center">
+              <!-- card dos sintomas -->
+              <div class="card col-9 mt-5" style="padding: 16px">
+                <label class="text">O QUE ACONTECEU (SINAIS E SINTOMAS)</label>
+                <div class="form-floating">
+                  <textarea
+                    class="form-control pt-2"
+                    id="sintomaTextarea"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div
+                class="card col-9 mt-4 d-flex flex-column justify-content-center p-3"
+              >
+                <div class="container d-flex gap-4 p-0">
+                  <label class="text mb-0">ACONTECEU OUTRAS VEZES?</label>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="outrasVezes"
+                      id="aconteceuSim"
+                    />
+                    <label class="form-check-label text" for="aconteceuSim">
+                      SIM
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="outrasVezes"
+                      id="aconteceuNao"
+                    />
+                    <label class="form-check-label text" for="aconteceuNao">
+                      NÃO
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card a quanto tempo aconteceu -->
+              <div class="card col-9 mt-4" style="padding: 16px">
+                <label class="text">A QUANTO TEMPO ISTO ACONTECEU?</label>
+                <input type="text" class="text-line" />
+              </div>
+
+              <!-- card problema de saude -->
+              <div class="card col-9 mt-4" style="padding: 16px">
+                <div class="container d-flex gap-4 p-0">
+                  <label class="text mb-0"
+                    >POSSUI ALGUM PROBLEMA DE SAÚDE?</label
+                  >
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="problemaSaude"
+                      id="problemaSim"
+                    />
+                    <label class="form-check-label text" for="problemaSim">
+                      SIM
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="problemaSaude"
+                      id="problemaNao"
+                    />
+                    <label class="form-check-label text" for="problemaNao">
+                      NÃO
+                    </label>
+                  </div>
+                </div>
+
+                <label class="text" style="margin-top: 16px">QUAIS?</label>
+                <div class="form-floating">
+                  <textarea
+                    class="form-control pt-2"
+                    id="problemasTextarea"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- card medicacao -->
+              <div class="card col-9 mt-4" style="padding: 16px">
+                <div class="container d-flex gap-4 p-0">
+                  <label class="text mb-0">FAZ USO DE MEDICAÇÃO</label>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="medicacao"
+                      id="medicacaoSim"
+                    />
+                    <label class="form-check-label text" for="medicacaoSim">
+                      SIM
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="medicacao"
+                      id="medicacaoNao"
+                    />
+                    <label class="form-check-label text" for="medicacaoNao">
+                      NÃO
+                    </label>
+                  </div>
+                </div>
+
+                <label class="text" style="margin-top: 16px">QUAIS?</label>
+                <div class="form-floating">
+                  <textarea class="form-control pt-2" id="medicacao"></textarea>
+                </div>
+
+                <div class="container d-flex p-0">
+                  <label class="text mb-0 p-0" style="margin-top: 16px"
+                    >HORÁRIO DA ÚLTIMA MEDICAÇÃO</label
+                  >
+                  <input
+                    type="text"
+                    class="text-line-personality ms-3"
+                    id="timeInput1"
+                  />
+                </div>
+              </div>
+
+              <!-- card alergias -->
+              <div class="card col-9 mt-4" style="padding-bottom: 16px">
+                <div class="container d-flex gap-4 p-0">
+                  <label class="text mb-0 mt-3">ALÉRGICO A ALGUMA COISA?</label>
+
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="alergia"
+                      id="alergiaSim"
+                    />
+                    <label class="form-check-label text" for="alergiaSim">
+                      SIM
+                    </label>
+                  </div>
+
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="alergia"
+                      id="alergiaNao"
+                    />
+                    <label class="form-check-label text" for="alergiaNao">
+                      NÃO
+                    </label>
+                  </div>
+                </div>
+
+                <label class="text mt-3">ESPECIFIQUE</label>
+                <div class="form-floating">
+                  <textarea
+                    class="form-control pt-2"
+                    id="alergiaTextarea"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- card alimento -->
+              <div class="card col-9 mt-4" style="padding-bottom: 12px">
+                <div class="container d-flex gap-4 p-0">
+                  <label class="text mb-0 mt-3"
+                    >INGERIU ALIMENTO LÍQUIDO NAS ÚLTIMAS 6 HORAS?</label
+                  >
+
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="alimento"
+                      id="alimentoSim"
+                    />
+                    <label class="form-check-label text" for="alimentoSIm">
+                      SIM
+                    </label>
+                  </div>
+
+                  <div class="form-check mt-3">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="alimento"
+                      id="alimentoNao"
+                    />
+                    <label class="form-check-label text" for="alimentoNao">
+                      NÃO
+                    </label>
+                  </div>
+                </div>
+
+                <div class="container d-flex p-0">
+                  <label class="text mb-0 p-0" style="margin-top: 16px"
+                    >QUE HORAS?</label
+                  >
+                  <input
+                    type="text"
+                    class="text-line-personality ms-3"
+                    id="timeInput"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <!-- botoes do rodapé -->
+      <div class="espaço_botao">
+        <div class="botao">
+          <button type="button" class="btn btn-outline-primary btn-lg">
+            Voltar
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-lg">
+            Proximo
+          </button>
+        </div>
+      </div>
     </div>
 
     <script>
-        document.getElementById('timeInput').addEventListener('input', function (e) {
-            // Obtém o valor atual do campo de texto
-            var value = e.target.value;
+      document
+        .getElementById("timeInput")
+        .addEventListener("input", function (e) {
+          // Obtém o valor atual do campo de texto
+          var value = e.target.value;
 
-            // Remove caracteres não numéricos
-            value = value.replace(/\D/g, '');
+          // Remove caracteres não numéricos
+          value = value.replace(/\D/g, "");
 
-            // Adiciona dois pontos entre as horas e os minutos
-            if (value.length > 2) {
-                value = value.slice(0, 2) + ':' + value.slice(2);
+          // Adiciona dois pontos entre as horas e os minutos
+          if (value.length > 2) {
+            value = value.slice(0, 2) + ":" + value.slice(2);
+          }
+
+          // Verifica se a hora é válida (0-23)
+          var hour = parseInt(value.slice(0, 2));
+          if (hour > 23) {
+            value = "23" + value.slice(2);
+          }
+
+          // Verifica se os minutos são válidos (0-59)
+          if (value.length > 2) {
+            var minutes = parseInt(value.slice(3));
+            if (minutes > 59) {
+              value = value.slice(0, 3) + "59";
             }
+          }
 
-            // Verifica se a hora é válida (0-23)
-            var hour = parseInt(value.slice(0, 2));
-            if (hour > 23) {
-                value = '23' + value.slice(2);
-            }
-
-            // Verifica se os minutos são válidos (0-59)
-            if (value.length > 2) {
-                var minutes = parseInt(value.slice(3));
-                if (minutes > 59) {
-                    value = value.slice(0, 3) + '59';
-                }
-            }
-
-            // Atualiza o valor do campo de texto
-            e.target.value = value;
+          // Atualiza o valor do campo de texto
+          e.target.value = value;
         });
     </script>
 
-<script>
-    document.getElementById('timeInput1').addEventListener('input', function (e) {
-        // Obtém o valor atual do campo de texto
-        var value = e.target.value;
+    <script>
+      document
+        .getElementById("timeInput1")
+        .addEventListener("input", function (e) {
+          // Obtém o valor atual do campo de texto
+          var value = e.target.value;
 
-        // Remove caracteres não numéricos
-        value = value.replace(/\D/g, '');
+          // Remove caracteres não numéricos
+          value = value.replace(/\D/g, "");
 
-        // Adiciona dois pontos entre as horas e os minutos
-        if (value.length > 2) {
-            value = value.slice(0, 2) + ':' + value.slice(2);
-        }
+          // Adiciona dois pontos entre as horas e os minutos
+          if (value.length > 2) {
+            value = value.slice(0, 2) + ":" + value.slice(2);
+          }
 
-        // Verifica se a hora é válida (0-23)
-        var hour = parseInt(value.slice(0, 2));
-        if (hour > 23) {
-            value = '23' + value.slice(2);
-        }
+          // Verifica se a hora é válida (0-23)
+          var hour = parseInt(value.slice(0, 2));
+          if (hour > 23) {
+            value = "23" + value.slice(2);
+          }
 
-        // Verifica se os minutos são válidos (0-59)
-        if (value.length > 2) {
+          // Verifica se os minutos são válidos (0-59)
+          if (value.length > 2) {
             var minutes = parseInt(value.slice(3));
             if (minutes > 59) {
-                value = value.slice(0, 3) + '59';
+              value = value.slice(0, 3) + "59";
             }
-        }
+          }
 
-        // Atualiza o valor do campo de texto
-        e.target.value = value;
-    });
-</script>
+          // Atualiza o valor do campo de texto
+          e.target.value = value;
+        });
+    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
