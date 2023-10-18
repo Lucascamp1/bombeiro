@@ -149,6 +149,20 @@
             margin-left: 20%;
         }
 
+        .container-fluid-teste-1 {
+            display: flex;
+            display: none;
+            flex-direction: column;
+            margin-left: 20%;
+        }
+
+        .container-fluid-teste-2 {
+            display: flex;
+            display: none;
+            flex-direction: column;
+            margin-left: 20%;
+        }
+
         @media screen and (min-width: 360px) and (max-width: 613px) {
 
             .casa {
@@ -331,7 +345,7 @@
                                     <input class="form-check-input" type="checkbox" value="" id="cianoseCheckbox">
                                 </div>
                             </div>
-                            <div class="container-fluid-teste">
+                            <div class="container-fluid-teste-1">
                                 <div class="form-check-1">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <div class="descrition d-flex" style="width: 100%;">LÁBIOS</div>
@@ -409,7 +423,7 @@
                         <div class="block-2 px-3">
                             <div class="descrition d-flex" style="width: 100%;">EDEMA
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="testeCheckbox">
+                                    <input class="form-check-input" type="checkbox" value="" id="edemaCheckbox">
                                 </div>
                             </div>
                             <div class="container-fluid-teste">
@@ -675,7 +689,59 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkboxes = document.querySelectorAll('.container-fluid-teste input[type="checkbox"]');
+
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    checkboxes.forEach(function (otherCheckbox) {
+                        if (otherCheckbox !== checkbox) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- CIANOSE -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cianoseCheckbox = document.querySelector('input[id="cianoseCheckbox"]');
+            const containerCianose = document.querySelector('.container-fluid-teste-1');
+
+            cianoseCheckbox.addEventListener('change', function () {
+                if (cianoseCheckbox.checked) {
+                    containerCianose.style.display = 'flex';
+                } else {
+                    containerCianose.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <!-- EDEMA -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const edemaCheckbox = document.querySelector('input[id="edemaCheckbox"]');
+            const containeredema = document.querySelector('.container-fluid-teste-2');
+
+            edemaCheckbox.addEventListener('change', function () {
+                if (edemaCheckbox.checked) {
+                    containeredema.style.display = 'flex';
+                } else {
+                    containeredema.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <!-- HEMORRAGIA -->
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             const cianoseCheckbox = document.querySelector('input[id="cianoseCheckbox"]');
             const containerCianose = document.querySelector('.container-fluid-teste');
@@ -688,7 +754,41 @@
                 }
             });
         });
-    </script>
+    </script> -->
+
+    <!-- PARADA -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cianoseCheckbox = document.querySelector('input[id="cianoseCheckbox"]');
+            const containerCianose = document.querySelector('.container-fluid-teste');
+
+            cianoseCheckbox.addEventListener('change', function () {
+                if (cianoseCheckbox.checked) {
+                    containerCianose.style.display = 'flex';
+                } else {
+                    containerCianose.style.display = 'none';
+                }
+            });
+        });
+    </script> -->
+
+    <!-- PUPILAS -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cianoseCheckbox = document.querySelector('input[id="cianoseCheckbox"]');
+            const containerCianose = document.querySelector('.container-fluid-teste');
+
+            cianoseCheckbox.addEventListener('change', function () {
+                if (cianoseCheckbox.checked) {
+                    containerCianose.style.display = 'flex';
+                } else {
+                    containerCianose.style.display = 'none';
+                }
+            });
+        });
+    </script> -->
+
+
 </body>
 
 </html>
