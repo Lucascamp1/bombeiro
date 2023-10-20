@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Out-2023 às 17:06
+-- Tempo de geração: 20-Out-2023 às 12:51
 -- Versão do servidor: 8.0.21
 -- versão do PHP: 8.1.2
 
@@ -162,6 +162,7 @@ CREATE TABLE `ocorrencia` (
   `demandante_ocorrencia` varchar(100) NOT NULL,
   `codir_ocorrencia` tinyint(1) NOT NULL,
   `codps_ocorrencia` tinyint(1) NOT NULL,
+  `dataocorrencia_ocorrencia` date NOT NULL,
   `id_paciente2` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -182,6 +183,90 @@ CREATE TABLE `paciente` (
   `hospital_paciente` varchar(100) NOT NULL,
   `id_acompanhante` int NOT NULL,
   `id_numero_ocorrencia` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `sinaisesintomas`
+--
+
+CREATE TABLE `sinaisesintomas` (
+  `abdomemsensivelourigido_sinaisesintomas` tinyint(1) NOT NULL,
+  `agitacao_sinaisesintomas` tinyint(1) NOT NULL,
+  `anginadepeito_sinaisesintomas` tinyint(1) NOT NULL,
+  `bradicardia_sinaisesintomas` tinyint(1) NOT NULL,
+  `broncoaspirado_sinaisesintomas` tinyint(1) NOT NULL,
+  `cianose_sinaisesintomas` tinyint(1) NOT NULL,
+  `decortificacao_sinaisesintomas` tinyint(1) NOT NULL,
+  `descerebracao_sinaisesintomas` tinyint(1) NOT NULL,
+  `desviodetraqueia_sinaisesintomas` tinyint(1) NOT NULL,
+  `dorlocal_sinaisesintomas` tinyint(1) NOT NULL,
+  `enfisemasubcutaneo_sinaisesintomas` tinyint(1) NOT NULL,
+  `facepalida_sinaisesintomas` tinyint(1) NOT NULL,
+  `hipertensao_sinaisesintomas` tinyint(1) NOT NULL,
+  `nauseasevomitos_sinaisesintomas` tinyint(1) NOT NULL,
+  `obito_sinaisesintomas` tinyint(1) NOT NULL,
+  `otorragia_sinaisesintomas` tinyint(1) NOT NULL,
+  `parada_sinaisesintomas` tinyint(1) NOT NULL,
+  `pruridopele_sinaisesintomas` tinyint(1) NOT NULL,
+  `sede_sinaisesintomas` tinyint(1) NOT NULL,
+  `sinaldeguaxinim_sinaisesintomas` tinyint(1) NOT NULL,
+  `taquipneia_sinaisesintomas` tinyint(1) NOT NULL,
+  `tontura_sinaisesintomas` tinyint(1) NOT NULL,
+  `afundamentocranio_sinaisesintomas` tinyint(1) NOT NULL,
+  `amnesia_sinaisesintomas` tinyint(1) NOT NULL,
+  `apneia_sinaisesintomas` tinyint(1) NOT NULL,
+  `bradipneia_sinaisesintomas` tinyint(1) NOT NULL,
+  `cefaleia_sinaisesintomas` tinyint(1) NOT NULL,
+  `convulsao_sinaisesintomas` tinyint(1) NOT NULL,
+  `deformidade_sinaisesintomas` tinyint(1) NOT NULL,
+  `desmaio_sinaisesintomas` tinyint(1) NOT NULL,
+  `dispneia_sinaisesintomas` tinyint(1) NOT NULL,
+  `edema_sinaisesintomas` tinyint(1) NOT NULL,
+  `entasedejugular_sinaisesintomas` tinyint(1) NOT NULL,
+  `homorragia_sinaisesintomas` tinyint(1) NOT NULL,
+  `hipotensao_sinaisesintomas` tinyint(1) NOT NULL,
+  `nasoragia_sinaisesintomas` tinyint(1) NOT NULL,
+  `otorreia_sinaisesintomas` tinyint(1) NOT NULL,
+  `ovace_sinaisesintomas` tinyint(1) NOT NULL,
+  `priaprismo_sinaisesintomas` tinyint(1) NOT NULL,
+  `pupilas_sinaisesintomas` tinyint(1) NOT NULL,
+  `battle_sinaisesintomas` tinyint(1) NOT NULL,
+  `suadores_sinaisesintomas` tinyint(1) NOT NULL,
+  `taquicardia_sinaisesintomas` tinyint(1) NOT NULL,
+  `outros_sinaisesintomas` varchar(500) NOT NULL,
+  `id_ocorrencia` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `sinaisvitais`
+--
+
+CREATE TABLE `sinaisvitais` (
+  `pressaoarterial_vitais` varchar(100) NOT NULL,
+  `pulso_vitais` varchar(100) NOT NULL,
+  `respiracao_vitais` varchar(100) NOT NULL,
+  `saturacao_vitais` varchar(100) NOT NULL,
+  `htg_vitais` varchar(100) NOT NULL,
+  `temperatura_vitais` int NOT NULL,
+  `perfusao_vitais` tinyint(1) NOT NULL,
+  `normalanormal_vitais` tinyint(1) NOT NULL,
+  `id_ocorrencia` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `situacaopatinete`
+--
+
+CREATE TABLE `situacaopatinete` (
+  `inconsciente_situacao` tinyint(1) NOT NULL,
+  `consciente_situacao` tinyint(1) NOT NULL,
+  `id_ocorrencia` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -239,6 +324,26 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id_usuario`, `nome_bombeiro`, `matricula_bombeiro`, `username_bombeiro`, `email_bombeiro`, `data_nascimento_bombeiro`, `contato_bombeiro`, `password_bombeiro`, `genero_bombeiro`) VALUES
 (1, 'Lucas', 1234, 'teste', 'lucas@gmail.com', '2023-10-05', '4799949015', '1234', 'Masculino');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `vitimaera`
+--
+
+CREATE TABLE `vitimaera` (
+  `ciclista_vitimaera` tinyint(1) NOT NULL,
+  `condutormoto_vitimaera` tinyint(1) NOT NULL,
+  `gestante_vitimaera` tinyint(1) NOT NULL,
+  `passbanfrente_vitimaera` tinyint(1) NOT NULL,
+  `passmoto_vitimaera` tinyint(1) NOT NULL,
+  `condutocarro_vitimaera` tinyint(1) NOT NULL,
+  `clinico_vitimaera` tinyint(1) NOT NULL,
+  `trauma_vitimaera` tinyint(1) NOT NULL,
+  `passbantras_vitimaera` tinyint(1) NOT NULL,
+  `pedestre_vitimaera` tinyint(1) NOT NULL,
+  `id_ocorrencia` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -303,6 +408,24 @@ ALTER TABLE `paciente`
   ADD KEY `fk_id_numero_ocorrencia` (`id_numero_ocorrencia`);
 
 --
+-- Índices para tabela `sinaisesintomas`
+--
+ALTER TABLE `sinaisesintomas`
+  ADD KEY `fk_id_ocorrencia10` (`id_ocorrencia`);
+
+--
+-- Índices para tabela `sinaisvitais`
+--
+ALTER TABLE `sinaisvitais`
+  ADD KEY `fk_id_ocorrencia9` (`id_ocorrencia`);
+
+--
+-- Índices para tabela `situacaopatinete`
+--
+ALTER TABLE `situacaopatinete`
+  ADD KEY `fk_id_ocorrencia11` (`id_ocorrencia`);
+
+--
 -- Índices para tabela `tipoocorrencia`
 --
 ALTER TABLE `tipoocorrencia`
@@ -313,6 +436,12 @@ ALTER TABLE `tipoocorrencia`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_usuario`);
+
+--
+-- Índices para tabela `vitimaera`
+--
+ALTER TABLE `vitimaera`
+  ADD KEY `fk_id_ocorrencia12` (`id_ocorrencia`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -402,10 +531,34 @@ ALTER TABLE `paciente`
   ADD CONSTRAINT `fk_id_numero_ocorrencia` FOREIGN KEY (`id_numero_ocorrencia`) REFERENCES `ocorrencia` (`numero_ocorrencia`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
+-- Limitadores para a tabela `sinaisesintomas`
+--
+ALTER TABLE `sinaisesintomas`
+  ADD CONSTRAINT `fk_id_ocorrencia10` FOREIGN KEY (`id_ocorrencia`) REFERENCES `ocorrencia` (`numero_ocorrencia`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Limitadores para a tabela `sinaisvitais`
+--
+ALTER TABLE `sinaisvitais`
+  ADD CONSTRAINT `fk_id_ocorrencia9` FOREIGN KEY (`id_ocorrencia`) REFERENCES `ocorrencia` (`numero_ocorrencia`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Limitadores para a tabela `situacaopatinete`
+--
+ALTER TABLE `situacaopatinete`
+  ADD CONSTRAINT `fk_id_ocorrencia11` FOREIGN KEY (`id_ocorrencia`) REFERENCES `ocorrencia` (`numero_ocorrencia`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
 -- Limitadores para a tabela `tipoocorrencia`
 --
 ALTER TABLE `tipoocorrencia`
   ADD CONSTRAINT `fk_id_ocorrencia7` FOREIGN KEY (`id_ocorrencia`) REFERENCES `ocorrencia` (`numero_ocorrencia`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
+-- Limitadores para a tabela `vitimaera`
+--
+ALTER TABLE `vitimaera`
+  ADD CONSTRAINT `fk_id_ocorrencia12` FOREIGN KEY (`id_ocorrencia`) REFERENCES `ocorrencia` (`numero_ocorrencia`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
