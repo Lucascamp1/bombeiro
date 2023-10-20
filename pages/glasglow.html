@@ -51,6 +51,9 @@
     #col{
         background-color: #333333;
         border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     #col-4{
         background-color: #333333;
@@ -75,6 +78,13 @@
       justify-content: space-between;
       align-items: center;
       width: 90%;
+    }
+    #col2{
+      background-color: #333333;
+        border-radius: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
 </style>
@@ -257,7 +267,7 @@
               ABERTURA  DE <br> OCULAR
             </div>
 
-            <div class="col-6 pt-2 " id="col">
+            <div class="col-6 pt-2 " id="col2">
                 <div class="row d-flex pl-4">
                     <div class="col-1">4</div>
                     <div class="col-1">
@@ -265,58 +275,166 @@
                           <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         </div>
                     </div>
-                    <div class="col-3">ESPONTANEA</div>
+                    <div class="col-3">ESPONTÂNEA</div>
                 </div>
                <br>
                 <div class="row d-flex pl-4">
-                  <div class="col-1">4</div>
+                  <div class="col-1">3</div>
                   <div class="col-1">
                     <div class="form-check d-flex">
                       <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                   </div>
-                  <div class="col-3">ESPONTANEA</div>
+                  <div class="col-6">COMANDO VERBAL</div>
                 </div>
                 <br>
                 <div class="row d-flex pl-4">
-                  <div class="col-1">4</div>
+                  <div class="col-1">2</div>
                   <div class="col-1">
                     <div class="form-check d-flex">
                       <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                   </div>
-                  <div class="col-3">ESPONTANEA</div>
+                  <div class="col-7">ESTÍMULO DOLOROSO</div>
                 </div>
                 <br>
                 <div class="row d-flex pl-4">
-                  <div class="col-1">4</div>
+                  <div class="col-1">1</div>
                   <div class="col-1">
                     <div class="form-check d-flex">
                       <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                   </div>
-                  <div class="col-3">ESPONTANEA</div>
+                  <div class="col-3">NENHUMA</div>
                 </div>
             </div>
           </div>
         <br>
 
-        <div class="row h-25 justify-content-center" id="row3">
-          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
-            RESPOSTA <br> VERBAL
-          </div>
-          <div class="col-6" id="col">
-            
-          </div>
+        <div class="row justify-content-center" id="row3" style="height: 30%;">
+            <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
+              RESPOSTA <br> VERBAL
+            </div>
+            <div class="col-6" id="col">
+                <div class="row d-flex pl-4">
+                  <div class="col-1">5</div>
+                  <div class="col-1">
+                    <div class="form-check d-flex">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                  </div>
+                  <div class="col-10">PALAVRAS E FRASES APROPRIADAS</div>
+                </div>
+                
+                <div class="row d-flex pl-4">
+                    <div class="col-1">4</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-8">PALAVRAS INAPROPRIADAS</div>
+                </div>
+                
+                <div class="row d-flex pl-4">
+                    <div class="col-1">3</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">CHORO PERSISTENTE OU GRITOS</div>
+                </div>
+                
+                <div class="row d-flex pl-4">
+                    <div class="col-1">2</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-9">SONS INCOMPREENSÍVEIS</div>
+                </div>
+                
+                <div class="row d-flex pl-4">
+                    <div class="col-1">1</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">NENHUMA RESPOSTA VERBAL</div>
+                </div>
+            </div>
         </div>
 
         <br>
 
-        <div class="row h-25 justify-content-center" id="row3">
-          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
-            RESPOSTAS <br> MOTORA
-          </div>
-          <div class="col-6" id="col"></div>
+        <div class="row justify-content-center" id="row3" style="height: 40%;">
+            <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
+              RESPOSTAS <br> MOTORA
+            </div>
+            <div class="col-6" id="col">
+                <div class="row d-flex pl-4">
+                    <div class="col-1">6</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">OBEDECE PRONTAMENTE</div>
+                </div>
+
+                <div class="row d-flex pl-4">
+                    <div class="col-1">5</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">LOCALIZA DOR OU ESTÍMULO TÁTIL</div>
+                </div>
+
+                <div class="row d-flex pl-4">
+                    <div class="col-1">4</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">RETIRADA DO SEGMENTO ESTIMULADO</div>
+                </div>
+
+                <div class="row d-flex pl-4">
+                    <div class="col-1">3</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">FLEXÃO ANORMAL (DECORTICAÇÃO)</div>
+                </div>
+
+                <div class="row d-flex pl-4">
+                    <div class="col-1">2</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">EXTENSÃO ANORMAL (DECEREBRAÇÃO)</div>
+                </div>
+
+                <div class="row d-flex pl-4">
+                    <div class="col-1">1</div>
+                    <div class="col-1">
+                      <div class="form-check d-flex">
+                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      </div>
+                    </div>
+                    <div class="col-10">AUSÊNCIA (PARALISIA FLÁCIDA, HIPOTONIA)</div>
+                </div>
+            </div>
         </div>
 
         <br>
@@ -341,22 +459,173 @@
       <br>
 
       <div class="row h-25 justify-content-center" id="row3">
-          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">ABERTURA DE <br> OCULAR</div>
-          <div class="col-6" id="col"></div>
+        <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">ABERTURA DE <br> OCULAR</div>
+        <div class="col-6" id="col2">
+            <div class="row d-flex pl-4">
+                <div class="col-1">4</div>
+                <div class="col-1">
+                    <div class="form-check d-flex">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                </div>
+                <div class="col-3">ESPONTÂNEA</div>
+            </div>
+          <br>
+            <div class="row d-flex pl-4">
+              <div class="col-1">3</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </div>
+              <div class="col-6">COMANDO VERBAL</div>
+            </div>
+            <br>
+            <div class="row d-flex pl-4">
+              <div class="col-1">2</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </div>
+              <div class="col-7">ESTÍMULO DOLOROSO</div>
+            </div>
+            <br>
+            <div class="row d-flex pl-4">
+              <div class="col-1">1</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </div>
+              <div class="col-3">NENHUMA</div>
+            </div>
+        </div>
       </div>
 
       <br>
 
-      <div class="row h-25 justify-content-center" id="row3">
+      <div class="row justify-content-center" id="row3" style="height: 30%;">
         <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">RESPOSTA <br> VERBAL</div>
-        <div class="col-6" id="col"></div>
+        <div class="col-6" id="col">
+          <div class="row d-flex pl-4">
+            <div class="col-1">5</div>
+            <div class="col-1">
+              <div class="form-check d-flex">
+                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+            <div class="col-10">ORIENTADO</div>
+          </div>
+          
+          <div class="row d-flex pl-4">
+              <div class="col-1">4</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </div>
+              <div class="col-8">CONFUSO</div>
+          </div>
+          
+          <div class="row d-flex pl-4">
+              <div class="col-1">3</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </div>
+              <div class="col-10">PALAVRAS INAPROPRIADAS</div>
+          </div>
+          
+          <div class="row d-flex pl-4">
+              <div class="col-1">2</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </div>
+              <div class="col-9">PALAVRAS INCOMPREENSÍVEIS</div>
+          </div>
+          
+          <div class="row d-flex pl-4">
+              <div class="col-1">1</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+              </div>
+              <div class="col-10">NENHUMA</div>
+          </div>
+        </div>
       </div>
 
       <br>
 
-      <div class="row h-25 justify-content-center" id="row3">
+      <div class="row justify-content-center" id="row3" style="height: 40%;">
         <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">RESPOSTAS <br> MOTORA</div>
-        <div class="col-6" id="col"></div>
+        <div class="col-6" id="col">
+          <div class="row d-flex pl-4">
+            <div class="col-1">6</div>
+            <div class="col-1">
+              <div class="form-check d-flex">
+                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+            <div class="col-10">OBEDECE COMANDOS</div>
+        </div>
+
+        <div class="row d-flex pl-4">
+            <div class="col-1">5</div>
+            <div class="col-1">
+              <div class="form-check d-flex">
+                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+            <div class="col-10">LOCALIZA DOR</div>
+        </div>
+
+        <div class="row d-flex pl-4">
+            <div class="col-1">4</div>
+            <div class="col-1">
+              <div class="form-check d-flex">
+                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+            <div class="col-10">MOVIMENTO DE RETIRADA</div>
+        </div>
+
+        <div class="row d-flex pl-4">
+            <div class="col-1">3</div>
+            <div class="col-1">
+              <div class="form-check d-flex">
+                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+            <div class="col-10">FLEXÃO ANORMAL</div>
+        </div>
+
+        <div class="row d-flex pl-4">
+            <div class="col-1">2</div>
+            <div class="col-1">
+              <div class="form-check d-flex">
+                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+            <div class="col-10">EXTENSÃO ANORMAL</div>
+        </div>
+
+        <div class="row d-flex pl-4">
+            <div class="col-1">1</div>
+            <div class="col-1">
+              <div class="form-check d-flex">
+                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+            <div class="col-10">NENHUMA</div>
+        </div>
+
+        </div>
       </div>
 
       <br>
