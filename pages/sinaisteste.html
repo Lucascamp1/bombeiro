@@ -117,7 +117,7 @@
 
         }
 
-        .pressao_arterial{
+        .pressao_arterial {
             background-color: #1e8fff49;
             width: 20px;
         }
@@ -128,6 +128,33 @@
             border: none;
             border-bottom: 2px solid rgb(6, 108, 243);
             width: 100%;
+        }
+
+
+
+
+
+
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            justify-content: center;
+        }
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
+
+        @media screen and (min-width: 360px) and (max-width: 613px) {
+
+            .text-align{
+                
+            }
+
         }
     </style>
 </head>
@@ -232,11 +259,11 @@
                     <div class="container-fluid-linha">
                         <div class="block">
                             <div class="descrition d-flex">
-                                <div class="pressao_arterial">PRESSÃO ARTERIAL:</div>
+                                <div class="pressao">PRESSÃO ARTERIAL:</div>
                                 <input type="text" class="text-line" id="pressao">
-                                <div>X</div>
+                                <div class="x">x</div>
                                 <input type="text" class="text-line" id="pressao">
-                                <div>mmHg</div>
+                                <div class="mmhg">mmHg</div>
                             </div>
                         </div>
 
