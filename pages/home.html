@@ -32,167 +32,38 @@
             background-color: #C1C1C1;
             color: white;
             font-family: 'Inter', sans-serif;
-
+            height: 100vh;
         }
 
         /* Detalhes nav */
         #nav {
             background-color: #333333;
         }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 10%;
+        #row{
+            height: 6%;
+            margin-top: 13%;
         }
-
-        /* Detalhes corpo */
-
-        .base_home {
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center; */
-            height: 100vh;
-            width: 100vw;
-            /* background-color: rgba(127, 255, 212, 0.296); */
-            /* justify-content: space-between; */
+        #fluid{
+            margin-top: 9%;
         }
-
-        /* Texto Olá  */
-
-        .texto {
-            display: flex;
-            margin-top: 87px;
-            height: 14%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+        #col{
+            font-size: 27px;
             color: #333333;
         }
-
-        .texto-block {
-            display: flex;
-            width: 96%;
-            flex-direction: column;
-        }
-
-        .texto .ola {
-            font-size: 24px;
-            opacity: 0.8;
-        }
-
-        .texto .bombeiro {
+        #col1{
             font-size: 20px;
-            font-weight: 600;
-            margin-left: 25px;
-            margin-top: 10px;
+            color: #333333;
         }
-
-        /* Dados central */
-        .central {
-            height: 39%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        #col2{
+            background-color: rgb(255, 84, 84);
+            border-radius: 13px;
         }
-
-        .redcard {
-            height: 82%;
-            width: 84%;
-            background-color: #E45952;
-            border-radius: 10px;
-            opacity: 1;
-            justify-content:space-between;
-            display: flex;
-            cursor: pointer;
-        }
-
-        .texto-titulo{
-            font-size: 30px;
-            font-weight: 600;
-            margin-top: 30px;
-            margin-left: 30px;
-        }
-
-        .texto-subtitulo{
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 5px;
-            margin-left: 30px;
-        }
-        .card-imagem {
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .redcard img {
-            height: 26vh;
-        }
-
-        .redcard .card-imagem {
-            margin-top: 0.6%;
-        }
-
-        .align-imagem{
-            display: flex;
-            justify-items: last baseline;
-        }
-
-
-        /* Dados rodapé */
-        .rodape {
-            display: flex;
-            justify-content: center;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 39%;
-        }
-
-        .bluecard{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 67%;
-            width: 36%;
-            border-radius: 10px;
-            display: flex; 
-            background-color: #35BFE2;
-        }
-
-        .purplecard{
-            height: 67%;
-            width: 36%;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #AA7AE4;
-        }
-
-        .card-texto{
-            display: flex;
-            /* align-items: center;
-            justify-content: center; */
-        }
-
-        .texto-titulo-pb {
-            display: flex;
-            font-size: 28px;
-            font-weight: bold;
-            text-align: center;
-            align-items:center;
-            align-items: center;
-        }
-
-
-
 
     </style>
 </head>
 
 <body>
-    <div class="base_home">
+    <div class="base h-100">
         <nav class="navbar navbar-dark fixed-top" id="nav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"> <img src="../images/avatar_bombeiro.png" width="60px"></a>
@@ -281,47 +152,29 @@
                 </div>
             </div>
         </nav>
-        <div class="texto">
-            <div class="texto-block">
-                <div class="ola">Olá,</div>
-                <div class="bombeiro">Adimin Robson</div>
-            </div>
-        </div>
-        <div class="central">
-            <div class="redcard">
-                <div class="card-texto">
-                    <div class="texto-block">
-                        <div class="texto-titulo">Nova Ocorrência</div>
-                        <div class="texto-subtitulo">Registre os dados do paciente</div>
-                    </div>
-                </div>
-                <!-- <div class="card-imagem">
-                    <div class="align-imagem">
-                        <img src="../images/mais.png">
-                    </div>
-                </div> -->
-            </div>
-        </div>
-        <div class="rodape">
-            <div class="bluecard">
-                <!-- <div class="card-imagem-special">
-                    <div class="align-imagem">
-                        <img src="../images/pastas.png">
-                    </div>
-                </div> -->
-                <div class="card-texto">
-                    <div class="texto-titulo-pb">Histórico de Ocorrências</div>
+
+        <div class="container-fluid h-100 w-100" id="fluid">
+            <div class="row align-items-center justify-content-center" id="row">
+                <div class="col-10" id="col">
+                    Olá,
                 </div>
             </div>
-            <div class="purplecard">
-                <div class="card-texto">
-                    <div class="texto-titulo-pb">Espaço do Usuário</div>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-9" id="col1">
+                    Bombeiro Lucas
                 </div>
-                <!-- <div class="card-imagem">
-                    <div class="align-imagem">
-                        <img src="../images/perfil.png">
-                    </div>
-                </div> -->
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row h-50  justify-content-center">
+                <div class="col-9 h-50" id="col2">
+                    <div class="pl-4 pt-4 w-75" style="font-size: 44px;"><b>Nova Ocorrência</b></div> 
+                    <div class="pl-4" style="font-size: 20px;"><b>Registre os dados do paciente</b></div>
+                </div>
+            </div>
+            <div class="row">
+
             </div>
         </div>
     </div>
