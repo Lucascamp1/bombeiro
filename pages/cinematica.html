@@ -67,18 +67,49 @@
         justify-content: space-between;
     }
     .sim_nao {
-            width: 27%;
+            width: 19%;
             background-color: #333333;
             box-shadow: 0px 0px 15px #1E90FF;
             border-radius: 5px;
             align-items: center;
             margin-right: 27px;
-            justify-content: center;
         }
+
+        @media screen and (min-width: 375px){
+            .sim_nao{
+                width: 53%;
+            }
+            .row{
+                justify-content: center;
+            }
+            .form_class{
+              height: 127vmax;
+            }
+        }
+
         @media screen and (min-width: 1024px){
             .sim_nao{
-                width: 19%;
+                width: 19% !important;
             }
+            .row{
+                justify-content: space-between;
+            }
+            .form_class{
+                height: 66vmax;
+        }
+
+        }
+
+        @media screen and (min-width: 768px){
+            .sim_nao{
+                width: 27%;
+            }
+            .row{
+                justify-content: space-between;
+            }
+            .form_class{
+                height: 66vmax;
+        }
         }
 
 </style>
@@ -242,7 +273,7 @@
             </div>
           </div>
         </nav>
-    <form action="" style="height: 66vmax;">
+    <form action="" class="form_class">
         <div class="form-group">
             <div class="container mt-5 d-flex justify-content-center">
                 <div class="col-10">
