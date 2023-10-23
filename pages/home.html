@@ -32,7 +32,7 @@
             background-color: #C1C1C1;
             color: white;
             font-family: 'Inter', sans-serif;
-            height: 100vh;
+            height: 86vh;
         }
 
         /* Detalhes nav */
@@ -58,7 +58,102 @@
             background-color: rgb(255, 84, 84);
             border-radius: 13px;
         }
+        #col3{
+            background-color: rgb(0, 122, 163);
+            border-radius: 13px;
+            
+        }
+        #col4{
+            background-color: rgb(167, 71, 212);
+            border-radius: 13px;
+        }
+        #row1{
+            height: 30%;
+            gap: 49px;
+        }
+        .legenda{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+        }
+        .legenda2{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+        }
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+        }
+        .legenda3{
+            font-size: 44px;
+        }
+        .legenda4{
+            font-size: 20px;
+        }
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
+        .redcard{
+            padding: 15px;
+        }
+            @media screen and (min-width: 375px){
+            .linha2{
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .legenda3{
+                font-size: 26px;
+            }
+            .legenda{
+                font-size: 25px;
+            }
+            .legenda2{
+                font-size: 25px;
+            }
+           
+        }
+        @media screen and (min-width: 1024px){
+            .legenda3{
+               font-size: 44px;
+            }
+            .legenda4{
+            font-size: 20px;
+            }
+            .legenda{
+                font-size: 30px;
+            }
+            .legenda2{
+                font-size: 30px;
+            }
 
+        }
+        @media screen and (min-width: 768px){
+            .legenda3{
+               font-size: 51px;
+            }
+            .legenda4{
+            font-size: 23px;
+            }
+            .legenda{
+                font-size: 30px;
+            }
+            .legenda2{
+                font-size: 30px;
+                text-align: center;
+            }
+            .redcard{
+                padding: 35px;
+            }
+
+        }
     </style>
 </head>
 
@@ -167,36 +262,52 @@
             <br>
             <br>
             <br>
-            <div class="row h-50  justify-content-center">
-                <div class="col-9 h-50" id="col2">
-                    <div class="pl-4 pt-4 w-75" style="font-size: 44px;"><b>Nova Ocorrência</b></div> 
-                    <div class="pl-4" style="font-size: 20px;"><b>Registre os dados do paciente</b></div>
+            <div class="row justify-content-center" id="row1">
+                <div class="redcard col-11 h-75" id="col2">
+                    <div class="legenda3 w-75"><b>Nova Ocorrência</b></div> 
+                    <div class="legenda4"><b>Registre os dados do paciente</b></div>
                 </div>
             </div>
-            <div class="row">
-
+            <div class="linha2 row justify-content-center" id="row1">
+                <div class="bluecard col-md-5 h-75" id="col3">
+                    <div class="legenda2 h-100">
+                        <b>Histórico de Ocorrência</b>
+                    </div>
+                </div>
+                <div class="purplecard col-md-5 h-75" id="col4">
+                    <div class="legenda h-100">
+                        <b>Espaço do Usuário</b>
+                    </div>
+                </div>
+            </div>
+            <div class="espaço_botao">
+                <div class="botao">
+                    <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                    <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        var redcard = document.getElementsByClassName('redcard')[0];
 
-        redcard.addEventListener("click", function () {
-            window.location.href = "https://g1.globo.com/";
-        });
-
-        var bluecard = document.getElementsByClassName('bluecard')[0];
-
-        bluecard.addEventListener("click", function () {
-            window.location.href = "https://g1.globo.com/";
-        });
-
-        var purplecard = document.getElementsByClassName('purplecard')[0];
-
-        purplecard.addEventListener("click", function () {
-            window.location.href = "https://g1.globo.com/";
-        });
-    </script>
 </body>
+<script>
+    var redcard = document.getElementsByClassName('redcard')[0];
+
+    redcard.addEventListener("click", function () {
+        window.location.href = "https://g1.globo.com/";
+    });
+
+    var bluecard = document.getElementsByClassName('bluecard')[0];
+
+    bluecard.addEventListener("click", function () {
+        window.location.href = "https://g1.globo.com/";
+    });
+
+    var purplecard = document.getElementsByClassName('purplecard')[0];
+
+    purplecard.addEventListener("click", function () {
+        window.location.href = "https://g1.globo.com/";
+    });
+</script>
 
 </html>
