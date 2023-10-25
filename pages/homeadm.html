@@ -26,13 +26,13 @@
         crossorigin="anonymous"></script>
 
     <style>
-        body {
+         body {
             margin: 0;
             padding: 0;
             background-color: #C1C1C1;
             color: white;
             font-family: 'Inter', sans-serif;
-
+            height: 86vh;
         }
 
         /* Detalhes nav */
@@ -46,160 +46,210 @@
             margin: 0px;
         }
 
-        .container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 10%;
+        #row {
+            height: 6%;
+            margin-top: 13%;
         }
 
-        /* Detalhes corpo */
-
-        .base_home {
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center; */
-            height: 100vh;
-            width: 100vw;
-            /* background-color: rgba(127, 255, 212, 0.296); */
-            /* justify-content: space-between; */
+        #fluid {
+            margin-top: 9%;
         }
 
-        /* Texto Olá  */
-
-        .texto {
-            display: flex;
-            margin-top: 87px;
-            height: 14%;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+        #col {
+            font-size: 27px;
             color: #333333;
         }
 
-        .texto-block {
-            display: flex;
-            width: 96%;
-            flex-direction: column;
-        }
-
-        .texto .ola {
-            font-size: 24px;
-            opacity: 0.8;
-        }
-
-        .texto .bombeiro {
+        #col1 {
             font-size: 20px;
-            font-weight: 600;
-            margin-left: 25px;
-            margin-top: 10px;
+            color: #333333;
         }
 
-        /* Dados central */
-        .central {
-            height: 39%;
+        #col2 {
+            background-color: #de6c3a;
+            border-radius: 13px;
+        }
+
+        #col3 {
+            background-color: #e29028;
+            border-radius: 13px;
+
+        }
+
+        #col4 {
+            background-color: #2cba29;
+            border-radius: 13px;
+        }
+
+        #row1 {
+            height: 30%;
+            gap: 49px;
+        }
+
+        .legenda {
+            align-items: center;
             display: flex;
             justify-content: center;
+            font-size: 30px;
+        }
+
+        .legenda2 {
             align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+        }
+
+        .legenda3 {
+            font-size: 44px;
+        }
+
+        .legenda4 {
+            font-size: 20px;
+        }
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
         }
 
         .redcard {
-            height: 82%;
-            width: 84%;
-            background-color: #dc6825;
-            border-radius: 10px;
-            opacity: 1;
-            justify-content: space-between;
-            display: flex;
-            cursor: pointer;
+            padding: 15px;
         }
 
-        .texto-titulo {
-            font-size: 30px;
-            font-weight: 600;
-            margin-top: 30px;
-            margin-left: 30px;
+        @media screen and (min-width: 375px) {
+            .linha2 {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .legenda3 {
+                font-size: 26px;
+            }
+
+            .legenda {
+                font-size: 26px;
+            }
+
+            .legenda2 {
+                font-size: 26px;
+            }
+            #fluid{
+                margin-top: 29%;
+            }
+            .legenda4 {
+                font-size: 19px;
+            }
+            .espaço_botao{
+                margin-top: 50%;
+            }
+
         }
 
-        .texto-subtitulo {
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 5px;
-            margin-left: 30px;
+        @media screen and (min-width: 1024px) {
+            .legenda3 {
+                font-size: 44px;
+            }
+
+            .legenda4 {
+                font-size: 20px;
+            }
+
+            .legenda {
+                font-size: 30px;
+            }
+
+            .legenda2 {
+                font-size: 30px;
+            }
+            #fluid{
+                margin-top: 9%;
+            }
+            .redcard {
+                padding: 15px;
+            }
+            .espaço_botao{
+                margin-top: 50%;
+            }
+            
         }
 
-        .card-imagem {
-            display: flex;
-            justify-content: flex-end;
+        @media screen and (min-width: 1024px) {
+            .legenda3 {
+                font-size: 51px;
+            }
+
+            .legenda4 {
+                font-size: 23px;
+            }
+
+            .legenda {
+                font-size: 30px;
+            }
+
+            .legenda2 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            .redcard {
+                padding: 15px !important;
+            }
+            #fluid{
+                margin-top: 9%;
+            }
+            .espaço_botao{
+                margin-top: 0%;
+            }
+
         }
 
-        .redcard img {
-            height: 26vh;
-        }
+        @media screen and (min-width: 768px) {
+            .redcard {
+                padding: 35px;
+            }
+            #fluid{
+                margin-top: 9%;
+            }
+            .legenda3 {
+                font-size: 51px;
+            }
 
-        .redcard .card-imagem {
-            margin-top: 0.6%;
-        }
+            .legenda4 {
+                font-size: 23px;
+            }
 
-        .align-imagem {
-            display: flex;
-            justify-items: last baseline;
-        }
+            .legenda {
+                font-size: 30px;
+            }
 
+            .legenda2 {
+                font-size: 30px;
+                text-align: center;
+            }
+            .espaço_botao{
+                margin-top: 0%;
+            }
 
-        /* Dados rodapé */
-        .rodape {
-            display: flex;
-            justify-content: center;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 39%;
-        }
-
-        .bluecard {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 67%;
-            width: 36%;
-            border-radius: 10px;
-            display: flex;
-            background-color: #da911d;
-        }
-
-        .purplecard {
-            height: 67%;
-            width: 36%;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #3eb140;
-        }
-
-        .card-texto {
-            display: flex;
-            /* align-items: center;
-            justify-content: center; */
-        }
-
-        .texto-titulo-pb {
-            display: flex;
-            font-size: 28px;
-            font-weight: bold;
-            text-align: center;
-            align-items: center;
-            align-items: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="base_home">
+    <div class="base h-100">
         <nav class="navbar navbar-dark fixed-top" id="nav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"> <img src="../images/avatar_bombeiro.png" width="60px"></a>
-                <p class="navbar-title mt-3 fw-bold">HOME ADM</p>
+                <p class="navbar-title mt-3 fw-bold">HOME</p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
@@ -286,50 +336,48 @@
                 </div>
             </div>
         </nav>
-        <div class="texto">
-            <div class="texto-block">
-                <div class="ola">Olá,</div>
-                <div class="bombeiro">Adimin Robson</div>
-            </div>
-        </div>
-        <div class="central">
-            <div class="redcard">
-                <div class="card-texto">
-                    <div class="texto-block">
-                        <div class="texto-titulo">Dashboard</div>
-                        <div class="texto-subtitulo">Visualize estatísticas e dados</div>
-                    </div>
-                </div>
-                <!-- <div class="card-imagem">
-                    <div class="align-imagem">
-                        <img src="../images/mais.png">
-                    </div>
-                </div> -->
-            </div>
-        </div>
-        <div class="rodape">
-            <div class="bluecard">
-                <!-- <div class="card-imagem-special">
-                    <div class="align-imagem">
-                        <img src="../images/pastas.png">
-                    </div>
-                </div> -->
-                <div class="card-texto">
-                    <div class="texto-titulo-pb">Histórico de Ocorrências</div>
+
+        <div class="container-fluid h-100 w-100" id="fluid">
+            <div class="row align-items-center justify-content-center" id="row">
+                <div class="col-10" id="col">
+                    Olá,
                 </div>
             </div>
-            <div class="purplecard">
-                <div class="card-texto">
-                    <div class="texto-titulo-pb">Espaço do Administrador</div>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-9" id="col1">
+                    Administrador Lucas
                 </div>
-                <!-- <div class="card-imagem">
-                    <div class="align-imagem">
-                        <img src="../images/perfil.png">
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="row justify-content-center" id="row1">
+                <div class="redcard col-11 h-75" id="col2">
+                    <div class="legenda3 w-75"><b>Dashboard</b></div>
+                    <div class="legenda4"><b>Visualizar estatísticas e dados</b></div>
+                </div>
+            </div>
+            <div class="linha2 row justify-content-center" id="row1">
+                <div class="bluecard col-md-5 h-75" id="col3">
+                    <div class="legenda2 h-100">
+                        <b>Histórico de Ocorrência</b>
                     </div>
-                </div> -->
+                </div>
+                <div class="purplecard col-md-5 h-75" id="col4">
+                    <div class="legenda text-center h-100">
+                        <b>Espaço do Administrador</b>
+                    </div>
+                </div>
+            </div>
+            <div class="espaço_botao">
+                <div class="botao">
+                    <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                    <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+                </div>
             </div>
         </div>
     </div>
+
     <script>
         var redcard = document.getElementsByClassName('redcard')[0];
 
