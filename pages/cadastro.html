@@ -77,7 +77,13 @@
             border-radius: 5px;
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1024px) {
+        @media screen and (max-width: 1024px) {
+            .geral {
+                height: 100vh !important;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
             .geral {
                 height: 70vh !important;
             }
@@ -123,8 +129,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS
-                                        ENCONTRADOS SUSPEITOS</a></li>
+                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS ENCONTRADOS SUSPEITOS</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -148,8 +153,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
-                                        CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
+                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -185,7 +189,7 @@
     </nav>
 
     <form action="processamento_cadastro.php" method="post">
-        <div class="container d-flex justify-content-center align-items-center geral" style="height: 100vh;">
+        <div class="container d-flex justify-content-center align-items-center geral">
             <div class="container-fluid" id="box" style="padding-top: 16px; padding-bottom: 16px;">
                 <label class="card-text mb-2">Nome Completo</label>
                 <input type="text" class="form-control" id="nome" aria-describedby="name">
@@ -209,10 +213,8 @@
                 </select>
                 <br>
                 <label class="card-text mb-2">Data de Nascimento</label>
-                <br>
                 <input type="text" id="dataNascimento" class="form-control" oninput="mascaraData(this)" maxlength="10"
                     style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
-
             </div>
         </div>
     </form>
