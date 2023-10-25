@@ -37,8 +37,14 @@
             box-shadow: 0 0 0 0.1rem rgb(6, 108, 243);
         }
 
+        /* MENU */
         #nav {
             background-color: #333333;
+        }
+
+        .navbar-brand {
+            display: flex;
+            margin: 0px;
         }
 
         #box {
@@ -71,14 +77,14 @@
             border-radius: 5px;
         }
 
-        @media screen and (min-width: 768px) and (max-width: 1024px){
-            .geral{
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .geral {
                 height: 70vh !important;
             }
         }
 
-        @media screen and (max-width: 767px){
-            .geral{
+        @media screen and (max-width: 767px) {
+            .geral {
                 height: 100vh !important;
             }
         }
@@ -142,7 +148,8 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
+                                <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
+                                        CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -194,7 +201,8 @@
                 <br>
                 <label class="card-text mb-2">Gênero</label>
                 <br>
-                <select class="form-select" name="genero" id="genero" style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
+                <select class="form-select" name="genero" id="genero"
+                    style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
                     <option value="" disabled selected hidden></option>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
@@ -202,7 +210,8 @@
                 <br>
                 <label class="card-text mb-2">Data de Nascimento</label>
                 <br>
-                <input type="text" id="dataNascimento" class="form-control" oninput="mascaraData(this)" maxlength="10" style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
+                <input type="text" id="dataNascimento" class="form-control" oninput="mascaraData(this)" maxlength="10"
+                    style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
 
             </div>
         </div>

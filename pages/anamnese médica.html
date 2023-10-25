@@ -38,8 +38,14 @@
     }
 
     /*Definindo cor da Navbar*/
+    /* MENU */
     #nav {
       background-color: #333333;
+    }
+
+    .navbar-brand {
+      display: flex;
+      margin: 0px;
     }
 
     /*Definindo cor dos cards*/
@@ -91,25 +97,24 @@
       width: 90%;
     }
 
-    @media screen and (max-width: 750px){
-      .text-line-personality{
+    @media screen and (max-width: 750px) {
+      .text-line-personality {
         width: 15%;
       }
     }
 
-    
-    @media screen and (max-width: 505px){
-      .text-line-personality{
+
+    @media screen and (max-width: 505px) {
+      .text-line-personality {
         width: 18%;
       }
     }
 
-    @media screen and (max-width: 505px){
-      .text-line-personality{
+    @media screen and (max-width: 505px) {
+      .text-line-personality {
         width: 20%;
       }
     }
-
   </style>
 </head>
 
@@ -152,7 +157,8 @@
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#" style="white-space: break-spaces">PROBLEMAS ENCONTRADOS SUSPEITOS</a>
+                    <a class="dropdown-item" href="#" style="white-space: break-spaces">PROBLEMAS ENCONTRADOS
+                      SUSPEITOS</a>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
@@ -186,7 +192,8 @@
                     <hr class="dropdown-divider" />
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#" style="white-space: break-spaces">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a>
+                    <a class="dropdown-item" href="#" style="white-space: break-spaces">FORMA DE CONDUÇÃO E DECISÃO DE
+                      TRANSPORTE</a>
                   </li>
                   <li>
                     <hr class="dropdown-divider" />
@@ -243,7 +250,7 @@
                 <textarea class="form-control pt-2" id="sintomaTextarea"></textarea>
               </div>
             </div>
-          
+
             <div class="card col-9 mt-4 d-flex flex-column justify-content-center p-3">
               <div class="container d-sm-block d-md-flex gap-4 p-0">
                 <label class="text mb-0">ACONTECEU OUTRAS VEZES?</label>
@@ -322,8 +329,9 @@
               </div>
 
               <div class="container d-block d-sm-flex p-0">
-                <label class="text mb-0 p-0" id="label-medicacao-mobile" style="margin-top: 16px">HORÁRIO DA ÚLTIMA MEDICAÇÃO</label>
-                <input type="text" class="text-line-personality ms-0 ms-sm-3" id="timeInput1"/>
+                <label class="text mb-0 p-0" id="label-medicacao-mobile" style="margin-top: 16px">HORÁRIO DA ÚLTIMA
+                  MEDICAÇÃO</label>
+                <input type="text" class="text-line-personality ms-0 ms-sm-3" id="timeInput1" />
               </div>
             </div>
 
@@ -356,7 +364,7 @@
             <!-- card alimento -->
             <div class="card col-9 mt-4" style="padding-bottom: 12px">
               <div class="container d-sm-block d-md-flex gap-4 p-0 ">
-              <label class="text mb-0 mt-3">INGERIU ALIMENTO LÍQUIDO NAS ÚLTIMAS 6 HORAS?</label>
+                <label class="text mb-0 mt-3">INGERIU ALIMENTO LÍQUIDO NAS ÚLTIMAS 6 HORAS?</label>
                 <div class="form-check mt-3">
                   <input class="form-check-input" type="radio" name="alimento" id="alimentoSim" />
                   <label class="form-check-label text" for="alimentoSIm">
