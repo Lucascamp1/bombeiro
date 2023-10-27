@@ -66,7 +66,29 @@
             /* width: 10%; */
         }
 
-        @media screen and (min-width: 375px) {}
+        .accordion-item {
+            background-color: #c1c1c1;
+            border: transparent;
+        }
+
+        .accordion-button{
+            background-color: #929292;
+            color: white;
+        }
+
+        .accordion-button:not(.collapsed){
+            background-color: #929292;
+            color: white;
+        }
+
+        .accordion-button:focus{
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            /* background-color: white; */
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -173,115 +195,170 @@
 
                     <div class="row d-flex flex-column align-items-center">
 
-                        <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
-                            style="padding: 12px;">
-                            <div class="container gap-1 p-0">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
-                                        id="flexRadioDefault1">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        MATERIAIS UTILIZADOS DESCARTÁVEIS
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
+                                            style="padding: 12px;">
+                                            <div class="container gap-1 p-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="anotherTimesnatal" id="flexRadioDefault1">
 
-                                    <label class="card-text mb-0">SONDA DE ASPIRAÇÃO</label>
+                                                    <label class="card-text mb-0">SONDA DE ASPIRAÇÃO</label>
+                                                </div>
+                                                <br>
+                                                <div>
+                                                    <label class="card-text mb-0">QUANTIDADE:</label>
+                                                    <input type="text" class="text-line">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
+                                        style="padding: 12px;">
+                                        <div class="container gap-1 p-0">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="anotherTimesnatal" id="flexRadioDefault1">
+
+                                                <label class="card-text mb-0">SONDA DE ASPIRAÇÃO</label>
+                                            </div>
+                                            <br>
+                                            <div>
+                                                <label class="card-text mb-0">QUANTIDADE:</label>
+                                                <input type="text" class="text-line">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
-                                <br>
-                                <div>
-                                    <label class="card-text mb-0">QUANTIDADE:</label>
-                                    <input type="text" class="text-line">
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        MATERIAIS UTILIZADOS DEIXADOS NO HOSPITAL
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <strong>This is the second item's accordion body.</strong> It is hidden by
+                                        default, until the collapse plugin adds the appropriate classes that we use to
+                                        style each element. These classes control the overall appearance, as well as the
+                                        showing and hiding via CSS transitions. You can modify any of this with custom
+                                        CSS or overriding our default variables. It's also worth noting that just about
+                                        any HTML can go within the <code>.accordion-body</code>, though the transition
+                                        does limit overflow.
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion p-4" id="accordionExample">
 
-                        <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
-                            style="padding: 12px;">
-                            <div class="container gap-1 p-0">
+
+
+                            <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
+                                style="padding: 12px;">
+                                <div class="container gap-1 p-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
+                                            id="flexRadioDefault1">
+
+                                        <label class="card-text mb-0">SORO FISIOLÓGICO:</label>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label class="card-text mb-0">QUANTIDADE:</label>
+                                        <input type="text" class="text-line">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
+                                style="padding: 12px;">
+                                <div class="container gap-1 p-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
+                                            id="flexRadioDefault1">
+
+                                        <label class="card-text mb-0">TIRANTE DE CABEÇA</label>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label class="card-text mb-0">QUANTIDADE:</label>
+                                        <input type="text" class="text-line">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
+                                style="padding: 12px;">
+                                <div class="container gap-1 p-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
+                                            id="flexRadioDefault1">
+
+                                        <label class="card-text mb-0">CÂNULA</label>
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label class="card-text mb-0">QUANTIDADE:</label>
+                                        <input type="text" class="text-line">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
+                                style="padding: 12px;">
+                                <div class="container gap-1 p-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
+                                            id="flexRadioDefault1">
+
+                                        <label class="card-text mb-0">TALAS PAP.</label>
+                                    </div>
+                                    <br>
+                                    <div style="color: white;">
+                                        <label class="card-text mb-0">TAMANHO:</label>
+                                        P
+                                        <input type="radio" name="tamanho" id="flexRadioDefault1">
+                                        G
+                                        <input type="radio" name="tamanho" id="flexRadioDefault1">
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label class="card-text mb-0">QUANTIDADE:</label>
+                                        <input type="text" class="text-line">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card col-8 mt-4" style="padding: 12px;">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
                                         id="flexRadioDefault1">
-
-                                    <label class="card-text mb-0">SORO FISIOLÓGICO:</label>
-                                </div>
-                                <br>
-                                <div>
-                                    <label class="card-text mb-0">QUANTIDADE:</label>
-                                    <input type="text" class="text-line">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
-                            style="padding: 12px;">
-                            <div class="container gap-1 p-0">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
-                                        id="flexRadioDefault1">
-
-                                    <label class="card-text mb-0">TIRANTE DE CABEÇA</label>
-                                </div>
-                                <br>
-                                <div>
-                                    <label class="card-text mb-0">QUANTIDADE:</label>
-                                    <input type="text" class="text-line">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
-                            style="padding: 12px;">
-                            <div class="container gap-1 p-0">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
-                                        id="flexRadioDefault1">
-
-                                    <label class="card-text mb-0">CÂNULA</label>
-                                </div>
-                                <br>
-                                <div>
-                                    <label class="card-text mb-0">QUANTIDADE:</label>
-                                    <input type="text" class="text-line">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card col-8 mt-4 d-flex flex-column justify-content-center p-3"
-                            style="padding: 12px;">
-                            <div class="container gap-1 p-0">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
-                                        id="flexRadioDefault1">
-
-                                    <label class="card-text mb-0">TALAS PAP.</label>
-                                </div>
-                                <br>
-                                <div style="color: white;">
-                                    <label class="card-text mb-0">TAMANHO:</label>
-                                    P
-                                    <input type="radio" name="tamanho" id="flexRadioDefault1">
-                                    G
-                                    <input type="radio" name="tamanho" id="flexRadioDefault1">
-                                </div>
-                                <br>
-                                <div>
-                                    <label class="card-text mb-0">QUANTIDADE:</label>
-                                    <input type="text" class="text-line">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card col-8 mt-4" style="padding: 12px;">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="anotherTimesnatal"
-                                    id="flexRadioDefault1">
 
                                     <label class="card-text mb-2">OUTROS</label>
-                            </div>
+                                </div>
 
-                            <div class="form-floating h-100">
-                                <textarea class="form-control p-2 h-100" placeholder="Leave a comment here" id="floatingTextarea2"
-                                    style="height: 100px"></textarea>
+                                <div class="form-floating h-100">
+                                    <textarea class="form-control p-2 h-100" placeholder="Leave a comment here"
+                                        id="floatingTextarea2" style="height: 100px"></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </form>
     </div>
     </div>
