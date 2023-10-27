@@ -62,12 +62,12 @@
         margin: 0px;
     }
 
-    .col-6 {
+    .col-4 {
         background-color: #333333;
         width: 40%;
         height: 13%;
         border-radius: 10px;
-        align-items: center;
+        /* align-items: center; */
     }
 
     #row {
@@ -86,6 +86,47 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
+    }
+    @media screen and (min-width: 375px) {
+      #row{
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .col-4{
+        width: 85%;
+    }
+    .espaço_botao{
+        height: 7vh;
+    }
+    }
+    @media screen and (min-width: 1024px) {
+      #row{
+        display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .col-4{
+        width: 40%;
+    }
+    .espaço_botao{
+        height: 5vh;
+    }
+
+    }
+    @media screen and (min-width: 768px) {
+      #row{
+        display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .col-4{
+        width: 40%;
+    }
+    .espaço_botao{
+        height: 5vh;
+        margin-top: 15%;
+    }
     }
 </style>
 
@@ -182,77 +223,79 @@
         </div>
     </nav>
 
-    <div class="form-group h-100">
-        <div class="container h-100 justify-content-center d-flex align-items-center">
-
-            <div class="row g-2 d-flex h-75" id="row">
-                <div class="col-6 d-flex p-4 justify-content-between">
+    <div class="form-group h-75">
+        <div class="container h-100 mt-5 justify-content-center align-items-center">
+            <form action="">
+            <div class="row gap-4" id="row">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">CICLISTA </span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">CONDUTOR CARRO</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">CONDUTOR MOTO</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">CLINICO</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">GESTANTE</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">TRAUMA</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">PASS.BAN.FRENTE</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">PAS.BCO.TRÁS</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">PAS.MOTO</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
-                <div class="col-6 d-flex p-4 justify-content-between">
+                <div class="col-4 d-flex p-4 justify-content-between">
                     <span class="d-flex">PEDESTRE</span>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     </div>
                 </div>
+            </form>
             </div>
-        </div>
-
-        <div class="espaço_botao">
-            <div class="botao">
-                <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
-                <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+            <br>
+            <br>
+            <div class="espaço_botao">
+                <div class="botao">
+                    <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                    <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+                </div>
             </div>
         </div>
 
