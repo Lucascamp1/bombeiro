@@ -83,19 +83,10 @@
 
         #row1 {
             height: 30%;
-            gap: 49px;
         }
 
         .legenda {
             align-items: center;
-            display: flex;
-            justify-content: center;
-            font-size: 30px;
-        }
-
-        .legenda2 {
-            align-items: center;
-            display: flex;
             justify-content: center;
             font-size: 30px;
         }
@@ -127,11 +118,6 @@
         }
 
         @media screen and (min-width: 375px) {
-            .linha2 {
-                padding-left: 16px;
-                padding-right: 16px;
-            }
-
             .legenda3 {
                 font-size: 26px;
             }
@@ -141,7 +127,7 @@
             }
 
             .legenda2 {
-                font-size: 26px;
+                font-size: 19px;
             }
             #fluid{
                 margin-top: 29%;
@@ -150,38 +136,15 @@
                 font-size: 19px;
             }
             .espaço_botao{
-                margin-top: 50%;
-            }
-
-        }
-
-        @media screen and (min-width: 1024px) {
-            .legenda3 {
-                font-size: 44px;
-            }
-
-            .legenda4 {
-                font-size: 20px;
-            }
-
-            .legenda {
-                font-size: 30px;
-            }
-
-            .legenda2 {
-                font-size: 30px;
-            }
-            #fluid{
                 margin-top: 9%;
             }
-            .redcard {
+            .purplecard{
                 padding: 15px;
             }
-            .espaço_botao{
-                margin-top: 50%;
-            }
-            
+
         }
+
+       
 
         @media screen and (min-width: 1024px) {
             .legenda3 {
@@ -193,12 +156,11 @@
             }
 
             .legenda {
-                font-size: 30px;
+                font-size: 44px;
             }
 
             .legenda2 {
-                font-size: 30px;
-                text-align: center;
+                font-size: 23px;
             }
 
             .redcard {
@@ -209,6 +171,9 @@
             }
             .espaço_botao{
                 margin-top: 0%;
+            }
+            .purplecard{
+                padding: 15px !important;
             }
 
         }
@@ -229,16 +194,19 @@
             }
 
             .legenda {
-                font-size: 30px;
+                font-size: 44px;
             }
 
             .legenda2 {
-                font-size: 30px;
-                text-align: center;
+                font-size: 23px;
             }
             .espaço_botao{
                 margin-top: 0%;
             }
+            .purplecard{
+                padding: 35px;
+            }
+
 
         }
     </style>
@@ -357,16 +325,10 @@
                     <div class="legenda4"><b>Registre os dados do paciente</b></div>
                 </div>
             </div>
-            <div class="linha2 row justify-content-center" id="row1">
-                <div class="bluecard col-md-5 h-75" id="col3">
-                    <div class="legenda2 h-100">
-                        <b>Histórico de Ocorrência</b>
-                    </div>
-                </div>
-                <div class="purplecard col-md-5 h-75" id="col4">
-                    <div class="legenda h-100">
-                        <b>Espaço do Usuário</b>
-                    </div>
+            <div class="row justify-content-center" id="row1">
+                <div class="purplecard col-11 h-75" id="col4">
+                    <div class="legenda"><b>Espaço do Usuário</b></div>
+                    <div class="legenda2"><b>Visualize seus dados</b></div>
                 </div>
             </div>
             <div class="espaço_botao">

@@ -72,6 +72,19 @@
             border-bottom: 2px solid rgb(6, 108, 243);
             width: 10%;
         }
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+        }
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
     </style>
 </head>
 
@@ -392,7 +405,12 @@
             </div>
         </form>
     </div>
-    </div>
+    <div class="espaço_botao">
+        <div class="botao">
+          <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+          <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+        </div>
+      </div>
 
     <script>
         document.getElementById('timeInput').addEventListener('input', function (e) {
