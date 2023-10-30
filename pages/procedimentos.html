@@ -82,6 +82,21 @@
       border-bottom: 2px solid rgb(6, 108, 243);
     }
 
+
+    .container-fluid-teste {
+      display: flex;
+      display: none;
+      flex-direction: column;
+      margin-left: 20%;
+    }
+
+    .form-check-3 {
+      display: flex;
+      display: none;
+      flex-direction: column;
+      margin-left: 20%;
+    }
+
     @media screen and (min-width: 375px) {
       #row {
         display: flex;
@@ -266,10 +281,10 @@
               </div>
             </div>
           </div>
-          <!-- AVALIAÇÃO DIGITAL -->
+          <!-- AVALIAÇÃO INICIAL -->
           <div class="col-4" id="col">
             <div class="p-3 d-flex" id="check">
-              AVALIAÇÃO DIGITAL
+              AVALIAÇÃO INICIAL
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
               </div>
@@ -566,7 +581,7 @@
           <!-- USO COLAR -->
           <div class="col-4" id="col">
             <div class="p-3 d-flex" id="check">
-              USO COLAR
+              <span>USO COLAR - TAM:<input type="text" class="text-line" id="oxi"></span>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
               </div>
@@ -617,12 +632,42 @@
               </div>
             </div>
           </div>
-          <!-- MEIOS AUXILIARES -->
+          <!-- MEIOS AUXILIARES TESTE-->
           <div class="col-4" id="col">
             <div class="p-3 d-flex" id="check">
               MEIOS AUXILIARES
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" value="" id="MEIOSCheckbox">
+              </div>
+            </div>
+            <div class="container-fluid-teste">
+              <div class="form-check-1">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">CELESC</div>
+              </div>
+              <div class="form-check-1">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">DEF. CIVIL</div>
+              </div>
+              <div class="form-check-1">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">IGP/PC</div>
+              </div>
+              <div class="form-check-2">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="SAMUcheck">
+                <div class="descrition d-flex" style="width: 100%;">SAMU</div>
+                <div class="form-check-3">
+                  <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                  <div class="descrition d-flex" style="width: 100%;">USA</div>
+                </div>
+                <div class="form-check-3">
+                  <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                  <div class="descrition d-flex" style="width: 100%;">USB</div>
+                </div>
+              </div>
+              <div class="form-check-2">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">POLÍCIA</div>
               </div>
             </div>
           </div>
@@ -645,5 +690,56 @@
       </div>
     </div>
   </div>
+
+
+  <!-- meios auxiliares -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const MEIOSCheckbox = document.querySelector('input[id="MEIOSCheckbox"]');
+      const containerMEIOS = document.querySelector('.container-fluid-teste');
+
+      MEIOSCheckbox.addEventListener('change', function () {
+        if (MEIOSCheckbox.checked) {
+          containerMEIOS.style.display = 'flex';
+        } else {
+          containerMEIOS.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  <!--  Check - meios auxiliares -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const checkboxes = document.querySelectorAll('.container-fluid-teste input[type="checkbox"]');
+
+      checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+          checkboxes.forEach(function (otherCheckbox) {
+            if (otherCheckbox !== checkbox) {
+              otherCheckbox.checked = false;
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+<!-- Samu -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const MEIOSCheckbox = document.querySelector('input[id="MEIOSCheckbox"]');
+    const containerMEIOS = document.querySelector('.container-fluid-teste');
+
+    MEIOSCheckbox.addEventListener('change', function () {
+      if (MEIOSCheckbox.checked) {
+        containerMEIOS.style.display = 'flex';
+      } else {
+        containerMEIOS.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>
