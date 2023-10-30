@@ -36,11 +36,6 @@
             color: white;
         }
 
-        .form-control:focus {
-            border-color: red;
-            box-shadow: 0 0 0 0.2rem rgba(241, 13, 13, 0.3);
-        }
-
         /* MENU */
         #nav {
             background-color: #333333;
@@ -73,6 +68,9 @@
             text-align: center;
             margin-bottom: 20px;
             border-radius: 10px;
+        }
+        #dark{
+          color: white !important;
         }
 
         .fonte {
@@ -107,7 +105,8 @@
                 width: 40% !important;
             }
         }
-        .espaço_botao {
+
+    .espaço_botao {
       display: flex;
       width: 100%;
       height: 10vh;
@@ -129,94 +128,116 @@
         <!-- navbar -->
         <nav class="navbar navbar-dark" id="nav">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px"></a>
-                <p class="navbar-title mt-3 fw-bold">FORMA DE CONDUÇÃO</p>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                    aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    CATEGORIAS
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-dark">
-                                    <li><a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">PROBLEMAS
-                                            ENCONTRADOS SUSPEITOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">SINAIS E SINTOMAS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" style="white-space: break-spaces;">FORMA DE
-                                            CONDUÇÃO E DECISÃO DE TRANSPORTE</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item" style="list-style-type: none">
-                                <a class="nav-link" href="#">PERFIL</a>
-                            </li>
-                            <li class="nav-item" style="list-style-type: none">
-                                <a class="nav-link" href="#">SAIR</a>
-                            </li>
-                        </ul>
-                    </div>
+              <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
+              <p class="navbar-title mt-3 fw-bold text">
+                ANAMNESE DA EMERGÊNCIA MÉDICA
+              </p>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
                 </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+                    </li>
+      
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        CATEGORIAS
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-dark" style="background-color: #343a40;" id="dark">
+                        <li>
+                          <a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" style="white-space: break-spaces">PROBLEMAS ENCONTRADOS SUSPEITOS</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">SINAIS E SINTOMAS</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#" style="white-space: break-spaces">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a>
+                        </li>
+                        <li>
+                          <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item" style="list-style-type: none">
+                      <a class="nav-link" href="#">PERFIL</a>
+                    </li>
+                    <li class="nav-item" style="list-style-type: none">
+                      <a class="nav-link" href="#">SAIR</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </nav>
+          </nav>
 
         <form action="">
 
