@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="PT-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procedimentos Efetuados</title>
-     <!-- Titulo -->
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link rel="stylesheet"
-         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <!-- Fonte -->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="viewport" content="width=device-width">
-     <!-- media -->
-     <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
 
-<style>
-  * {
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procedimentos Efetuados</title>
+  <!-- Titulo -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Fonte -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <!-- media -->
+  <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
+
+  <style>
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -42,19 +43,24 @@
       display: flex;
       margin: 0px;
     }
-    #col{
-        background-color: #333333;
-        border-radius: 13px;
+
+    #col {
+      background-color: #333333;
+      border-radius: 13px;
     }
-    #row{
+
+    #row {
       display: flex;
     }
-    #check{
+
+    #check {
       justify-content: space-between;
     }
-    #oxi{
+
+    #oxi {
       width: 17%;
     }
+
     .espaço_botao {
       display: flex;
       width: 100%;
@@ -68,552 +74,672 @@
       align-items: center;
       width: 90%;
     }
+
     .text-line {
       background: transparent;
       color: white;
       border: none;
       border-bottom: 2px solid rgb(6, 108, 243);
     }
-    @media screen and (min-width: 375px) {
-      #row{
+
+
+    .container-fluid-teste {
       display: flex;
+      display: none;
       flex-direction: column;
-      align-items: center;
+      margin-left: 20%;
     }
-    #col{
-      width: 88%;
+
+    .form-check-3 {
+      display: flex;
+      display: none;
+      flex-direction: column;
+      margin-left: 20%;
     }
+
+    @media screen and (min-width: 375px) {
+      #row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #col {
+        width: 88%;
+      }
     }
+
     @media screen and (min-width: 1024px) {
-      #row{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    #col{
-      width: 42%;
-    }
+      #row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #col {
+        width: 42%;
+      }
 
     }
+
     @media screen and (min-width: 768px) {
-      #row{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    #col{
-      width: 42%;
-    }
+      #row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      #col {
+        width: 42%;
+      }
     }
 
-</style>
+    /* Tamanho menu */
+    @media screen and (min-width: 200px) and (max-width:460px) {
+
+      .navbar-title {
+        font-size: 13PX;
+      }
+
+    }
+
+    @media screen and (min-width: 200px) and (max-width:405px) {
+
+      .navbar-title {
+        font-size: 10.6PX;
+      }
+
+    }
+  </style>
 </head>
 <body>
-        <!-- navbar -->
-        <nav class="navbar navbar-dark" id="nav">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
-            <p class="navbar-title mt-3 fw-bold text">
-              PROCEDIMENTOS EFETUADOS
-            </p>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-              aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-              aria-labelledby="offcanvasDarkNavbarLabel">
-              <div class="offcanvas-header">
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
-                  </li>
-    
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      CATEGORIAS
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li>
-                        <a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#" style="white-space: break-spaces">PROBLEMAS ENCONTRADOS
-                          SUSPEITOS</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">SINAIS E SINTOMAS</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#" style="white-space: break-spaces">FORMA DE CONDUÇÃO E DECISÃO DE
-                          TRANSPORTE</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a>
-                      </li>
-                      <li>
-                        <hr class="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item" style="list-style-type: none">
-                    <a class="nav-link" href="#">PERFIL</a>
-                  </li>
-                  <li class="nav-item" style="list-style-type: none">
-                    <a class="nav-link" href="#">SAIR</a>
-                  </li>
-                </ul>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <!-- navbar -->
+  <nav class="navbar navbar-dark" id="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
+      <p class="navbar-title mt-3 fw-bold text">
+        PROCEDIMENTOS EFETUADOS
+      </p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                CATEGORIAS
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" style="white-space: break-spaces">PROBLEMAS ENCONTRADOS SUSPEITOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">SINAIS E SINTOMAS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" style="white-space: break-spaces">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item" style="list-style-type: none">
+              <a class="nav-link" href="#">PERFIL</a>
+            </li>
+            <li class="nav-item" style="list-style-type: none">
+              <a class="nav-link" href="#">SAIR</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid h-100">
+    <form action="">
+      <div class="form-group h-100">
+        <div class="row mt-5 gap-4 justify-content-center" id="row">
+          <!-- ASPIRAÇÃO -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              ASPIRAÇÃO
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
               </div>
             </div>
           </div>
-        </nav>
-        <div class="container-fluid h-100">
-          <form action="">
-            <div class="form-group h-100">
-              <div class="row mt-5 gap-4 justify-content-center" id="row">
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          ASPIRAÇÃO
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          AVALIAÇÃO DIGITAL 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          AVALIAÇÃO DIRIGIDA
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4"  id="col">
-                      <div class="p-3 d-flex" id="check">
-                          AVALIAÇÃO CONTINUADA 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          CHAVE DE RAUTEK 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          CÂNULA DE GUEDEL 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          DESOBSTRUÇÃO DE V.A
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          EMPREGO DO D.E.A
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          GERENCIAMENTO DE RISCOS 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          LIMPEZA DE FERIMENTO 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          CURATIVOS
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          COMPRESSIVO
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div> 
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          ENCRAVAMENTO  
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          OCULAR 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          QUEIMADURA
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          SIMPLES 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          3 PONTAS  
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          IMOBILIZAÇÕES 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                        MEMBRO INF. DIR.
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                        MEMBRO INF. ESQ. 
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                        MEMBRO SUP. DIR.
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                        MEMBRO SUP. ESQ.
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                            QUADRIL
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            CERVICAL
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                            MACAS SOBRE RODAS
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            MACA RÍGIDA
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            PONTE
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            RETIRADO CAPACETE
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            R.C.P
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            ROLAMENTO 90º
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            ROLAMENTO 180º
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          TOMADA DECISÃO
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          TRATADO CHOQUE
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            USO DE CÂNULA
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          USO COLAR
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                        <div class="p-3 d-flex" id="check">
-                            USO KED
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                          </div>
-                        </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          USO TTF
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          VENTILAÇÃO SUPORTE
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          <span>OXIGENIOTERAPIA <input type="text" class="text-line" id="oxi">LPM</span>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          <span>REANIMADOR<input type="text" class="text-line" id="oxi">LPM</span> 
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
-                  </div>
-
-                  <div class="col-4" id="col">
-                      <div class="p-3 d-flex" id="check">
-                          MEIOS AUXILIARES
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                      </div>
+          <!-- AVALIAÇÃO INICIAL -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              AVALIAÇÃO INICIAL
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- AVALIAÇÃO DIRIGIDA -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              AVALIAÇÃO DIRIGIDA
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- AVALIAÇÃO CONTINUADA -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              AVALIAÇÃO CONTINUADA
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- CHAVE DE RAUTEK -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              CHAVE DE RAUTEK
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- CÂNULA DE GUEDEL -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              CÂNULA DE GUEDEL
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- DESOBSTRUÇÃO DE V.A -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              DESOBSTRUÇÃO DE V.A
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- EMPREGO DO D.E.A -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              EMPREGO DO D.E.A
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- GERENCIAMENTO DE RISCOS -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              GERENCIAMENTO DE RISCOS
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- LIMPEZA DE FERIMENTO -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              LIMPEZA DE FERIMENTO
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- CURATIVOS -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              CURATIVOS
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- COMPRESSIVO -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              COMPRESSIVO
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- ENCRAVAMENTO -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              ENCRAVAMENTO
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- OCULAR -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              OCULAR
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- QUEIMADURA -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              QUEIMADURA
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- SIMPLES -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              SIMPLES
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- 3 PONTAS -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              3 PONTAS
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- IMOBILIZAÇÕES -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              IMOBILIZAÇÕES
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- MEMBRO INF. DIR. -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              MEMBRO INF. DIR.
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- MEMBRO INF. ESQ. -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              MEMBRO INF. ESQ.
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- MEMBRO SUP. DIR. -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              MEMBRO SUP. DIR.
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- MEMBRO SUP. ESQ. -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              MEMBRO SUP. ESQ.
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- QUADRIL -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              QUADRIL
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- CERVICAL -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              CERVICAL
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- MACAS SOBRE RODAS -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              MACAS SOBRE RODAS
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- MACA RÍGIDA -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              MACA RÍGIDA
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- PONTE -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              PONTE
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- RETIRADO CAPACETE -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              RETIRADO CAPACETE
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- R.C.P -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              R.C.P
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- ROLAMENTO 90º -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              ROLAMENTO 90º
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- ROLAMENTO 180º -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              ROLAMENTO 180º
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- TOMADA DECISÃO -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              TOMADA DECISÃO
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- TRATADO CHOQUE -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              TRATADO CHOQUE
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- USO DE CÂNULA -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              USO DE CÂNULA
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- USO COLAR -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              <span>USO COLAR - TAM:<input type="text" class="text-line" id="oxi"></span>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- USO KED -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              USO KED
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- USO TTF -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              USO TTF
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- VENTILAÇÃO SUPORTE -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              VENTILAÇÃO SUPORTE
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- OXIGENIOTERAPIA -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              <span>OXIGENIOTERAPIA <input type="text" class="text-line" id="oxi">LPM</span>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- REANIMADOR -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              <span>REANIMADOR<input type="text" class="text-line" id="oxi">LPM</span>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <!-- MEIOS AUXILIARES TESTE-->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              MEIOS AUXILIARES
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="MEIOSCheckbox">
+              </div>
+            </div>
+            <div class="container-fluid-teste">
+              <div class="form-check-1">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">CELESC</div>
+              </div>
+              <div class="form-check-1">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">DEF. CIVIL</div>
+              </div>
+              <div class="form-check-1">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">IGP/PC</div>
+              </div>
+              <div class="form-check-2">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="SAMUCheckbox">
+                <div class="descrition d-flex" style="width: 100%;">SAMU</div>
+                <div class="form-check-3">
+                  <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                  <div class="descrition d-flex" style="width: 100%;">USA</div>
                 </div>
-
-                <div class="col-4" id="col">
-                  <div class="p-3 d-flex" id="check">
-                      CIT
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </div>
-                  </div>
-                  </div>
+                <div class="form-check-3">
+                  <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                  <div class="descrition d-flex" style="width: 100%;">USB</div>
+                </div>
+              </div>
+              <div class="form-check-2">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                <div class="descrition d-flex" style="width: 100%;">POLÍCIA</div>
+              </div>
             </div>
           </div>
-        </form> 
-            <div class="espaço_botao">
-              <div class="botao">
-                  <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
-                  <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+          <!-- CIT -->
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              CIT
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
               </div>
+            </div>
           </div>
         </div>
+      </div>
+    </form>
+    <div class="espaço_botao">
+      <div class="botao">
+        <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+        <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- meios auxiliares -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const MEIOSCheckbox = document.querySelector('input[id="MEIOSCheckbox"]');
+      const containerMEIOS = document.querySelector('.container-fluid-teste');
+
+      MEIOSCheckbox.addEventListener('change', function () {
+        if (MEIOSCheckbox.checked) {
+          containerMEIOS.style.display = 'flex';
+        } else {
+          containerMEIOS.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  <!--  Check - meios auxiliares -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const checkboxes = document.querySelectorAll('.container-fluid-teste input[type="checkbox"]');
+
+      checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+          checkboxes.forEach(function (otherCheckbox) {
+            if (otherCheckbox !== checkbox) {
+              otherCheckbox.checked = false;
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+<!-- Samu -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const SAMUCheckbox = document.querySelector('input[id="SAMUCheckbox"]');
+    const containerSAMU = document.querySelector('.form-check-3');
+
+    SAMUCheckbox.addEventListener('change', function () {
+      if (SAMUCheckbox.checked) {
+        containerSAMU.style.display = 'flex';
+      } else {
+        containerSAMU.style.display = 'none';
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>
