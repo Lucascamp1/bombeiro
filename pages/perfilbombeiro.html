@@ -65,6 +65,11 @@
 
     .card{
       padding: 20px 24px 20px 24px;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important
+    }
+
+    .form-control{
+        box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02)
     }
 </style>
 </head>
@@ -178,10 +183,44 @@
 
                     <div>
                         <p>Informação do Usuário</p>
-                        <div class="mb-3">
-                            <label for="disabledTextInput" class="form-label">Disabled input</label>
-                            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+
+                        <div class="d-flex">
+                            <div class="mb-3 col-6">
+                                <label for="disabledTextInput" class="form-label">Username</label>
+                                <input type="text" class="form-control" placeholder="robson_leones">
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="disabledTextInput" class="form-label">Email</label>
+                                <input type="text" class="form-control" placeholder="robson_leones@gmail.com">
+                            </div>
                         </div>
+
+                        <div class="d-flex">
+                            <div class="mb-3 col-6">
+                                <label for="disabledTextInput" class="form-label">Nome</label>
+                                <input type="text" class="form-control" placeholder="Robson Leones">
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="disabledTextInput" class="form-label">Matrícula</label>
+                                <input type="text" class="form-control" placeholder="12345-6789-8976">
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="mb-3 col-6">
+                                <label for="disabledTextInput" class="form-label">Gênero</label>
+                                <input type="text" class="form-control" placeholder="Masculino">
+                            </div>
+                            <div class="mb-3 col-6">
+                                <label for="disabledTextInput" class="form-label">Data de Nascimento</label>
+                                <input type="text" class="form-control" placeholder="18/10/1994">
+                            </div>
+                        </div>
+
+                            <div class="mb-3 col-6">
+                                <label for="disabledTextInput" class="form-label">Contato</label>
+                                <input type="text" class="form-control" placeholder="(47) 96784-5674">
+                            </div>
                     </div>
                 </div>
             </div>
