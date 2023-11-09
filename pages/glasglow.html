@@ -1,483 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVALIAÇÃO DO PACIENTE (GLASGLOW)</title>
-     <!-- Titulo -->
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link rel="stylesheet"
-         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <!-- Fonte -->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="viewport" content="width=device-width">
-     <!-- media -->
-     <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
-     <!--Imagem icon-->
- 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-         crossorigin="anonymous"></script>
 
-<style>
-     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVALIAÇÃO DO PACIENTE (GLASGLOW)</title>
+  <!-- Titulo -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Fonte -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <!-- media -->
+  <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
+  <!--Imagem icon-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-        background-color: #c1c1c1;  
-        font-family: 'Inter', sans-serif;
-        color: white;
-        height: 100vh;
+      background-color: #c1c1c1;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      height: 100vh;
     }
 
     #nav {
-        background-color: #333333;
-    }
-    #row{
-        height: 6%; 
-        background-color: #969393;
-    }
-    #row2{
-        height: 10%;
-    }
-    #col{
-        background-color: #333333;
-        border-radius: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    #col-4{
-        background-color: #333333;
-    }
-    #col-8{
-        background-color: #333333;
-    }
-    #row3{
-        gap: 8%;
-    }
-    #col1{
       background-color: #333333;
     }
+
+    #row {
+      height: 6%;
+      background-color: #969393;
+    }
+
+    #row2 {
+      height: 10%;
+    }
+
+    #col {
+      background-color: #333333;
+      border-radius: 13px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    #col-4 {
+      background-color: #333333;
+    }
+
+    #col-8 {
+      background-color: #333333;
+    }
+
+    #row3 {
+      gap: 8%;
+    }
+
+    #col1 {
+      background-color: #333333;
+    }
+
     .espaço_botao {
       display: flex;
       width: 100%;
       height: 10vh;
-     justify-content: center;
+      justify-content: center;
     }
+
     .botao {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 90%;
     }
-    #col2{
+
+    #col2 {
       background-color: #333333;
-        border-radius: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+      border-radius: 13px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-</style>
-</head>
-<body>
-     <!-- navbar -->
-     <nav class="navbar navbar-dark" id="nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="../images/avatar_bombeiro.png" width="60px"/></a>
-          <p class="navbar-title mt-3 fw-bold text">
-            AVALIAÇÃO DA CINEMÁTICA
-          </p>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasDarkNavbar"
-            aria-controls="offcanvasDarkNavbar"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end text-bg-dark"
-            tabindex="-1"
-            id="offcanvasDarkNavbar"
-            aria-labelledby="offcanvasDarkNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#"
-                    >TELA DE INÍCIO</a
-                  >
-                </li>
+    #col1 {
+      border-radius: 10px;
+    }
 
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    CATEGORIAS
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li>
-                      <a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        style="white-space: break-spaces"
-                        >PROBLEMAS ENCONTRADOS SUSPEITOS</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">SINAIS E SINTOMAS</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >AVALIAÇÃO DO PACIENTE (GLASGOW)</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >LOCALIZAÇÃO DOS TRAUMAS</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a
-                        class="dropdown-item"
-                        href="#"
-                        style="white-space: break-spaces"
-                        >FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >PROCEDIMENTOS EFETUADOS</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >OBSERVAÇÕES IMPORTANTES</a
-                      >
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >AVALIAÇÃO DA CINEMÁTICA</a
-                      >
-                    </li>
-                  </ul>
+    .soma1 {
+      border-radius: 5px;
+      text-align: center;
+      background-color: transparent;
+      border-color: white;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-dark" id="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../images/avatar_bombeiro.png" width="60px" /></a>
+      <p class="navbar-title mt-3 fw-bold text">
+        AVALIAÇÃO DO PACIENTE (GLASGLOW)
+      </p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                CATEGORIAS
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li>
+                  <a class="dropdown-item" href="#">TIPO DE OCORRÊNCIA</a>
                 </li>
-                <li class="nav-item" style="list-style-type: none">
-                  <a class="nav-link" href="#">PERFIL</a>
+                <li>
+                  <hr class="dropdown-divider" />
                 </li>
-                <li class="nav-item" style="list-style-type: none">
-                  <a class="nav-link" href="#">SAIR</a>
+                <li>
+                  <a class="dropdown-item" href="#" style="white-space: break-spaces">PROBLEMAS ENCONTRADOS
+                    SUSPEITOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">SINAIS E SINTOMAS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">AVALIAÇÃO DO PACIENTE (GLASGOW)</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">LOCALIZAÇÃO DOS TRAUMAS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">SINAIS VITAIS</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">OBJETOS RECOLHIDOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" style="white-space: break-spaces">FORMA DE CONDUÇÃO E DECISÃO DE
+                    TRANSPORTE</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">VÍTIMA ERA</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">PROCEDIMENTOS EFETUADOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">MATERIAIS UTILIZADOS</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">OBSERVAÇÕES IMPORTANTES</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">AVALIAÇÃO DA CINEMÁTICA</a>
                 </li>
               </ul>
-            </div>
-          </div>
+            </li>
+            <li class="nav-item" style="list-style-type: none">
+              <a class="nav-link" href="#">PERFIL</a>
+            </li>
+            <li class="nav-item" style="list-style-type: none">
+              <a class="nav-link" href="#">SAIR</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-<form action="" class="h-100">   
-  <div class="form-group h-100">
-    <div class="container-fluid h-100 w-100">
+      </div>
+    </div>
+  </nav>
+  <form action="" class="h-100">
+    <div class="form-group h-100">
+      <div class="container-fluid h-100 w-100">
         <div class="row text-center d-flex align-items-center" id="row">
-            <b>NÍVEL DE CONCIÊNCIA</b>
+          <b>NÍVEL DE CONCIÊNCIA</b>
         </div>
-        
+
         <BR>
         <BR>
 
         <div class="row d-flex text-center justify-content-center" id="row2">
-            <div class="col-10 h-75 d-flex justify-content-center align-items-center " id="col">
-                <b>MENORES DE 5 ANOS</b>
-            </div>
+          <div class="col-10 h-75 d-flex justify-content-center align-items-center " id="col">
+            <b>MENORES DE 5 ANOS</b>
+          </div>
         </div>
 
         <br>
         <br>
 
         <div class="row h-25 justify-content-center" id="row3">
-            <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
-              ABERTURA  DE <br> OCULAR
-            </div>
-
-            <div class="col-6 pt-2 " id="col2">
-                <div class="row d-flex pl-4">
-                    <div class="col-1">4</div>
-                    <div class="col-1">
-                        <div class="form-check d-flex">
-                          <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        </div>
-                    </div>
-                    <div class="col-3">ESPONTÂNEA</div>
-                </div>
-               <br>
-                <div class="row d-flex pl-4">
-                  <div class="col-1">3</div>
-                  <div class="col-1">
-                    <div class="form-check d-flex">
-                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </div>
-                  </div>
-                  <div class="col-6">COMANDO VERBAL</div>
-                </div>
-                <br>
-                <div class="row d-flex pl-4">
-                  <div class="col-1">2</div>
-                  <div class="col-1">
-                    <div class="form-check d-flex">
-                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </div>
-                  </div>
-                  <div class="col-7">ESTÍMULO DOLOROSO</div>
-                </div>
-                <br>
-                <div class="row d-flex pl-4">
-                  <div class="col-1">1</div>
-                  <div class="col-1">
-                    <div class="form-check d-flex">
-                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </div>
-                  </div>
-                  <div class="col-3">NENHUMA</div>
-                </div>
-            </div>
+          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
+            ABERTURA DE <br> OCULAR
           </div>
-        <br>
 
-        <div class="row justify-content-center" id="row3" style="height: 30%;">
-            <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
-              RESPOSTA <br> VERBAL
-            </div>
-            <div class="col-6" id="col">
-                <div class="row d-flex pl-4">
-                  <div class="col-1">5</div>
-                  <div class="col-1">
-                    <div class="form-check d-flex">
-                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </div>
-                  </div>
-                  <div class="col-10">PALAVRAS E FRASES APROPRIADAS</div>
-                </div>
-                
-                <div class="row d-flex pl-4">
-                    <div class="col-1">4</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-8">PALAVRAS INAPROPRIADAS</div>
-                </div>
-                
-                <div class="row d-flex pl-4">
-                    <div class="col-1">3</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">CHORO PERSISTENTE OU GRITOS</div>
-                </div>
-                
-                <div class="row d-flex pl-4">
-                    <div class="col-1">2</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-9">SONS INCOMPREENSÍVEIS</div>
-                </div>
-                
-                <div class="row d-flex pl-4">
-                    <div class="col-1">1</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">NENHUMA RESPOSTA VERBAL</div>
-                </div>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="row justify-content-center" id="row3" style="height: 40%;">
-            <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
-              RESPOSTAS <br> MOTORA
-            </div>
-            <div class="col-6" id="col">
-                <div class="row d-flex pl-4">
-                    <div class="col-1">6</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">OBEDECE PRONTAMENTE</div>
-                </div>
-
-                <div class="row d-flex pl-4">
-                    <div class="col-1">5</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">LOCALIZA DOR OU ESTÍMULO TÁTIL</div>
-                </div>
-
-                <div class="row d-flex pl-4">
-                    <div class="col-1">4</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">RETIRADA DO SEGMENTO ESTIMULADO</div>
-                </div>
-
-                <div class="row d-flex pl-4">
-                    <div class="col-1">3</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">FLEXÃO ANORMAL (DECORTICAÇÃO)</div>
-                </div>
-
-                <div class="row d-flex pl-4">
-                    <div class="col-1">2</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">EXTENSÃO ANORMAL (DECEREBRAÇÃO)</div>
-                </div>
-
-                <div class="row d-flex pl-4">
-                    <div class="col-1">1</div>
-                    <div class="col-1">
-                      <div class="form-check d-flex">
-                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </div>
-                    </div>
-                    <div class="col-10">AUSÊNCIA (PARALISIA FLÁCIDA, HIPOTONIA)</div>
-                </div>
-            </div>
-        </div>
-
-        <br>
-        <br>
-
-        <div class="row d-flex justify-content-center" id="row2">
-            <div class="col-5 h-75" id="col1">
-
-            </div>
-        </div>
-
-        <br>
-        <br>
-
-        <div class="row d-flex text-center justify-content-center" id="row2">
-          <div class="col-10 h-75 d-flex justify-content-center align-items-center " id="col">
-              <b>MAIORES DE 5 ANOS</b>
-          </div>
-      </div>
-
-      <br>
-      <br>
-
-      <div class="row h-25 justify-content-center" id="row3">
-        <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">ABERTURA DE <br> OCULAR</div>
-        <div class="col-6" id="col2">
+          <div class="col-6 pt-2 " id="col2">
             <div class="row d-flex pl-4">
-                <div class="col-1">4</div>
-                <div class="col-1">
-                    <div class="form-check d-flex">
-                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </div>
+              <div class="col-1">4</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="4" onclick="calcularSoma()"
+                    id="soma">
                 </div>
-                <div class="col-3">ESPONTÂNEA</div>
+              </div>
+              <div class="col-3">ESPONTÂNEA</div>
             </div>
-          <br>
+            <br>
             <div class="row d-flex pl-4">
               <div class="col-1">3</div>
               <div class="col-1">
                 <div class="form-check d-flex">
-                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="3" onclick="calcularSoma()"
+                    id="soma">
                 </div>
               </div>
               <div class="col-6">COMANDO VERBAL</div>
@@ -487,7 +280,8 @@
               <div class="col-1">2</div>
               <div class="col-1">
                 <div class="form-check d-flex">
-                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="2" onclick="calcularSoma()"
+                    id="soma">
                 </div>
               </div>
               <div class="col-7">ESTÍMULO DOLOROSO</div>
@@ -497,156 +291,397 @@
               <div class="col-1">1</div>
               <div class="col-1">
                 <div class="form-check d-flex">
-                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="1" onclick="calcularSoma()"
+                    id="soma">
                 </div>
               </div>
               <div class="col-3">NENHUMA</div>
             </div>
-        </div>
-      </div>
-
-      <br>
-
-      <div class="row justify-content-center" id="row3" style="height: 30%;">
-        <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">RESPOSTA <br> VERBAL</div>
-        <div class="col-6" id="col">
-          <div class="row d-flex pl-4">
-            <div class="col-1">5</div>
-            <div class="col-1">
-              <div class="form-check d-flex">
-                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              </div>
-            </div>
-            <div class="col-10">ORIENTADO</div>
           </div>
-          
-          <div class="row d-flex pl-4">
+        </div>
+        <br>
+
+        <div class="row justify-content-center" id="row3" style="height: 30%;">
+          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
+            RESPOSTA <br> VERBAL
+          </div>
+          <div class="col-6" id="col">
+            <div class="row d-flex pl-4">
+              <div class="col-1">5</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="5" onclick="calcularSoma()"
+                    id="soma">
+                </div>
+              </div>
+              <div class="col-10">PALAVRAS E FRASES APROPRIADAS</div>
+            </div>
+
+            <div class="row d-flex pl-4">
               <div class="col-1">4</div>
               <div class="col-1">
                 <div class="form-check d-flex">
-                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="4" onclick="calcularSoma()"
+                    id="soma">
                 </div>
               </div>
-              <div class="col-8">CONFUSO</div>
-          </div>
-          
-          <div class="row d-flex pl-4">
+              <div class="col-8">PALAVRAS INAPROPRIADAS</div>
+            </div>
+
+            <div class="row d-flex pl-4">
               <div class="col-1">3</div>
               <div class="col-1">
                 <div class="form-check d-flex">
-                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="3" onclick="calcularSoma()"
+                    id="soma">
                 </div>
               </div>
-              <div class="col-10">PALAVRAS INAPROPRIADAS</div>
-          </div>
-          
-          <div class="row d-flex pl-4">
+              <div class="col-10">CHORO PERSISTENTE OU GRITOS</div>
+            </div>
+
+            <div class="row d-flex pl-4">
               <div class="col-1">2</div>
               <div class="col-1">
                 <div class="form-check d-flex">
-                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="2" onclick="calcularSoma()"
+                    id="soma">
                 </div>
               </div>
-              <div class="col-9">PALAVRAS INCOMPREENSÍVEIS</div>
-          </div>
-          
-          <div class="row d-flex pl-4">
+              <div class="col-9">SONS INCOMPREENSÍVEIS</div>
+            </div>
+
+            <div class="row d-flex pl-4">
               <div class="col-1">1</div>
               <div class="col-1">
                 <div class="form-check d-flex">
-                  <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="1" onclick="calcularSoma()"
+                    id="soma">
+                </div>
+              </div>
+              <div class="col-10">NENHUMA RESPOSTA VERBAL</div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center" id="row3" style="height: 40%;">
+          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">
+            RESPOSTAS <br> MOTORA
+          </div>
+          <div class="col-6" id="col">
+            <div class="row d-flex pl-4">
+              <div class="col-1">6</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="6" onclick="calcularSoma()"
+                    id="soma">
+                </div>
+              </div>
+              <div class="col-10">OBEDECE PRONTAMENTE</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">5</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="5" id="soma"
+                    onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-10">LOCALIZA DOR OU ESTÍMULO TÁTIL</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">4</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="4" onclick="calcularSoma()"
+                    id="soma">
+                </div>
+              </div>
+              <div class="col-10">RETIRADA DO SEGMENTO ESTIMULADO</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">3</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="3" onclick="calcularSoma()"
+                    id="soma">
+                </div>
+              </div>
+              <div class="col-10">FLEXÃO ANORMAL (DECORTICAÇÃO)</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">2</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="2" onclick="calcularSoma()"
+                    id="soma">
+                </div>
+              </div>
+              <div class="col-10">EXTENSÃO ANORMAL (DECEREBRAÇÃO)</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">1</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupo" class="form-check-input" type="checkbox" value="1" onclick="calcularSoma()"
+                    id="soma">
+                </div>
+              </div>
+              <div class="col-10">AUSÊNCIA (PARALISIA FLÁCIDA, HIPOTONIA)</div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row d-flex justify-content-center col-12" id="row2">
+          <div class="col-3 h-75 d-flex align-items-center justify-content-center" id="col1">
+            <div>
+              <label class="card-text mb-0 col-12">TOTAL (GCS) (3-15)</label>
+            </div>
+
+            <div class="col-4">
+              <input type="text" id="soma" class="soma1 col-9" readonly>
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row d-flex text-center justify-content-center" id="row2">
+          <div class="col-10 h-75 d-flex justify-content-center align-items-center " id="col">
+            <b>MAIORES DE 5 ANOS</b>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row h-25 justify-content-center" id="row3">
+          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">ABERTURA DE <br>
+            OCULAR</div>
+          <div class="col-6" id="col2">
+            <div class="row d-flex pl-4">
+              <div class="col-1">4</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="4"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-3">ESPONTÂNEA</div>
+            </div>
+            <br>
+            <div class="row d-flex pl-4">
+              <div class="col-1">3</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="3"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-6">COMANDO VERBAL</div>
+            </div>
+            <br>
+            <div class="row d-flex pl-4">
+              <div class="col-1">2</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="2"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-7">ESTÍMULO DOLOROSO</div>
+            </div>
+            <br>
+            <div class="row d-flex pl-4">
+              <div class="col-1">1</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="1"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-3">NENHUMA</div>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center" id="row3" style="height: 30%;">
+          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">RESPOSTA <br> VERBAL
+          </div>
+          <div class="col-6" id="col">
+            <div class="row d-flex pl-4">
+              <div class="col-1">5</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="5"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-10">ORIENTADO</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">4</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="4"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-8">CONFUSO</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">3</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="3"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-10">PALAVRAS INAPROPRIADAS</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">2</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="2"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
+              </div>
+              <div class="col-9">PALAVRAS INCOMPREENSÍVEIS</div>
+            </div>
+
+            <div class="row d-flex pl-4">
+              <div class="col-1">1</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="1"
+                    id="soma1" onclick="calcularSoma()">
                 </div>
               </div>
               <div class="col-10">NENHUMA</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <br>
+        <br>
 
-      <div class="row justify-content-center" id="row3" style="height: 40%;">
-        <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">RESPOSTAS <br> MOTORA</div>
-        <div class="col-6" id="col">
-          <div class="row d-flex pl-4">
-            <div class="col-1">6</div>
-            <div class="col-1">
-              <div class="form-check d-flex">
-                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <div class="row justify-content-center" id="row3" style="height: 40%;">
+          <div class="col-3 d-flex align-items-center justify-content-center text-center" id="col">RESPOSTAS <br> MOTORA
+          </div>
+          <div class="col-6" id="col">
+            <div class="row d-flex pl-4">
+              <div class="col-1">6</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="6"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
               </div>
+              <div class="col-10">OBEDECE COMANDOS</div>
             </div>
-            <div class="col-10">OBEDECE COMANDOS</div>
-        </div>
 
-        <div class="row d-flex pl-4">
-            <div class="col-1">5</div>
-            <div class="col-1">
-              <div class="form-check d-flex">
-                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <div class="row d-flex pl-4">
+              <div class="col-1">5</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="5"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
               </div>
+              <div class="col-10">LOCALIZA DOR</div>
             </div>
-            <div class="col-10">LOCALIZA DOR</div>
-        </div>
 
-        <div class="row d-flex pl-4">
-            <div class="col-1">4</div>
-            <div class="col-1">
-              <div class="form-check d-flex">
-                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <div class="row d-flex pl-4">
+              <div class="col-1">4</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="4"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
               </div>
+              <div class="col-10">MOVIMENTO DE RETIRADA</div>
             </div>
-            <div class="col-10">MOVIMENTO DE RETIRADA</div>
-        </div>
 
-        <div class="row d-flex pl-4">
-            <div class="col-1">3</div>
-            <div class="col-1">
-              <div class="form-check d-flex">
-                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <div class="row d-flex pl-4">
+              <div class="col-1">3</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="3"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
               </div>
+              <div class="col-10">FLEXÃO ANORMAL</div>
             </div>
-            <div class="col-10">FLEXÃO ANORMAL</div>
-        </div>
 
-        <div class="row d-flex pl-4">
-            <div class="col-1">2</div>
-            <div class="col-1">
-              <div class="form-check d-flex">
-                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <div class="row d-flex pl-4">
+              <div class="col-1">2</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="2"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
               </div>
+              <div class="col-10">EXTENSÃO ANORMAL</div>
             </div>
-            <div class="col-10">EXTENSÃO ANORMAL</div>
-        </div>
 
-        <div class="row d-flex pl-4">
-            <div class="col-1">1</div>
-            <div class="col-1">
-              <div class="form-check d-flex">
-                <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <div class="row d-flex pl-4">
+              <div class="col-1">1</div>
+              <div class="col-1">
+                <div class="form-check d-flex">
+                  <input name="grupoMaiores5Anos" class="form-check-input" type="checkbox" value="1"
+                    id="soma1" onclick="calcularSoma()">
+                </div>
               </div>
+              <div class="col-10">NENHUMA</div>
             </div>
-            <div class="col-10">NENHUMA</div>
-        </div>
-
-        </div>
-      </div>
-
-      <br>
-      <br>
-
-      <div class="row d-flex justify-content-center" id="row2">
-          <div class="col-5 h-75" id="col1">
 
           </div>
-      </div>
+        </div>
 
-      <div class="espaço_botao">
+        <br>
+        <br>
+
+        <div class="row d-flex justify-content-center col-12" id="row2">
+          <div class="col-3 h-75 d-flex align-items-center justify-content-center" id="col1">
+            <div>
+              <label class="card-text mb-0 col-12">TOTAL (GCS) (3-15)</label>
+            </div>
+
+            <div class="col-4">
+              <input type="text" id="somaMaiores5Anos" class="soma1 col-9" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="espaço_botao">
           <div class="botao">
-              <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
-              <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+            <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+            <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
           </div>
+        </div>
       </div>
     </div>
-  </div>
-</form>   
+  </form>
+
+
+
+
+
 </body>
+
 </html>
