@@ -97,6 +97,13 @@
       margin-left: 20%;
     }
 
+    .form-check-4 {
+      display: flex;
+      display: none;
+      flex-direction: column;
+      margin-left: 20%;
+    }
+
     @media screen and (min-width: 375px) {
       #row {
         display: flex;
@@ -112,7 +119,7 @@
     @media screen and (min-width: 1024px) {
       #row {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
       }
 
@@ -125,12 +132,12 @@
     @media screen and (min-width: 768px) {
       #row {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
       }
 
       #col {
-        width: 42%;
+        width: 76%;
       }
     }
 
@@ -674,9 +681,27 @@
                   </div>
                 </div>
               </div>
-              <div class="form-check-2">
-                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+              <div class="form-check-1">
+                <input class="form-check-input" name="grupo1" type="checkbox" value="" id="POLICheckbox">
                 <div class="descrition d-flex" style="width: 100%;">POLÍCIA</div>
+                <div class="form-check-4">
+                  <div>
+                    <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                    <div class="descrition d-flex" style="width: 100%;">CIVIL</div>
+                  </div>
+                  <div>
+                    <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                    <div class="descrition d-flex" style="width: 100%;">MILITAR</div>
+                  </div>
+                  <div>
+                    <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                    <div class="descrition d-flex" style="width: 100%;">PRE</div>
+                  </div>
+                  <div>
+                    <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
+                    <div class="descrition d-flex" style="width: 100%; margin-bottom: 12px;">PRF</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -744,6 +769,21 @@
           containerSAMU.style.display = 'flex';
         } else {
           containerSAMU.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  <!-- Poli -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const POLICheckbox = document.querySelector('input[id="POLICheckbox"]');
+      const containerPOLI = document.querySelector('.form-check-4');
+
+      POLICheckbox.addEventListener('change', function () {
+        if (POLICheckbox.checked) {
+          containerPOLI.style.display = 'flex';
+        } else {
+          containerPOLI.style.display = 'none';
         }
       });
     });
