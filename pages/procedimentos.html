@@ -157,6 +157,14 @@
       }
 
     }
+
+    #floatingTextarea {
+      background: transparent;
+      color: white;
+      border: none;
+      border-bottom: 2px solid rgb(6, 108, 243);
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -683,7 +691,7 @@
               </div>
               <div class="form-check-1">
                 <input class="form-check-input" name="grupo1" type="checkbox" value="" id="POLICheckbox">
-                <div class="descrition d-flex" style="width: 100%;">POLÍCIA</div>
+                <div class="descrition d-flex mb-2" style="width: 100%;">POLÍCIA</div>
                 <div class="form-check-4">
                   <div>
                     <input class="form-check-input" name="grupo1" type="checkbox" value="" id="flexCheckDefault">
@@ -711,6 +719,15 @@
               CIT
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              </div>
+            </div>
+          </div>
+          <div class="col-4" id="col">
+            <div class="p-3 d-flex" id="check">
+              OUTROS:
+              <div class="form-floating d-flex w-100">
+                <textarea class="form-control pt-2" id="floatingTextarea" style="height: 100%;"></textarea>
+                <!-- <label for="floatingTextarea mt-3">Outro</label> -->
               </div>
             </div>
           </div>
