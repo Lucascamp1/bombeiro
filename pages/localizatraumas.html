@@ -58,6 +58,24 @@
             display: flex;
             margin: 0px;
         }
+
+        /* Tamanho titulo */
+        @media screen and (max-width:460px) {
+
+            .navbar-title {
+                font-size: 13PX;
+            }
+
+        }
+
+        /* Tamanho titulo */
+        @media screen and (max-width:405px) {
+
+            .navbar-title {
+                font-size: 10.6PX;
+            }
+
+        }
     </style>
 
 </head>
@@ -156,8 +174,8 @@
                 </div>
             </div>
         </nav>
-        <!-- <div class="card mb-2 text-light"> -->
-            <div class="card-header">
+        <div class="fundo mb-2">
+            <div class="card-header mt-3">
                 <div class="text-center">
                     <h2 class="card-title mb-0">Localização dos Traumas</h2>
                 </div>
@@ -179,19 +197,19 @@
                         <option value="Queimadura_3">Queimadura 3° grau</option>
                     </select>
                     <div class="row position-relative" id="imageContainer">
-                        <img id="humanBody" src="/images/corpo_maior.PNG" alt="body-image">
+                        <!-- <img id="humanBody" src="/images/corpo_maior.PNG" alt="body-image"> -->
                     </div>
                     <!-- Buton to undo -->
-                    <div class="d-flex justify-content-center mt-4">
+                    <!-- <div class="d-flex justify-content-center mt-4">
                         <button type="button" class="btn btn-light fw-bold" id="undoBtn">Desfazer</button>
                     </div>
                     <div class="d-flex justify-content-between mt-4">
                         <button type="submit" class="btn btn-light" id="backBtn">Voltar</button>
                         <button type="submit" class="btn btn-primary" id="nextBtn">Próximo</button>
-                    </div>
+                    </div> -->
                 </form>
             </div>
-        <!-- </div> -->
+        </div>
     </div>
 
 
