@@ -80,12 +80,13 @@
             box-sizing: border-box;
             padding: 15px;
             justify-content: space-between;
-            background-color: rgba(0, 255, 255, 0.425);
         }
 
         .form-group {
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         .container-fluid-linha {
@@ -105,15 +106,26 @@
             width: 90%;
         }
 
-        #option{
+        .card-body-cor {
             display: flex;
-            background-color: rgba(127, 255, 212, 0.37);
+            flex-direction: column;
+            width: 90%;
+            padding: 20px;
         }
 
-        /* .form-control{
+        .espaço_botao {
             display: flex;
             width: 100%;
-        } */
+            height: 15vh;
+            justify-content: center;
+        }
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
     </style>
 
 </head>
@@ -223,8 +235,10 @@
                                     <label for="traumaType" class="mt-1 mb-2">Selecione o tipo de trauma:</label>
                                 </div>
                                 <select id="traumaType" class="form-control mb-3">
-                                    <option value="Fratura_Luxacao_Entorse">Fraturas/Luxações/Entorses</option>
-                                    <option value="Ferimentos_diversos">Ferimentos diversos</option>
+                                    <option value="Fratura_Luxacao_Entorse">
+                                        Fraturas/Luxações/Entorses</option>
+                                    <option value="Ferimentos_diversos">Ferimentos diversos
+                                    </option>
                                     <option value="Hemorragia">Hemorragia</option>
                                     <option value="Evisceracao">Evisceração</option>
                                     <option value="FAB_FAF">FAB/FAF</option>
@@ -236,8 +250,25 @@
                             </form>
                         </div>
                     </div>
+                    <div class="container-fluid-linha">
+                        <div class="card-body-cor">
+                            <img id="humanBody" src="/images/corpo_maior.PNG" alt="body-image">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="button" class="btn btn-light fw-bold" id="undoBtn">Desfazer</button>
+                    </div>
+
+                </div>
+                <!-- Botão Voltar e Proxima -->
+                <div class="espaço_botao">
+                    <div class="botao">
+                        <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                        <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+                    </div>
                 </div>
             </form>
+
         </div>
 
 
@@ -256,23 +287,6 @@
 
 
 
-
-        <!-- <div class="card-body">
-                <form id="TraumaLocForm"> -->
-        <!-- Adicione um campo de seleção para o tipo de trauma -->
-        <!-- <label for="traumaType" class="mt-1 mb-2">Selecione o tipo de trauma:</label>
-                    <select id="traumaType" class="form-control mb-3"> -->
-        <!-- Adicione as opções de trauma aqui -->
-        <!-- <option value="Fratura_Luxacao_Entorse">Fraturas/Luxações/Entorses</option>
-                        <option value="Ferimentos_diversos">Ferimentos diversos</option>
-                        <option value="Hemorragia">Hemorragia</option>
-                        <option value="Evisceracao">Evisceração</option>
-                        <option value="FAB_FAF">FAB/FAF</option>
-                        <option value="Amputacao">Amputação</option>
-                        <option value="Queimadura_1">Queimadura 1° grau</option>
-                        <option value="Queimadura_2">Queimadura 2° grau</option>
-                        <option value="Queimadura_3">Queimadura 3° grau</option>
-                    </select> -->
         <!-- <div class="row position-relative" id="imageContainer">
                         <img id="humanBody" src="/images/corpo_maior.PNG" alt="body-image">
                     </div> -->
