@@ -80,7 +80,6 @@
             box-sizing: border-box;
             padding: 15px;
             justify-content: space-between;
-            background-color: rgba(0, 255, 255, 0.425);
         }
 
         .form-group {
@@ -107,7 +106,6 @@
 
         #option {
             display: flex;
-            background-color: rgba(127, 255, 212, 0.37);
         }
 
         /* .form-control{
@@ -115,17 +113,33 @@
             width: 100%;
         } */
 
-        .corpo{
+        .corpo {
             display: flex;
-            background-color: aliceblue;
             justify-content: center;
         }
-        .row{
+
+        .row {
             display: flex;
             background-color: #333333;
             width: 70%;
+            padding: 14px;
+            border-radius: 11px;
         }
-        
+
+        /* Definindo estilos dos botões do rodapé */
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 15vh;
+            justify-content: center;
+        }
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
     </style>
 
 </head>
@@ -254,6 +268,16 @@
                         <img class="img" id="humanBody" src="/images/corpo_maior.PNG" alt="body-image">
                     </div>
                 </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="button" class="btn btn-light fw-bold" id="undoBtn">Desfazer</button>
+                </div>
+                <div class="espaço_botao">
+                    <div class="botao">
+                        <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                        <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+                    </div>
+                </div>
+
 
             </form>
 
@@ -262,36 +286,6 @@
 
 
 
-
-        <!-- <div class="card-body">
-                <form id="TraumaLocForm"> -->
-        <!-- Adicione um campo de seleção para o tipo de trauma -->
-        <!-- <label for="traumaType" class="mt-1 mb-2">Selecione o tipo de trauma:</label>
-                    <select id="traumaType" class="form-control mb-3"> -->
-        <!-- Adicione as opções de trauma aqui -->
-        <!-- <option value="Fratura_Luxacao_Entorse">Fraturas/Luxações/Entorses</option>
-                        <option value="Ferimentos_diversos">Ferimentos diversos</option>
-                        <option value="Hemorragia">Hemorragia</option>
-                        <option value="Evisceracao">Evisceração</option>
-                        <option value="FAB_FAF">FAB/FAF</option>
-                        <option value="Amputacao">Amputação</option>
-                        <option value="Queimadura_1">Queimadura 1° grau</option>
-                        <option value="Queimadura_2">Queimadura 2° grau</option>
-                        <option value="Queimadura_3">Queimadura 3° grau</option>
-                    </select> -->
-        <!-- <div class="row position-relative" id="imageContainer">
-                        <img id="humanBody" src="/images/corpo_maior.PNG" alt="body-image">
-                    </div> -->
-        <!-- Buton to undo -->
-        <!-- <div class="d-flex justify-content-center mt-4">
-                        <button type="button" class="btn btn-light fw-bold" id="undoBtn">Desfazer</button>
-                    </div>
-                    <div class="d-flex justify-content-between mt-4">
-                        <button type="submit" class="btn btn-light" id="backBtn">Voltar</button>
-                        <button type="submit" class="btn btn-primary" id="nextBtn">Próximo</button>
-                    </div> -->
-        <!-- </form>
-            </div> -->
 
 
 
