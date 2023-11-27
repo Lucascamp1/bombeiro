@@ -106,16 +106,43 @@
             width: 90%;
         }
 
+<<<<<<< HEAD
         .card-body-cor {
             display: flex;
             flex-direction: column;
             width: 90%;
             padding: 20px;
+=======
+        #option {
+            display: flex;
+>>>>>>> ec9dedfc4ebfdec2dd581df78d413d16566e512e
         }
 
         .espaço_botao {
             display: flex;
             width: 100%;
+<<<<<<< HEAD
+=======
+        } */
+
+        .corpo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            background-color: #333333;
+            width: 70%;
+            padding: 14px;
+            border-radius: 11px;
+        }
+
+        /* Definindo estilos dos botões do rodapé */
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+>>>>>>> ec9dedfc4ebfdec2dd581df78d413d16566e512e
             height: 15vh;
             justify-content: center;
         }
@@ -267,6 +294,30 @@
                         <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
                     </div>
                 </div>
+<<<<<<< HEAD
+            </form>
+
+        </div>
+
+
+=======
+                <div class="corpo">
+                    <div class="row" id="imageContainer">
+                        <img class="img" id="humanBody" src="/images/corpo_maior.PNG" alt="body-image">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="button" class="btn btn-light fw-bold" id="undoBtn">Desfazer</button>
+                </div>
+                <div class="espaço_botao">
+                    <div class="botao">
+                        <button type="button" class="btn btn-outline-primary btn-lg">Voltar</button>
+                        <button type="button" class="btn btn-outline-primary btn-lg">Proximo</button>
+                    </div>
+                </div>
+>>>>>>> ec9dedfc4ebfdec2dd581df78d413d16566e512e
+
+
             </form>
 
         </div>
@@ -277,16 +328,41 @@
 
 
 
+    </div>
+    </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script>
+        function storeTraumaIcon(x, y, traumaType) {
+            let traumaIcons = JSON.parse(localStorage.getItem('traumaIcons')) || [];
+            traumaIcons.push({ x, y, traumaType });
+            localStorage.setItem('traumaIcons', JSON.stringify(traumaIcons));
+        }
 
+        function removeLastTraumaIcon() {
+            let traumaIcons = JSON.parse(localStorage.getItem('traumaIcons')) || [];
+            if (traumaIcons.length > 0) {
+                traumaIcons.pop();
+                localStorage.setItem('traumaIcons', JSON.stringify(traumaIcons));
 
+                // Remove o último ícone da imagem
+                let imageContainer = document.getElementById('imageContainer');
+                let lastIcon = imageContainer.lastElementChild;
+                if (lastIcon.tagName === 'IMG') {
+                    imageContainer.removeChild(lastIcon);
+                }
+            }
+        }
 
+        function recreateTraumaImage() {
+            let traumaIcons = JSON.parse(localStorage.getItem('traumaIcons')) || {};
+            traumaIcons.forEach(icon => {
+                createTraumaIcon(icon.x, icon.y, icon.traumaType);
+            });
+        }
 
-
-
-
-
+<<<<<<< HEAD
         <!-- <div class="row position-relative" id="imageContainer">
                         <img id="humanBody" src="/images/corpo_maior.PNG" alt="body-image">
                     </div> -->
@@ -302,7 +378,75 @@
             </div> -->
     </div>
     </div>
+=======
+        function createTraumaIcon(x, y, traumaType) {
+            let icon = document.createElement('img');
+            icon.src = `/trauma_icon/${traumaType}.png`;
+            icon.style.position = 'absolute';
+            let iconWidth = 50;
+            let iconHeight = 50;
+            icon.style.left = `${x - iconWidth / 2}px`;
+            icon.style.top = `${y - iconHeight / 2}px`;
+            icon.style.width = `${iconWidth}px`;
+            icon.style.height = `${iconHeight}px`;
+            icon.style.padding = '0';
+            document.getElementById('imageContainer').appendChild(icon);
+        }
+>>>>>>> ec9dedfc4ebfdec2dd581df78d413d16566e512e
 
+        document.addEventListener('DOMContentLoaded', recreateTraumaImage);
+
+        document.getElementById('undoBtn').addEventListener('click', function () {
+            removeLastTraumaIcon();
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            let canvas = await html2canvas(document.getElementById('imageContainer'));
+            let imgData = canvas.toDataURL('image/png');
+
+            // Recupera o objeto JSON existente ou cria um novo se não existir
+            let formData = JSON.parse(localStorage.getItem('formData')) || {};
+
+            // Adiciona a imagem ao objeto JSON
+            formData['traumaImage'] = imgData;
+
+            // Armazena o objeto JSON atualizado no localStorage
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            console.log('Stored Data:', formData);  // Imprime os dados armazenados no localStorage
+
+            // Navega para a próxima página
+            window.location.href = 'traumaDesc.html';
+        });
+
+        let img = document.getElementById('humanBody');
+        img.addEventListener('click', function (e) {
+            let x = e.offsetX;
+            let y = e.offsetY;
+            let traumaType = document.getElementById('traumaType').value;
+
+            storeTraumaIcon(x, y, traumaType);
+            createTraumaIcon(x, y, traumaType);
+        });
+
+        function imageLogin() {
+            // Verify if the user is logged in
+            fetch('/menu').then(res => res.json()).then(data => {
+                if (data.loggedin) {
+                    // If the user is logged in, redirect to the menu
+                    window.location.href = '/menu.html';
+                } else {
+                    // If the user is not logged in, redirect to the login page
+                    window.location.href = '/login.html';
+                }
+            }).catch(err => {
+                console.error(err);
+                alert('Erro de conexão!');
+            });
+        }
+    </script>
 
 
 
