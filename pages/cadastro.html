@@ -208,25 +208,28 @@
         </div>
     </nav>
 
-    <form action="processamento_cadastro.php" method="post">
+    <form action="../cadastro.php" method="post">
         <div class="form-group">
             <div class="container d-flex justify-content-center align-items-center geral">
                 <div class="container-fluid" id="box" style="padding-top: 16px; padding-bottom: 16px;">
                     <label class="card-text mb-2">Nome Completo</label>
-                    <input type="text" class="form-control" id="nome" aria-describedby="name">
+                    <input type="text" class="form-control" id="nome" name="nome" aria-describedby="name">
                     <br>
                     <label class="card-text mb-2">Username</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="username">
+                    <input type="text" class="form-control" id="username" name="username" aria-describedby="username">
                     <br>
                     <label class="card-text mb-2">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="email">
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email">
+                    <br>
+                    <label class="card-text mb-2">Senha</label>
+                    <input type="password" class="form-control" id="senha" name="senha" aria-describedby="password">
                     <br>
                     <label class="card-text mb-2">Matrícula</label>
-                    <input type="number" class="form-control" id="matricula" aria-describedby="matricula">
+                    <input type="number" class="form-control" id="matricula" name="matricula" aria-describedby="matricula">
                     <br>
                     <label class="card-text mb-2">Gênero</label>
                     <br>
-                    <select class="form-select" name="genero" id="genero"
+                    <select class="form-select" name="genero" id="genero" name="genero"
                         style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
                         <option value="" disabled selected hidden></option>
                         <option value="masculino">Masculino</option>
@@ -234,7 +237,7 @@
                     </select>
                     <br>
                     <label class="card-text mb-2">Data de Nascimento</label>
-                    <input type="text" id="dataNascimento" class="form-control" oninput="mascaraData(this)"
+                    <input type="text" id="dataNascimento" name="dataNascimento" class="form-control" oninput="mascaraData(this)"
                         maxlength="10"
                         style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
                 </div>
