@@ -14,24 +14,17 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-        :root {
-            --main-color: #6666a3;
-            --second-color: #3f3fa7;
-            --form-backgroud-color: #4C4C87;
-            --form-box-color: #1B1B60;
-            --main-font: 'Inter', sans-serif;
-        }
+
 
         * {
             font-family: var(--main-font);
         }
 
-        header {
-            background-color: #1B1B60;
-        }
-
         body {
-            background-color: var(--form-backgroud-color) !important;
+            background-color: #c1c1c1;
+            font-family: 'Inter', sans-serif;
+            color: white;
+
         }
 
         .img-fluid.logo_noar {
@@ -82,15 +75,148 @@
         .table {
             width: auto !important;
         }
+
+        #nav {
+            background-color: #333333;
+            color: white;
+        }
+
+        .navbar-brand {
+            display: flex;
+            margin: 0px;
+        }
     </style>
 </head>
+<nav class="navbar navbar-dark" id="nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
+        <p class="navbar-title mt-3 fw-bold text">
+            LOCALIZAÇÃO DOS TRAUMAS
+        </p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+            aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+                    </li>
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            CATEGORIAS
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'ocorrencia.html'">TIPO DE OCORRÊNCIA</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" style="white-space: break-spaces"
+                                    onclick="window.location.href = 'problemasuspeitos.html'">PROBLEMAS ENCONTRADOS
+                                    SUSPEITOS</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'sinaisesintomas.html'">SINAIS E SINTOMAS</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'glasglow.html'">AVALIAÇÃO DO PACIENTE (GLASGOW)</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'ocorrencia.html'">LOCALIZAÇÃO DOS TRAUMAS</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#" onclick="window.location.href = 'sinais.html'">SINAIS
+                                    VITAIS</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'objetos.html'">OBJETOS RECOLHIDOS</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#" style="white-space: break-spaces"
+                                    onclick="window.location.href = 'conducao.html'">FORMA DE CONDUÇÃO E DECISÃO DE
+                                    TRANSPORTE</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'vitimaera.html'">VÍTIMA ERA</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'procedimentos.html'">PROCEDIMENTOS EFETUADOS</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'materiaisutilizados.html'">MATERIAIS UTILIZADOS</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'obsimportante.html'">OBSERVAÇÕES IMPORTANTES</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#"
+                                    onclick="window.location.href = 'cinematica.html'">AVALIAÇÃO DA CINEMÁTICA</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item" style="list-style-type: none">
+                        <a class="nav-link" href="#" onclick="window.location.href = 'perfilbombeiro.html'">PERFIL</a>
+                    </li>
+                    <li class="nav-item" style="list-style-type: none">
+                        <a class="nav-link" href="#">SAIR</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 
 <div class="card mb-2 text-light">
     <div class="card-header">
-        <div class="text-center">
-            <h2 class="card-title mb-0">Localização dos Traumas</h2>
-        </div>
     </div>
     <div class="card-body">
         <form id="TraumaLocForm">
@@ -114,7 +240,7 @@
             </div>
             <!-- Buton to undo -->
             <div class="d-flex justify-content-center mt-4">
-                <button type="button" class="btn btn-light fw-bold" id="undoBtn">Desfazer</button>
+                <button type="button" class="btn btn-danger fw-bold" id="undoBtn">Desfazer</button>
             </div>
             <div class="container mt-3">
                 <div class="row">
@@ -123,18 +249,16 @@
                             <table class="table text-center text-break w-100">
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><img src="Amputacao.png" alt="Amputação"
-                                                class="img-small"></th>
+                                        <th scope="row"><img src="Amputacao.png" alt="Amputação" class="img-small"></th>
                                         <td class="small">Amputação</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="Evisceracao.png" alt="Amputação"
-                                                class="img-small"></th>
+                                        <th scope="row"><img src="Evisceracao.png" alt="Amputação" class="img-small">
+                                        </th>
                                         <td class="small">Evisceração</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="FAB_FAF.png" alt="Amputação"
-                                                class="img-small"></th>
+                                        <th scope="row"><img src="FAB_FAF.png" alt="Amputação" class="img-small"></th>
                                         <td class="small">FAB/FAF</td>
                                     </tr>
                                 </tbody>
@@ -151,13 +275,13 @@
                                         <td class="small">Ferimentos diversos</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="Fratura_Luxacao_Entorse.png"
-                                                alt="Amputação" class="img-small"></th>
+                                        <th scope="row"><img src="Fratura_Luxacao_Entorse.png" alt="Amputação"
+                                                class="img-small"></th>
                                         <td class="small">Fratura/Luxação/Entorse</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="Hemorragia.png" alt="Amputação"
-                                                class="img-small"></th>
+                                        <th scope="row"><img src="Hemorragia.png" alt="Amputação" class="img-small">
+                                        </th>
                                         <td class="small">Hemorragia</td>
                                     </tr>
                                 </tbody>
@@ -169,18 +293,18 @@
                             <table class="table text-center text-break w-100">
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><img src="Queimadura_1.png" alt="Amputação"
-                                                class="img-small"></th>
+                                        <th scope="row"><img src="Queimadura_1.png" alt="Amputação" class="img-small">
+                                        </th>
                                         <td class="small">Queimadura 1° grau</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="Queimadura_2.png" alt="Amputação"
-                                                class="img-small"></th>
+                                        <th scope="row"><img src="Queimadura_2.png" alt="Amputação" class="img-small">
+                                        </th>
                                         <td class="small">Queimadura 2° grau</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><img src="Queimadura_3.png" alt="Amputação"
-                                                class="img-small"></th>
+                                        <th scope="row"><img src="Queimadura_3.png" alt="Amputação" class="img-small">
+                                        </th>
                                         <td class="small">Queimadura 3° grau</td>
                                     </tr>
                                 </tbody>
@@ -190,7 +314,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-between mt-4">
-                <button type="submit" class="btn btn-light" id="backBtn">Voltar</button>
+                <button type="submit" class="btn btn-primary" id="backBtn">Voltar</button>
                 <button type="submit" class="btn btn-primary" id="nextBtn">Próximo</button>
             </div>
         </form>
