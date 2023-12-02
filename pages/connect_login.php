@@ -48,7 +48,7 @@ if(isset($_POST['userCPF']) && isset($_POST['passwords'])) {
             }
 
         } else {
-            echo "CPF ou senha incorretos";
+            echo "Falha ao logar! CPF ou SENHA incorretos";
         }
     }
 }
