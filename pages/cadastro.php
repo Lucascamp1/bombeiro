@@ -116,7 +116,7 @@ include('conexao.php');
                             <a class="nav-link" aria-current="page" href="homeadm.html">TELA DE INÍCIO</a>
                         </li>
                         <li class="nav-item" style="list-style-type: none">
-                            <a class="nav-link" href="#">SAIR</a>
+                            <a class="nav-link" href="logout.php">SAIR</a>
                         </li>
                     </ul>
                 </div>
@@ -137,10 +137,9 @@ include('conexao.php');
                     <div class="input-caixatexto">
                         <label for="tipo">Escolha seu cargo</label>
                         <select id="tipo" name="tipo" required>
-                            <option value="administrador">Administrador </option>
-                            <option value="atendente">Atendente </option>
-                            <option value="bombeiro">Bombeiro</option>
-                            <option value="outro">Outro</option>
+                            <option value="Administrador">Administrador </option>
+                            <option value="Atendente">Atendente </option>
+                            <option value="Bombeiro">Bombeiro</option>
                         </select>
                     </div>
                     <label class="card-text mb-2">Email</label>
