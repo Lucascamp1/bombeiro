@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c1c1c1;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: rgb(6, 108, 243);
+    box-shadow: 0 0 0 0.1rem rgb(6, 108, 243);
+}
+
+/* MENU */
+#nav {
+    background-color: #333333;
+}
+
+.navbar-brand {
+    display: flex;
+    margin: 0px;
+}
+
+#box {
+    background-color: #333333;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.card-text {
+    color: white;
+}
+
+#botao {
+    background-color: #333333;
+}
+
+#botao:hover {
+    background-color: rgb(21, 138, 50);
+}
+
+#genero {
+    width: 100%;
+    height: 6%;
+    border-radius: 5px;
+}
+
+#dataNascimento {
+    width: 100%;
+    height: 6%;
+    border-radius: 5px;
+}
+
+.justify-content-center {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .geral {
+        height: 79vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .geral {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .geral {
+        height: 100vh;
+    }
+}
+
+/*  */
+@media screen and (min-width: 200px) and (max-width:460px) {
+    .navbar-title {
+        font-size: 13PX;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width:405px) {
+
+    .navbar-title {
+        font-size: 10.6PX;
+    }
+
+}
