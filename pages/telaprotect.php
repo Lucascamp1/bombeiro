@@ -14,9 +14,12 @@
     <div class="form-caixa-protect">
         <div class="perfil">
             <p class="titulo-protect">Faça Login</p>
-            <p>Você não pode acessar esta página, pois não está logado.</p>
+            <p>Faça o login em sua conta para acessar essa página</p>
+            <br>
         </div>
+    </div>
 
+    <div>
         <button class="irUsuarios">
             <div id="irparaLogin">
                 <a href="login.html">Fazer Login</a>
