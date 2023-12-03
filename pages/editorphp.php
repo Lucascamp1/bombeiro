@@ -268,7 +268,7 @@ include('connect_usuarios.php');
                             });
                     }
                 } else {
-                    alert("Nenhuma alteração foi feita nos campos.");
+                    alert("Nenhuma modificação feita nos campos.");
                 }
             });
         });
