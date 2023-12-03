@@ -52,7 +52,7 @@ include('connect_usuarios.php');
                             <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
                         </li>
 
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 CATEGORIAS
@@ -149,7 +149,7 @@ include('connect_usuarios.php');
                                         onclick="window.location.href = 'cinematica.html'">AVALIAÇÃO DA CINEMÁTICA</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- <li class="nav-item" style="list-style-type: none">
                       <a class="nav-link" href="#" onclick="window.location.href = 'perfilbombeiro.html'">PERFIL</a>
                     </li> -->
