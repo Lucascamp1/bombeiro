@@ -1,34 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c1c1c1;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+#nav, .card {
+  background-color: #333333;
+}
+
+.navbar-brand {
+  display: flex;
+  margin: 0px;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.form-control:disabled {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+}
+
+.form-control:disabled::placeholder,
+.form-label{
+  color: white;
+}
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; */
   /* Adicionado para melhorar o cálculo do tamanho */
-}
+/* } */
 
-body {
-  width: 100%;
+/* body { */
+  /* width: 100%;
   min-height: 100vh;
-  background-color: #E5E6E7;
+  background-color: #E5E6E7; */
   /* background-image: linear-gradient(to bottom, #001024, #001e44); */
-  background-repeat: no-repeat;
-  font-family: 'Open Sans', sans-serif;
+  /* background-repeat: no-repeat;
+  font-family: 'Open Sans', sans-serif; */
   /* Definir uma fonte padrão */
-  zoom: 1.15;
+  /* zoom: 1.15; */
   /* Aumenta o zoom em 20% */
-}
+/* } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
   /* Estilos para telas menores, como smartphones */
-}
+/* } */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) { */
   /* Estilos para telas maiores, como tablets e desktops */
-}
+/* } */
 
-
+/* 
 p {
   font-size: 1em;
 }
@@ -45,9 +88,9 @@ p {
   align-items: center;
   justify-content: space-between;
   /* background-color: #030060; */
-}
+/* } */
 
-.relatorios,
+/* .relatorios,
 .conectado,
 .inicio {
   top: 0;
@@ -67,16 +110,16 @@ p {
 .inicio a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
-.relatorios:hover,
+/* .relatorios:hover,
 .conectado:hover,
 .inicio:hover {
-  background-color: #1b40af;
+  background-color: #1b40af; 
   /* Cor do fundo ao passar o mouse */
-}
+/* } */
 
-.relatorios {
+/* .relatorios {
   left: 0;
 }
 
@@ -87,10 +130,10 @@ p {
 .inicio {
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 
-.inicioPerfil {
+/* .inicioPerfil {
   display: flex;
   position: relative;
   justify-content: center;
@@ -111,14 +154,14 @@ p {
   position: relative;
   color: #fff;
   text-decoration: none;
-justify-content: center;}
+justify-content: center;} */
 
-.inicioPerfil:hover {
-  background-color: #1b40af;
-  /* Cor do fundo ao passar o mouse */
-}
+/* .inicioPerfil:hover {
+  background-color: #1b40af; 
+  Cor do fundo ao passar o mouse
+} */
 
-button {
+/* button {
   display: flex;
   position: relative;
   justify-content: center;
@@ -133,19 +176,19 @@ button {
   cursor: pointer;
   transition: 0.5s ease-out;
   overflow: visible;
-}
+} */
 
-button a {
+/* button a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
-button:hover {
-  background-color: #1b40af;
+/* button:hover {
+  background-color: #1b40af; */
   /* Cor do fundo ao passar o mouse */
-}
+/* } */
 
-.infos{
+/* .infos{
   display: grid;
   width: 100%;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -157,18 +200,18 @@ button:hover {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-}
+} */
 
-.container-login {
+/* .container-login {
   margin-top: 12%;
 }
 
 
 table {
   gap: 0.5rem;
-}
+} */
 
-a {
+/* a {
   text-decoration: none;
   color: #fff;
 }
@@ -181,9 +224,9 @@ a {
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem;
-}
+} */
 
-#botaoEditar {
+/* #botaoEditar {
   display: flex;
   position: relative;
   justify-content: center;
@@ -208,12 +251,12 @@ a {
   text-decoration: none;
 justify-content: center;}
 
-#botaoEditar:hover {
+ #botaoEditar:hover {
   background-color: #1b40af;
-  /* Cor do fundo ao passar o mouse */
-}
+  Cor do fundo ao passar o mouse
+} */
 
-.boxEditar{
+/* .boxEditar{
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
@@ -231,9 +274,9 @@ justify-content: center;}
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem;
-}
+} */
 
-.form-caixa-salvo {
+/* .form-caixa-salvo {
   background-color: #fff;
   width: 60%;
   margin: 0 auto;
@@ -252,11 +295,11 @@ justify-content: center;}
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   padding: 5%;
-}
+} */
 
 
 /*titulo "Login"*/
-.titulo {
+/* .titulo {
   text-align: center;
   font-size: 2rem;
   line-height: 2rem;
@@ -266,9 +309,9 @@ justify-content: center;}
   color: #030060;
   margin-top: 2rem;
   margin-bottom: 3rem;
-}
+} */
 
-.titulo-protect {
+/* .titulo-protect {
   text-align: center;
   font-size: 2rem;
   line-height: 2rem;
@@ -289,21 +332,21 @@ justify-content: center;}
   font-family: 'Poppins', sans-serif;
   color: #030060;
   margin-top: 1rem;
-}
+} */
 
-.titulo-login {
+/* .titulo-login {
   text-align: center;
   font-size: 2rem;
   line-height: 2rem;
   font-weight: 600;
   color: black;
   font-family: 'Poppins', sans-serif;
-  color: #030060;
+  color: #030060; */
   /* margin-top: 5rem; */
-  margin-bottom: 3rem;
-}
+  /* margin-bottom: 3rem;
+} */
 
-.perfil {
+/* .perfil {
   color: #030060;
   font-size: 1.2rem;
   display: flex;
@@ -316,20 +359,20 @@ justify-content: center;}
 
 .perfil p {
   width: 100%;
-}
+} */
 
-.perfil-login {
+/* .perfil-login {
   color: #030060;
   font-size: 1.2rem;
   display: flex;
-  /* Use display flex para centralizar o conteúdo verticalmente */
-  flex-direction: column;
+  Use display flex para centralizar o conteúdo verticalmente  */
+  /* flex-direction: column; */
   /* Para alinhar os elementos verticalmente */
-  text-align: center;
+  /* text-align: center; */
   /* Alinhe o texto horizontalmente ao centro */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   /* width: 60%; */
-  align-items: center;
+  /* align-items: center;
 }
 
 .perfil-login p {
