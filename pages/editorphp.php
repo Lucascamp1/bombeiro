@@ -31,7 +31,7 @@ include('connect_usuarios.php');
 <body>
     <nav class="navbar navbar-dark" id="nav">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
+            <a class="navbar-brand" href="homeadm.html"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
             <p class="navbar-title mt-3 fw-bold text">
                 EDITAR USUÁRIO
             </p>
