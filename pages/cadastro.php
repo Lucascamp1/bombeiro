@@ -135,13 +135,17 @@ include('conexao.php');
                     <input type="number" class="form-control" id="cpf" name="userCPF" aria-describedby="matricula">
                     <br>
                     <div class="input-caixatexto">
-                        <label for="tipo">Escolha seu cargo</label>
-                        <select id="tipo" name="tipo" required>
-                            <option value="Administrador">Administrador </option>
-                            <option value="Atendente">Atendente </option>
-                            <option value="Bombeiro">Bombeiro</option>
-                        </select>
+                        <label class="textooo" for="tipo">Cargo</label>
+                        <br>
+                        <div class="dropdown-container mt-2">
+                            <select id="tipo" name="tipo" class="custom-dropdown" required>
+                                <option value="Administrador">Administrador </option>
+                                <option value="Atendente">Atendente </option>
+                                <option value="Bombeiro">Bombeiro</option>
+                            </select>
+                        </div>
                     </div>
+                    <br>
                     <label class="card-text mb-2">Email</label>
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="email">
                     <br>

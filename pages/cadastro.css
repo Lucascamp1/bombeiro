@@ -92,3 +92,49 @@ body {
     }
 
 }
+
+.dropdown-container {
+    position: relative;
+  }
+  
+  .custom-dropdown {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 6px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .custom-dropdown:hover {
+    border-color: #555;
+  }
+  
+  .custom-dropdown:focus {
+    border-color: #00f;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+  }
+  
+  /* Estilo da seta do dropdown */
+  .custom-dropdown::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  /* Estilo das opções do dropdown */
+  .custom-dropdown option {
+    padding: 10px;
+  }
+
+  .input-caixatexto{
+    font-family: 'Inter', sans-serif;
+  }
