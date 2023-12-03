@@ -103,17 +103,6 @@ body {
   margin-top: 6rem;
 }
 
-.titulo {
-  text-align: center;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  color: #030060;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-}
-
 #container-relatorios {
   display: block;
   width: 90%;
@@ -147,7 +136,7 @@ body {
 #botao-editar {
   margin: auto;
   font-weight: bold;
-  color: #030060;
+  color: #333333;
   padding: 5%;
 }
 
@@ -156,7 +145,7 @@ body {
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  background-color: #030060;
+  background-color: #333333;
   color: #fff;
   cursor: pointer;
   transition: 0.5s ease-out;
@@ -231,7 +220,7 @@ td{
   top: 0;
   padding: 0.4rem;
   margin: 5px;
-  background-color: #030060;
+  background-color: #333333;
   color: #fff;
   border: none;
   border-radius: 0.5rem;
@@ -244,4 +233,14 @@ td{
 
 .editar:hover {
   background-color: #1b40af; /* Cor do fundo ao passar o mouse */
+}
+
+#nav {
+  background-color: #333333;
+  color: white;
+}
+
+.navbar-brand {
+  display: flex;
+  margin: 0px;
 }
