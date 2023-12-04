@@ -162,6 +162,10 @@ include('conexao.php');
             background-color: #065839;
             border-color: #167e56;
         }
+
+        .custom-dropdown:focus{
+            border-color: #065839;
+        }
     </style>
 
 </head>

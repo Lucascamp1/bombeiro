@@ -55,14 +55,14 @@ body {
   overflow: visible;
 }
 
-.relatorios a, .perfil a, .inicio a, .novo_usuario a, .conectado a, .voltar a {
+/* .relatorios a, .perfil a, .inicio a, .novo_usuario a, .conectado a, .voltar a {
   color: #fff;
   text-decoration: none;
-}
+} */
 
-.relatorios:hover, .perfil:hover, .inicio:hover, .novo_usuario:hover, .voltar:hover {
+/* .relatorios:hover, .perfil:hover, .inicio:hover, .novo_usuario:hover, .voltar:hover {
   background-color: #1b40af;
-}
+} */
 
 .inicio {
   margin-top: 2rem;
@@ -152,9 +152,9 @@ body {
   overflow: visible;
 }
 
-.botao:hover {
+/* .botao:hover {
   background-color: #1b40af;
-}
+} */
 
 .form-caixa {
   background-color: #fff;
