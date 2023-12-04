@@ -37,10 +37,10 @@ if(isset($_POST['userCPF']) && isset($_POST['passwords'])) {
             $_SESSION['senha'] = $usuario['senha'];
 
             if ($_SESSION['tipo'] == 'Administrador') {
-                header("Location: homeadm.html");
+                header("Location: homeadm.php");
                 exit();
             } elseif ($_SESSION['tipo'] == 'Atendente' || $_SESSION['tipo'] == 'Bombeiro' || $_SESSION['tipo'] == 'Outro') {
-                header("Location: home.html");
+                header("Location: home.php");
                 exit();
             } else {
                 // Tratar outros tipos de cargos, se necessário

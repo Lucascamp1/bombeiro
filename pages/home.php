@@ -1,3 +1,8 @@
+<?php
+  include ("conexao.php");
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -235,86 +240,6 @@
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
                     </li>
-      
-                    <!-- <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        CATEGORIAS
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'ocorrencia.html'">TIPO DE OCORRÊNCIA</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" style="white-space: break-spaces" onclick="window.location.href = 'problemasuspeitos.html'">PROBLEMAS ENCONTRADOS SUSPEITOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'sinaisesintomas.html'">SINAIS E SINTOMAS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'glasglow.html'">AVALIAÇÃO DO PACIENTE (GLASGOW)</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'ocorrencia.html'">LOCALIZAÇÃO DOS TRAUMAS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="#" onclick="window.location.href = 'sinais.html'">SINAIS VITAIS</a></li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'objetos.html'">OBJETOS RECOLHIDOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" style="white-space: break-spaces" onclick="window.location.href = 'conducao.html'">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="#" onclick="window.location.href = 'vitimaera.html'">VÍTIMA ERA</a></li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'procedimentos.html'">PROCEDIMENTOS EFETUADOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'materiaisutilizados.html'">MATERIAIS UTILIZADOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'obsimportante.html'">OBSERVAÇÕES IMPORTANTES</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'cinematica.html'">AVALIAÇÃO DA CINEMÁTICA</a>
-                        </li>
-                      </ul>
-                    </li> -->
                     <li class="nav-item" style="list-style-type: none">
                       <a class="nav-link" href="#" onclick="window.location.href = 'perfilbombeiro.html'">PERFIL</a>
                     </li>
@@ -335,7 +260,7 @@
             </div>
             <div class="row align-items-center justify-content-center">
                 <div class="col-9" id="col1">
-                    Bombeiro Lucas
+                    Bombeiro <?php echo $_SESSION['nome']; ?>!
                 </div>
             </div>
             <br>
