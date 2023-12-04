@@ -326,19 +326,74 @@ include('processarInfoOcorrencia.php');
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                            <label for="textoformaconducao">Forma de Condução:</label>
-                            <div>
-                                <select class="sexo" name="formaConducaoSelect">
-                                    <option selected="selected"></option>
-                                    <option>Deitada</option>
-                                    <option>Semi-sentada</option>
-                                    <option>Sentada</option>
-                                </select>
-                                <div class="custom-arrow"></div>
-                            </div>
+                        <label for="textoformaconducao">Forma de Condução:</label>
+                        <div>
+                            <select class="sexo" name="formaConducaoSelect">
+                                <option selected="selected"></option>
+                                <option>Deitada</option>
+                                <option>Semi-sentada</option>
+                                <option>Sentada</option>
+                            </select>
+                            <div class="custom-arrow"></div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                        Informações da ocorrência
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="container" id="box1">
+                            <label for="username">Data:</label>
+                            <input class="textbox-n" placeholder="XX/XX/20XX" name="data_ocorrencia" type="text"
+                                onfocus="(this.type='date')" onblur="(this.type='date')" />
+                            <br>
+                            <label class="card-text">Local da Ocorrência</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="name">
+                            <br>
+                            <label class="card-text">Nome do Hospital</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="name">
+                            <br>
+                            <input type="number" class="form-control" id="nome" aria-describedby="name"
+                                placeholder="NºUSB">
+                            <br>
+                            <input type="number" class="form-control" id="nome" aria-describedby="name"
+                                placeholder="NºOCORRÊNCIA">
+                            <br>
+                            <input type="number" class="form-control" id="nome" aria-describedby="name"
+                                placeholder="NºDESPACHANTE">
+                            <br>
+                            <label for="horachegada">Hora Chegada:</label>
+                            <input type="time" id="horachegada" name="horachegada" min="01:00" max="00:59" required />
+                            <br>
+                            <input type="number" class="form-control" id="nome" aria-describedby="name"
+                                placeholder="KM FINAL">
+                            <br>
+                            <label for="codIr">CÓD. IR:</label>
+                            <input type="text" id="codIr" name="codIr" placeholder="Digite..."
+                                oninput="validarCodIR(this)">
+                            <p id="mensagemErro-7" style="color: red;"></p>
+                            <label for="codPs">CÓD. PS:</label>
+                            <input type="text" id="codPs" name="codPs" placeholder="Digite..."
+                                oninput="validarCodPS(this)">
+                            <p id="mensagemErro-8" style="color: red;"></p>
+                            <label for="codSiaSus">CÓD. SIA/SUS:</label>
+                            <input type="text" id="codSiaSus" name="codSiaSus" placeholder="Digite..."
+                                oninput="validarCodSIASUS(this)">
+                            <p id="mensagemErro-9" style="color: red;"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
 
