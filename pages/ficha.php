@@ -4,7 +4,7 @@ include('processarInfoOcorrencia.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,8 @@ include('processarInfoOcorrencia.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="ficha.css">
+    <link rel="stylesheet" type="text/css" href="ficha.css">
+    <script src="/scripts/cadastro.js"></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@ include('processarInfoOcorrencia.php');
         <div class="container-fluid">
             <a class="navbar-brand" href="home.html"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
             <p class="navbar-title mt-3 fw-bold text">
-                AVALIAÇÃO DA CINEMÁTICA
+                REGISTRO DE OCORRÊNCIAS
             </p>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
@@ -161,373 +162,190 @@ include('processarInfoOcorrencia.php');
         </div>
     </nav>
 
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                    aria-expanded="true" aria-controls="collapseOne">
-                    Informações do paciente
-                </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <div class="container" id="box1">
-                        <label class="card-text">Nome Completo</label>
-                        <input type="text" class="form-control" id="nome" aria-describedby="name">
-                        <br>
-                        <label class="card-text">Idade</label>
-                        <br>
-                        <input type="number" id="age" name="age" min="0" max="120">
-                        <br>
-                        <br>
-                        <label class="card-text">Sexo</label>
-                        <br>
-                        <select name="genero" id="genero"
-                            style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
-                            <option value="" disabled selected hidden></option>
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                        </select>
-                        <br>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="documentType" id="cpfRadio">
-                            <label class="form-check-label card-text" for="cpfRadio">
-                                CPF
-                            </label>
-                        </div>
+    <form name="formOcorrencia" id="envioFormulario" method="POST" submit="processarInfoOcorrencia.php">
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="documentType" id="rgRadio">
-                            <label class="form-check-label card-text" for="rgRadio">
-                                RG
-                            </label>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Informações do paciente
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="container" id="box1">
+                            <label class="card-text">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="name">
+                            <br>
+                            <label class="card-text">Idade</label>
+                            <br>
+                            <input type="number" id="age" name="age" min="0" max="120">
+                            <br>
+                            <br>
+                            <label class="card-text">Sexo</label>
+                            <br>
+                            <select name="genero" id="genero"
+                                style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
+                                <option value="" disabled selected hidden></option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                            <br>
+                            <br>
+                            <div class="input-caixatexto">
+                                <label for="rgCpfPaciente">RG/CPF do paciente:</label> <br>
+                                <input type="text" id="rgCpfPaciente" name="rgcpfPaciente" placeholder="Digite..."
+                                    oninput="formatarDocumento(this);">
+                                <p id="mensagemErro-3" style="color: red;"></p>
+                            </div>
                         </div>
-                        <br>
-                        <div id="inputContainer"></div>
-                        <label class="card-text">Telefone</label>
-                        <input type="text" class="form-control" id="nome1" aria-describedby="name">
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Informações do acompanhante
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <div class="container" id="box1">
-                        <label class="card-text">Nome Completo</label>
-                        <input type="text" class="form-control" id="nome" aria-describedby="name">
-                        <br>
-                        <label class="card-text">Idade</label>
-                        <br>
-                        <input type="number" id="age" name="age" min="0" max="120">
-                        <br>
-                        <br>
-                        <label class="card-text">Sexo</label>
-                        <br>
-                        <select name="genero" id="genero"
-                            style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
-                            <option value="" disabled selected hidden></option>
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                        </select>
-                        <br>
-                        <br>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="documentType" id="cpfRadio1">
-                            <label class="form-check-label card-text" for="cpfRadio">
-                                CPF
-                            </label>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Informações do acompanhante
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="container" id="box1">
+                            <label class="card-text">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" aria-describedby="name">
+                            <br>
+                            <label class="card-text">Idade</label>
+                            <br>
+                            <input type="number" id="age" name="age" min="0" max="120">
+                            <br>
+                            <br>
                         </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="documentType" id="rgRadio1">
-                            <label class="form-check-label card-text" for="rgRadio">
-                                RG
-                            </label>
-                        </div>
-                        <br>
-                        <div id="inputContainer1"></div>
-                        <label class="card-text">Telefone</label>
-                        <input type="text" class="form-control" id="nome1" aria-describedby="name">
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Informações da ocorrência
-                </button>
-            </h2>
-            <div id="collapsethree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+
+            <div class="accordion-item" style="color: white;">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                        Vítima era
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="form-group h-75">
+                            <div class="container h-100 mt-5 justify-content-center align-items-center">
+                                <div class="row gap-4 justify-content-center" id="row">
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">CICLISTA </span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">CONDUTOR CARRO</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">CONDUTOR MOTO</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">CLINICO</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">GESTANTE</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">TRAUMA</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">PASS.BAN.FRENTE</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">PAS.BCO.TRÁS</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">PAS.MOTO</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 d-flex p-4 justify-content-between">
+                                        <span class="d-flex">PEDESTRE</span>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Tipo de ocorrência (pré-hospitalar)
-                </button>
-            </h2>
-            <div id="collapsefor" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                        Forma de condução
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                            <label for="textoformaconducao">Forma de Condução:</label>
+                            <div>
+                                <select class="sexo" name="formaConducaoSelect">
+                                    <option selected="selected"></option>
+                                    <option>Deitada</option>
+                                    <option>Semi-sentada</option>
+                                    <option>Sentada</option>
+                                </select>
+                                <div class="custom-arrow"></div>
+                            </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsefor" aria-expanded="false" aria-controls="collapsefor">
-                    Avaliação da cinemática
-                </button>
-            </h2>
-            <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                    Sinais vitais do paciente
-                </button>
-            </h2>
-            <div id="collapsesix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
-                    Problemas encontrados
-                </button>
-            </h2>
-            <div id="collapseseven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
-                    Localização dos traumas
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
-                    Decisão de transporte
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
         </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
-                    Sinais e sintomas
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
-                    Anamnese da emergência médica
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
-                    Equipe de atendimento
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsetwoo" aria-expanded="false" aria-controls="collapsetwoo">
-                    Procedimentos efetuados
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThreee" aria-expanded="false" aria-controls="collapseThreee">
-                    Materiais descartáveis utilizados
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseThreeee" aria-expanded="false" aria-controls="collapseThreeee">
-                    Materiais utilizados deixado no hospital
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseghost" aria-expanded="false" aria-controls="collapseghost">
-                    Observações importantes
-                </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                    collapse plugin adds the appropriate classes that we use to style each element. These classes
-                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                    modify any of this with custom CSS or overriding our default variables. It's also worth noting that
-                    just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit
-                    overflow.
-                </div>
-            </div>
-        </div>
-    </div>
+    </form>
 </body>
 
 </html>
