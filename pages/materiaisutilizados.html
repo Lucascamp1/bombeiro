@@ -35,8 +35,8 @@
         }
 
         .form-control:focus {
-            border-color: red;
-            box-shadow: 0 0 0 0.2rem rgba(241, 13, 13, 0.3);
+            border-color: #167e56;
+            box-shadow: 0 0 0 0.2rem #167e56;
         }
 
         /* MENU */
@@ -67,7 +67,7 @@
             background: transparent;
             color: white;
             border: none;
-            border-bottom: 2px solid rgb(6, 108, 243);
+            border-bottom: 2px solid #167e56;
             width: 40%;
             /* width: 10%; */
         }
@@ -76,7 +76,7 @@
             background: transparent;
             color: white;
             border: none;
-            border-bottom: 2px solid rgb(6, 108, 243);
+            border-bottom: 2px solid #167e56;
             width: 7%;
             /* width: 10%; */
         }
@@ -101,15 +101,8 @@
         }
 
         .accordion-button::after {
-            /* background-color: white; */
             border-radius: 5px;
         }
-
-        /* @media screen and (min-width: 375px) {
-            .card1{
-                width: 96%;
-            }
-        } */
 
         @media screen and (min-width: 320px) {
             .card1 {
@@ -122,19 +115,20 @@
                 width: 54%;
             }
         }
-        .espaço_botao {
-      display: flex;
-      width: 100%;
-      height: 10vh;
-      justify-content: center;
-    }
 
-    .botao {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 90%;
-    }
+        .espaço_botao {
+            display: flex;
+            width: 100%;
+            height: 10vh;
+            justify-content: center;
+        }
+
+        .botao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
     </style>
 </head>
 
@@ -144,116 +138,136 @@
         <!-- navbar -->
         <nav class="navbar navbar-dark" id="nav">
             <div class="container-fluid">
-              <a class="navbar-brand" href="home.html"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
-              <p class="navbar-title mt-3 fw-bold text">
-                MATERIAIS UTILIZADOS
-              </p>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-                aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-                aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                <a class="navbar-brand" href="home.html"><img src="../images/avatar_bombeiro.png" width="60px" /></a>
+                <p class="navbar-title mt-3 fw-bold text">
+                    MATERIAIS UTILIZADOS
+                </p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    CATEGORIAS
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'ocorrencia.html'">TIPO DE OCORRÊNCIA</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#" style="white-space: break-spaces"
+                                            onclick="window.location.href = 'problemasuspeitos.html'">PROBLEMAS
+                                            ENCONTRADOS SUSPEITOS</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'sinaisesintomas.html'">SINAIS E
+                                            SINTOMAS</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'glasglow.html'">AVALIAÇÃO DO PACIENTE
+                                            (GLASGOW)</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'loctromas.html'">LOCALIZAÇÃO DOS
+                                            TRAUMAS</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'sinais.html'">SINAIS VITAIS</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'objetos.html'">OBJETOS RECOLHIDOS</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#" style="white-space: break-spaces"
+                                            onclick="window.location.href = 'conducao.html'">FORMA DE CONDUÇÃO E DECISÃO
+                                            DE TRANSPORTE</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'vitimaera.html'">VÍTIMA ERA</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'procedimentos.html'">PROCEDIMENTOS
+                                            EFETUADOS</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'materiaisutilizados.html'">MATERIAIS
+                                            UTILIZADOS</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'obsimportante.html'">OBSERVAÇÕES
+                                            IMPORTANTES</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider" />
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            onclick="window.location.href = 'cinematica.html'">AVALIAÇÃO DA
+                                            CINEMÁTICA</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item" style="list-style-type: none">
+                                <a class="nav-link" href="#">SAIR</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
-                    </li>
-      
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        CATEGORIAS
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'ocorrencia.html'">TIPO DE OCORRÊNCIA</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" style="white-space: break-spaces" onclick="window.location.href = 'problemasuspeitos.html'">PROBLEMAS ENCONTRADOS SUSPEITOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'sinaisesintomas.html'">SINAIS E SINTOMAS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'glasglow.html'">AVALIAÇÃO DO PACIENTE (GLASGOW)</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'loctromas.html'">LOCALIZAÇÃO DOS TRAUMAS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="#" onclick="window.location.href = 'sinais.html'">SINAIS VITAIS</a></li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'objetos.html'">OBJETOS RECOLHIDOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" style="white-space: break-spaces" onclick="window.location.href = 'conducao.html'">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li><a class="dropdown-item" href="#" onclick="window.location.href = 'vitimaera.html'">VÍTIMA ERA</a></li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'procedimentos.html'">PROCEDIMENTOS EFETUADOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'materiaisutilizados.html'">MATERIAIS UTILIZADOS</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'obsimportante.html'">OBSERVAÇÕES IMPORTANTES</a>
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#" onclick="window.location.href = 'cinematica.html'">AVALIAÇÃO DA CINEMÁTICA</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <!-- <li class="nav-item" style="list-style-type: none">
-                      <a class="nav-link" href="#" onclick="window.location.href = 'perfilbombeiro.html'">PERFIL</a>
-                    </li> -->
-                    <li class="nav-item" style="list-style-type: none">
-                      <a class="nav-link" href="#">SAIR</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
-          </nav>
+        </nav>
         <form action="">
 
             <div class="container-fluid">
@@ -754,10 +768,12 @@
     </div>
     <div class="espaço_botao">
         <div class="botao">
-          <button type="button" class="btn btn-outline-primary btn-lg" onclick="window.location.href = 'cinematica.html'">Voltar</button>
-          <button type="button" class="btn btn-outline-primary btn-lg" onclick="window.location.href = 'obsimportante.html'">Proximo</button>
+            <button type="button" class="btn btn-outline-primary btn-lg"
+                onclick="window.location.href = 'cinematica.html'">Voltar</button>
+            <button type="button" class="btn btn-outline-primary btn-lg"
+                onclick="window.location.href = 'obsimportante.html'">Proximo</button>
         </div>
-      </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

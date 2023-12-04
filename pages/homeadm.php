@@ -29,6 +29,7 @@ session_start();
     crossorigin="anonymous"></script>
 
   <style>
+
     body {
       margin: 0;
       padding: 0;
@@ -115,10 +116,6 @@ session_start();
       width: 90%;
     }
 
-    /* .hiscard {
-      padding: 15px;
-    } */
-
     @media screen and (min-width: 375px) {
       .legenda3 {
         font-size: 26px;
@@ -149,8 +146,6 @@ session_start();
       }
 
     }
-
-
 
     @media screen and (min-width: 1024px) {
       .legenda3 {
@@ -184,7 +179,6 @@ session_start();
       .cadcard {
         padding: 15px !important;
       }
-
     }
 
     @media screen and (min-width: 768px) {
@@ -219,7 +213,6 @@ session_start();
       .cadcard {
         padding: 35px;
       }
-
     }
   </style>
 </head>

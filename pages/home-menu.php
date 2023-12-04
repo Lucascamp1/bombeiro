@@ -153,8 +153,6 @@
 
         }
 
-
-
         @media screen and (min-width: 1024px) {
             .legenda3 {
                 font-size: 51px;
@@ -222,8 +220,6 @@
             .purplecard {
                 padding: 35px;
             }
-
-
         }
     </style>
 </head>

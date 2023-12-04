@@ -12,8 +12,8 @@ body {
 
 .form-control:focus,
 .form-select:focus {
-    border-color: rgb(6, 108, 243);
-    box-shadow: 0 0 0 0.1rem rgb(6, 108, 243);
+    border-color: #167e56;
+    box-shadow: 0 0 0 0.1rem #167e56;
 }
 
 /* MENU */

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórico de Ocorrência</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórico de Ocorrência</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
@@ -21,8 +22,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-<style>
-     /*Início do código CSS*/
+  <style>
+    /*Início do código CSS*/
 
     /*Resetando estilos da página*/
     * {
@@ -49,30 +50,33 @@
       display: flex;
       margin: 0px;
     }
-       /* Tamanho titulo */
+
+    /* Tamanho titulo */
     @media screen and (max-width:460px) {
 
-    .navbar-title {
-    font-size: 13PX;
-    }
+      .navbar-title {
+        font-size: 13PX;
+      }
 
     }
+
     /* Tamanho titulo */
     @media screen and (max-width:405px) {
 
-    .navbar-title {
-    font-size: 10.6PX;
+      .navbar-title {
+        font-size: 10.6PX;
+      }
     }
 
+    #table {
+      width: 97%;
     }
 
-    #table{
-        width: 97%;
+    #group {
+      flex-direction: column;
     }
-    #group{
-        flex-direction: column;
-    }
-    .accordion-body{
+
+    .accordion-body {
       width: max-content;
       height: max-content;
       position: relative;
@@ -81,116 +85,116 @@
       background-color: #262626;
       color: white;
     }
+
     .container {
-  color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15px;
-}
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+    }
 
-.calendar {
-  width: 59vw;
-  height: 53vh  ;
-  background-color: #222227;
-  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
-  font-size: 15px;
-}
+    .calendar {
+      width: 59vw;
+      height: 53vh;
+      background-color: #222227;
+      box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+      font-size: 15px;
+    }
 
-.month {
-  width: 100%;
-  height: 6rem;
-  background-color: #16362a;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-  text-align: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
+    .month {
+      width: 100%;
+      height: 6rem;
+      background-color: #16362a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      text-align: center;
+      text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
 
-.month i {
-  font-size: 2.5rem;
-  cursor: pointer;
-}
+    .month i {
+      font-size: 2.5rem;
+      cursor: pointer;
+    }
 
-.month h1 {
-  font-size: 2rem;
-  font-weight: 400;
-}
+    .month h1 {
+      font-size: 2rem;
+      font-weight: 400;
+    }
 
-.month p {
-  font-size: 1.2rem;
-}
+    .month p {
+      font-size: 1.2rem;
+    }
 
-.weekdays {
-  width: 100%;
-  height: 6vh;
-  padding: 0 0.4rem;
-  display: flex;
-  align-items: center;
-}
+    .weekdays {
+      width: 100%;
+      height: 6vh;
+      padding: 0 0.4rem;
+      display: flex;
+      align-items: center;
+    }
 
-.weekdays div {
-  font-size: 1.0rem;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-}
+    .weekdays div {
+      font-size: 1.0rem;
+      font-weight: 400;
+      letter-spacing: 0.1rem;
+      width: calc(44.2rem / 7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
 
-.days {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.2rem;
-}
+    .days {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.2rem;
+    }
 
-.days div {
-  font-size: 1.0rem;
-  margin: 0.3rem;
-  width: calc(51.2vw / 7);
-  height: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  transition: background-color 0.2s;
-}
+    .days div {
+      font-size: 1.0rem;
+      margin: 0.3rem;
+      width: calc(51.2vw / 7);
+      height: 5vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+      transition: background-color 0.2s;
+    }
 
-.days div:hover:not(.today) {
-  background-color: #262626;
-  border: 0.2rem solid #777;
-  cursor: pointer;
-}
+    .days div:hover:not(.today) {
+      background-color: #262626;
+      border: 0.2rem solid #777;
+      cursor: pointer;
+    }
 
-.prev-date,
-.next-date {
-  opacity: 0.5;
-}
+    .prev-date,
+    .next-date {
+      opacity: 0.5;
+    }
 
-.today {
-  background-color: rgb(222, 149, 15);
-}
-.marked-date {
-  background-color: rgb(89, 93, 104);
-}
+    .today {
+      background-color: rgb(222, 149, 15);
+    }
 
-.accordion-body:focus{
-  box-shadow: transparent !important;
-}
+    .marked-date {
+      background-color: rgb(89, 93, 104);
+    }
 
-.accordion-button:not(.collapsed){
-  color: white;
-  background-color: #167e56;
-}
+    .accordion-body:focus {
+      box-shadow: transparent !important;
+    }
 
-
-
-</style>
+    .accordion-button:not(.collapsed) {
+      color: white;
+      background-color: #167e56;
+    }
+  </style>
 </head>
+
 <body>
   <nav class="navbar navbar-dark" id="nav">
     <div class="container-fluid">
@@ -221,438 +225,442 @@
       </div>
     </div>
   </nav>
-      <form action="" class="h-100">
-            <div class="form-group d-flex align-items-center h-100" id="group">
-                <div class="container-fluid d-flex justify-content-center" id="container">
-                    <div class="accordion accordion-flush w-75 mt-5" id="accordionFlushExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              <b>LOCAL DA OCORRÊNCIA</b>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body w-100 d-flex" style="justify-content: space-around;">
-                              <div class="division gap-2 d-flex" style="flex-direction: column;">
-                                  <span class="d-flex">
-                                      <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                      Barra Velha
-                                  </span>
-                                  <span class="d-flex">
-                                        <div class="form-check">
-                                          <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        </div>
-                                        São João do Itaperiú
-                                  </span>
-                                  <span class="d-flex">
-                                        <div class="form-check">
-                                            <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        </div>
-                                        Massaranduba
-                                  </span>
-                                  <span class="d-flex">
-                                        <div class="form-check">
-                                            <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                          </div>
-                                        Guaramirim
-                                  </span>
-                              </div>
-                              <div class="division gap-2 d-flex" style="flex-direction: column;">
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  Schroeder
-                                </span>
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  Jaraguá do Sul
-                                </span>
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  Corupá
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              <b>TIPO DE ACIDENTE</b>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body w-100 d-flex" style="justify-content: space-around;">
-                                <div class="division gap-2 d-flex" style="flex-direction: column;">
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Causado por Animais
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Com meio de Transporte
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Desmoronamento/Deslizamento
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Emergência Médica
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Queda de Altura 2M
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Tentativa de Suicídio
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Queda Própria Altura 
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Afogamento
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Agressão 
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Atropelamento
-                                  </span>
-                                </div>
-                                <div class="division gap-2 d-flex" style="flex-direction: column;">
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Choque Elétrico
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Desabamento 
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Doméstico
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Esportivo
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Intoxicação 
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Queda Bicicleta 
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Queda Moto
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Queda Nível 2< M
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Trabalho 
-                                  </span>
-                                  <span class="d-flex">
-                                    <div class="form-check">
-                                        <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                      </div>
-                                    Transferência
-                                  </span>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="accordion-item">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                <b>HOSPITAL</b>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body w-100 d-flex" style="justify-content: space-around;">
-                              <div class="divison gap-2 d-flex" style="flex-direction: column;">
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  Políclinica Barra Velha
-                                </span>
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  Hospital e Maternidade Santo Antônio
-                                </span>
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  João Schroeder
-                                </span>
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  UBS São João do Itaperiú
-                                </span>
-                              </div>
-                              <div class="division gap-2 d-flex" style="flex-direction: column;">
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  Jaraguá
-                                </span>
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  Unidade Schroeder - Unimed
-                                </span>
-                                <span class="d-flex">
-                                  <div class="form-check">
-                                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    </div>
-                                  São José
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                                  <b>DATA DA OCORRÊNCIA</b>
-                              </button>
-                            </h2>
-                            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-
-                              <div class="accordion-body d-flex justify-content-center w-100 h-100">
-                                <div class="container h-25 w-100">
-                                  <div class="calendar">
-                                    <div class="month">
-                                      <i class="fas fa-angle-left prev"></i>
-                                      <div class="date mt-3">
-                                        <h1></h1>
-                                        <p></p>
-                                      </div>
-                                      <i class="fas fa-angle-right next"></i>
-                                    </div>
-                                    <div class="weekdays">
-                                      <div>Sun</div>
-                                      <div>Mon</div>
-                                      <div>Tue</div>
-                                      <div>Wed</div>
-                                      <div>Thu</div>
-                                      <div>Fri</div>
-                                      <div>Sat</div>
-                                    </div>
-                                    <div class="days"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                      </div>
-                </div>  
-                <table class="table table-striped mt-5" id="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Tipo de Acidente</th>
-                        <th scope="col">Local do Acidente</th>
-                        <th scope="col">Hospital</th>
-                        <th scope="col">Nº Ocorr</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@twitter</td>
-                        
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@twitter</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        
-                      </tr>
-                    </tbody>
-                  </table>
-
+  <form action="" class="h-100">
+    <div class="form-group d-flex align-items-center h-100" id="group">
+      <div class="container-fluid d-flex justify-content-center" id="container">
+        <div class="accordion accordion-flush w-75 mt-5" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <b>LOCAL DA OCORRÊNCIA</b>
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body w-100 d-flex" style="justify-content: space-around;">
+                <div class="division gap-2 d-flex" style="flex-direction: column;">
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Barra Velha
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    São João do Itaperiú
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Massaranduba
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Guaramirim
+                  </span>
+                </div>
+                <div class="division gap-2 d-flex" style="flex-direction: column;">
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Schroeder
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Jaraguá do Sul
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Corupá
+                  </span>
+                </div>
+              </div>
             </div>
-      </form>
-  
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <b>TIPO DE ACIDENTE</b>
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body w-100 d-flex" style="justify-content: space-around;">
+                <div class="division gap-2 d-flex" style="flex-direction: column;">
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Causado por Animais
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Com meio de Transporte
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Desmoronamento/Deslizamento
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Emergência Médica
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Queda de Altura 2M
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Tentativa de Suicídio
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Queda Própria Altura
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Afogamento
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Agressão
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Atropelamento
+                  </span>
+                </div>
+                <div class="division gap-2 d-flex" style="flex-direction: column;">
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Choque Elétrico
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Desabamento
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Doméstico
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Esportivo
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Intoxicação
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Queda Bicicleta
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Queda Moto
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Queda Nível 2< M </span>
+                      <span class="d-flex">
+                        <div class="form-check">
+                          <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                        Trabalho
+                      </span>
+                      <span class="d-flex">
+                        <div class="form-check">
+                          <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        </div>
+                        Transferência
+                      </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <b>HOSPITAL</b>
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body w-100 d-flex" style="justify-content: space-around;">
+                <div class="divison gap-2 d-flex" style="flex-direction: column;">
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Políclinica Barra Velha
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Hospital e Maternidade Santo Antônio
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    João Schroeder
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    UBS São João do Itaperiú
+                  </span>
+                </div>
+                <div class="division gap-2 d-flex" style="flex-direction: column;">
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Jaraguá
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    Unidade Schroeder - Unimed
+                  </span>
+                  <span class="d-flex">
+                    <div class="form-check">
+                      <input name="grupo" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    São José
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <b>DATA DA OCORRÊNCIA</b>
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+
+              <div class="accordion-body d-flex justify-content-center w-100 h-100">
+                <div class="container h-25 w-100">
+                  <div class="calendar">
+                    <div class="month">
+                      <i class="fas fa-angle-left prev"></i>
+                      <div class="date mt-3">
+                        <h1></h1>
+                        <p></p>
+                      </div>
+                      <i class="fas fa-angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                      <div>Sun</div>
+                      <div>Mon</div>
+                      <div>Tue</div>
+                      <div>Wed</div>
+                      <div>Thu</div>
+                      <div>Fri</div>
+                      <div>Sat</div>
+                    </div>
+                    <div class="days"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <table class="table table-striped mt-5" id="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Data</th>
+            <th scope="col">Tipo de Acidente</th>
+            <th scope="col">Local do Acidente</th>
+            <th scope="col">Hospital</th>
+            <th scope="col">Nº Ocorr</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>@mdo</td>
+            <td>@twitter</td>
+
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>@fat</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>@twitter</td>
+            <td>@twitter</td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </form>
+
 </body>
 <script>
- const date = new Date();
-const markedDates = new Set(); // Conjunto para armazenar os dias marcados
+  const date = new Date();
+  const markedDates = new Set(); // Conjunto para armazenar os dias marcados
 
-const renderCalendar = () => {
-  date.setDate(1);
+  const renderCalendar = () => {
+    date.setDate(1);
 
-  const monthDays = document.querySelector(".days");
+    const monthDays = document.querySelector(".days");
 
-  const lastDay = new Date(
-    date.getFullYear(),
-    date.getMonth() + 1,
-    0
-  ).getDate();
+    const lastDay = new Date(
+      date.getFullYear(),
+      date.getMonth() + 1,
+      0
+    ).getDate();
 
-  const prevLastDay = new Date(
-    date.getFullYear(),
-    date.getMonth(),
-    0
-  ).getDate();
+    const prevLastDay = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      0
+    ).getDate();
 
-  const firstDayIndex = date.getDay();
+    const firstDayIndex = date.getDay();
 
-  const lastDayIndex = new Date(
-    date.getFullYear(),
-    date.getMonth() + 1,
-    0
-  ).getDay();
+    const lastDayIndex = new Date(
+      date.getFullYear(),
+      date.getMonth() + 1,
+      0
+    ).getDay();
 
-  const nextDays = 7 - lastDayIndex - 1;
+    const nextDays = 7 - lastDayIndex - 1;
 
-  const months = [
-    "Janeiro",
-    "Fevereiro",
-    "Março",
-    "Abril",
-    "Maio",
-    "Junho",
-    "Julho",
-    "Agosto",
-    "Setembro",
-    "Outubro",
-    "Novembro",
-    "Dezembro",
-  ];
+    const months = [
+      "Janeiro",
+      "Fevereiro",
+      "Março",
+      "Abril",
+      "Maio",
+      "Junho",
+      "Julho",
+      "Agosto",
+      "Setembro",
+      "Outubro",
+      "Novembro",
+      "Dezembro",
+    ];
 
-  document.querySelector(".date h1").innerHTML = months[date.getMonth()];
+    document.querySelector(".date h1").innerHTML = months[date.getMonth()];
 
-  document.querySelector(".date p").innerHTML = new Date().toDateString();
+    document.querySelector(".date p").innerHTML = new Date().toDateString();
 
-  let days = "";
+    let days = "";
 
-  for (let x = firstDayIndex; x > 0; x--) {
-    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
-  }
-
-  for (let i = 1; i <= lastDay; i++) {
-    let dayClass = "";
-    
-    if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
-      dayClass = "today";
-    } else if (markedDates.has(i)) {
-      dayClass = "marked-date";
+    for (let x = firstDayIndex; x > 0; x--) {
+      days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
     }
 
-    days += `<div class="${dayClass}" onclick="toggleMark(${i})">${i}</div>`;
-  }
+    for (let i = 1; i <= lastDay; i++) {
+      let dayClass = "";
 
-  for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="next-date">${j}</div>`;
-  }
+      if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+        dayClass = "today";
+      } else if (markedDates.has(i)) {
+        dayClass = "marked-date";
+      }
 
-  monthDays.innerHTML = days;
-};
+      days += `<div class="${dayClass}" onclick="toggleMark(${i})">${i}</div>`;
+    }
 
-const toggleMark = (day) => {
-  if (markedDates.has(day)) {
-    markedDates.delete(day);
-  } else {
-    markedDates.add(day);
-  }
+    for (let j = 1; j <= nextDays; j++) {
+      days += `<div class="next-date">${j}</div>`;
+    }
 
-  renderCalendar(); // Re-render para refletir as mudanças
-};
+    monthDays.innerHTML = days;
+  };
 
-document.querySelector(".prev").addEventListener("click", () => {
-  date.setMonth(date.getMonth() - 1);
+  const toggleMark = (day) => {
+    if (markedDates.has(day)) {
+      markedDates.delete(day);
+    } else {
+      markedDates.add(day);
+    }
+
+    renderCalendar(); // Re-render para refletir as mudanças
+  };
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    date.setMonth(date.getMonth() - 1);
+    renderCalendar();
+  });
+
+  document.querySelector(".next").addEventListener("click", () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
+  });
+
   renderCalendar();
-});
-
-document.querySelector(".next").addEventListener("click", () => {
-  date.setMonth(date.getMonth() + 1);
-  renderCalendar();
-});
-
-renderCalendar();
 
 </script>
+
 </html>
