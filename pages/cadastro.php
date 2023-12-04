@@ -53,42 +53,6 @@ include('conexao.php');
             }
         }
 
-        function validarCPF(cpf) {
-            cpf = cpf.replace(/[^\d]+/g, '');
-            if (cpf == '') return false;
-            // Elimina CPFs invalidos conhecidos    
-            if (cpf.length != 11 ||
-                cpf == "00000000000" ||
-                cpf == "11111111111" ||
-                cpf == "22222222222" ||
-                cpf == "33333333333" ||
-                cpf == "44444444444" ||
-                cpf == "55555555555" ||
-                cpf == "66666666666" ||
-                cpf == "77777777777" ||
-                cpf == "88888888888" ||
-                cpf == "99999999999")
-                return false;
-            // Valida 1o digito 
-            add = 0;
-            for (i = 0; i < 9; i++)
-                add += parseInt(cpf.charAt(i)) * (10 - i);
-            rev = 11 - (add % 11);
-            if (rev == 10 || rev == 11)
-                rev = 0;
-            if (rev != parseInt(cpf.charAt(9)))
-                return false;
-            // Valida 2o digito 
-            add = 0;
-            for (i = 0; i < 10; i++)
-                add += parseInt(cpf.charAt(i)) * (11 - i);
-            rev = 11 - (add % 11);
-            if (rev == 10 || rev == 11)
-                rev = 0;
-            if (rev != parseInt(cpf.charAt(10)))
-                return false;
-            return true;
-        }
     </script>
 
 </head>
@@ -132,7 +96,8 @@ include('conexao.php');
                     <input type="text" class="form-control" id="nome" name="nome" aria-describedby="name">
                     <br>
                     <label class="card-text mb-2">CPF</label>
-                    <input type="number" class="form-control" id="cpf" name="userCPF" aria-describedby="matricula">
+                    <input type="text" class="form-control" id="cpf" name="userCPF" maxlength="14"
+                        oninput="applyCpfMask(this)">
                     <br>
                     <div class="input-caixatexto">
                         <label class="textooo" for="tipo">Cargo</label>
@@ -165,6 +130,19 @@ include('conexao.php');
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <script>
+        function applyCpfMask(input) {
+            // Remove qualquer caractere não numérico
+            let cpf = input.value.replace(/\D/g, '');
+
+            // Aplica a máscara de CPF (XXX.XXX.XXX-XX)
+            cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+
+            // Atualiza o valor do campo
+            input.value = cpf;
+        }
+    </script>
 </body>
 
 </html>

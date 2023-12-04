@@ -155,7 +155,7 @@ include('connect_usuarios.php');
                       <a class="nav-link" href="#" onclick="window.location.href = 'perfilbombeiro.html'">PERFIL</a>
                     </li> -->
             <li class="nav-item" style="list-style-type: none">
-              <a class="nav-link" href="#">SAIR</a>
+              <a class="nav-link" href="logout.php">SAIR</a>
             </li>
           </ul>
         </div>
