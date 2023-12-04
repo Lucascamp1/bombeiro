@@ -24,36 +24,145 @@ include('conexao.php');
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <link rel="stylesheet" type="text/css" href="cadastro.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <script>
-        function mostrarOcultarSenha(inputId, olhoId) {
-            var input = document.getElementById(inputId);
-            var olho = document.getElementById(olhoId);
+        body {
+            background-color: #c1c1c1;
+            font-family: 'Inter', sans-serif;
+            color: white;
+        }
 
-            if (input.type === "password") {
-                input.type = "text";
-                olho.className = "fa fa-eye";
-            } else {
-                input.type = "password";
-                olho.className = "fa fa-eye-slash";
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #167e56;
+            box-shadow: 0 0 0 0.1rem #167e56;
+        }
+
+        #nav {
+            background-color: #333333;
+        }
+
+        .navbar-brand {
+            display: flex;
+            margin: 0px;
+        }
+
+        #box {
+            background-color: #333333;
+            width: 90%;
+            border-radius: 10px;
+        }
+
+        .card-text {
+            color: white;
+        }
+
+        #botao {
+            background-color: #333333;
+        }
+
+        #botao:hover {
+            background-color: rgb(21, 138, 50);
+        }
+
+        #genero {
+            width: 100%;
+            height: 6%;
+            border-radius: 5px;
+        }
+
+        #dataNascimento {
+            width: 100%;
+            height: 6%;
+            border-radius: 5px;
+        }
+
+        .dropdown-container {
+            position: relative;
+        }
+
+        .custom-dropdown {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            padding: 6px;
+            width: 100%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .custom-dropdown:hover {
+            border-color: #555;
+        }
+
+        .custom-dropdown:focus {
+            border-color: #00f;
+            box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+        }
+
+        .custom-dropdown::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .custom-dropdown option {
+            padding: 10px;
+        }
+
+        @media screen and (min-width: 768px) {
+            .geral {
+                height: 79vh;
             }
         }
 
-        function mostrarConfirmarOcultarSenha(inputId, olhoId) {
-            var input = document.getElementById(inputId);
-            var olho = document.getElementById(olhoId);
-
-            if (input.type === "password") {
-                input.type = "text";
-                olho.className = "fa fa-eye";
-            } else {
-                input.type = "password";
-                olho.className = "fa fa-eye-slash";
+        @media screen and (max-width: 767px) {
+            .geral {
+                height: 80vh;
             }
         }
 
-    </script>
+        @media screen and (max-width: 375px) {
+            .geral {
+                height: 100vh;
+            }
+        }
+
+        @media screen and (min-width: 200px) and (max-width:460px) {
+            .navbar-title {
+                font-size: 13PX;
+            }
+        }
+
+        @media screen and (min-width: 200px) and (max-width:405px) {
+
+            .navbar-title {
+                font-size: 10.6PX;
+            }
+        }
+
+        .btn-primary{
+            background-color: #167e56;
+            border-color: #167e56;
+        }
+
+        .btn-primary:hover{
+            background-color: #065839;
+            border-color: #167e56;
+        }
+    </style>
 
 </head>
 
@@ -144,5 +253,4 @@ include('conexao.php');
         }
     </script>
 </body>
-
 </html>
