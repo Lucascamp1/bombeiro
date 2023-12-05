@@ -297,7 +297,7 @@
     var redcard = document.getElementsByClassName('redcard')[0];
 
     redcard.addEventListener("click", function () {
-        window.location.href = "situation.html";
+        window.location.href = "cadastropaciente.html";
     });
 
     var purplecard = document.getElementsByClassName('purplecard')[0];

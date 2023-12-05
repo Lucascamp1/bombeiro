@@ -309,8 +309,8 @@
                 </div>
             </div>
             <div class="d-flex justify-content-between mt-4">
-                <button type="submit" class="btn btn-primary" id="backBtn" onclick="window.location.href = 'sinaisesintomas.html'">Voltar</button>
-                <button type="submit" class="btn btn-primary" id="nextBtn" onclick="window.location.href = 'glasglow.html'">Próximo</button>
+                <button type="submit" class="btn btn-primary" id="backBtn" onclick="window.location.href = 'problemasuspeitos.html'">Voltar</button>
+                <button type="submit" class="btn btn-primary" id="nextBtn" onclick="window.location.href = 'sinaisesintomas.html'">Próximo</button>
             </div>
         </form>
     </div>
@@ -352,7 +352,7 @@
 
     function createTraumaIcon(x, y, traumaType) {
         let icon = document.createElement('img');
-        icon.src = `/imagenslocalizartraumas/${traumaType}.png`;
+        icon.src = `../imagenslocalizartraumas/${traumaType}.png`;
         icon.style.position = 'absolute';
         let iconWidth = 50;
         let iconHeight = 50;
