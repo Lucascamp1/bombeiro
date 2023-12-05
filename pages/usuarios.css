@@ -193,20 +193,20 @@ body {
 }
 
 #nome {
-  color: #030060;
+  color: #167e56;
   font-size: 1.2rem;
   font-weight: bold;
   display: inline-block;
 }
 
 .texto {
-  color: #030060;
+  color: #167e56;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 .text-table-style {
-  color: #030060;
+  color: #167e56;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -215,12 +215,12 @@ td{
   padding: 0.5rem;
 }
 
-.editar{
+/* .editar{
   position: static;
   top: 0;
   padding: 0.4rem;
   margin: 5px;
-  background-color: #333333;
+  background-color: #167e56;
   color: #fff;
   border: none;
   border-radius: 0.5rem;
@@ -228,11 +228,11 @@ td{
   cursor: pointer;
   transition: 0.5s ease-out;
   overflow: visible;
-}
+} */
 
 
 .editar:hover {
-  background-color: #1b40af; /* Cor do fundo ao passar o mouse */
+  background-color: #167e56; /* Cor do fundo ao passar o mouse */
 }
 
 #nav {

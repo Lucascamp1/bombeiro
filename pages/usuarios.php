@@ -36,6 +36,40 @@ include('connect_usuarios.php');
 
 <body>
 
+  <style>
+    .editar {
+      position: static;
+      top: 0;
+      padding: 0.4rem;
+      margin: 5px;
+      background-color: #167e56;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.5s ease-out;
+      overflow: visible;
+    }
+
+
+    .editar:hover {
+      background-color: #167e56;
+      /* Cor do fundo ao passar o mouse */
+    }
+
+    .texto {
+      color: #167e56;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .text-table-style {
+      color: #167e56;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  </style>
   <!-- navbar -->
   <nav class="navbar navbar-dark" id="nav">
     <div class="container-fluid">
@@ -244,6 +278,6 @@ include('connect_usuarios.php');
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </html>
