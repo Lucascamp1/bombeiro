@@ -24,12 +24,10 @@ include('connect_usuarios.php');
   <meta name="viewport" content="width=device-width">
   <!-- media -->
   <link rel="icon" href="../images/avatar_bombeiro.png" type="image/png">
-  <!--Imagem icon-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&display=swap">
 
   <link rel="stylesheet" type="text/css" href="usuarios.css">
 </head>
@@ -69,6 +67,7 @@ include('connect_usuarios.php');
       font-size: 1.2rem;
       font-weight: bold;
     }
+
   </style>
   <!-- navbar -->
   <nav class="navbar navbar-dark" id="nav">
@@ -90,104 +89,8 @@ include('connect_usuarios.php');
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">TELA DE INÍCIO</a>
+              <a class="nav-link" aria-current="page" href="homeadm.php">TELA DE INÍCIO</a>
             </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                CATEGORIAS
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'ocorrencia.html'">TIPO DE
-                    OCORRÊNCIA</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" style="white-space: break-spaces"
-                    onclick="window.location.href = 'problemasuspeitos.html'">PROBLEMAS ENCONTRADOS SUSPEITOS</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'sinaisesintomas.html'">SINAIS E
-                    SINTOMAS</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'glasglow.html'">AVALIAÇÃO DO
-                    PACIENTE (GLASGOW)</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'loctromas.html'">LOCALIZAÇÃO DOS
-                    TRAUMAS</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li><a class="dropdown-item" href="#" onclick="window.location.href = 'sinais.html'">SINAIS VITAIS</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'objetos.html'">OBJETOS
-                    RECOLHIDOS</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" style="white-space: break-spaces"
-                    onclick="window.location.href = 'conducao.html'">FORMA DE CONDUÇÃO E DECISÃO DE TRANSPORTE</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li><a class="dropdown-item" href="#" onclick="window.location.href = 'vitimaera.html'">VÍTIMA ERA</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'procedimentos.html'">PROCEDIMENTOS
-                    EFETUADOS</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    onclick="window.location.href = 'materiaisutilizados.html'">MATERIAIS UTILIZADOS</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'obsimportante.html'">OBSERVAÇÕES
-                    IMPORTANTES</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" onclick="window.location.href = 'cinematica.html'">AVALIAÇÃO DA
-                    CINEMÁTICA</a>
-                </li>
-              </ul>
-            </li>
-            <!-- <li class="nav-item" style="list-style-type: none">
-                      <a class="nav-link" href="#" onclick="window.location.href = 'perfilbombeiro.html'">PERFIL</a>
-                    </li> -->
             <li class="nav-item" style="list-style-type: none">
               <a class="nav-link" href="logout.php">SAIR</a>
             </li>
