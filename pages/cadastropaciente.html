@@ -246,7 +246,7 @@
     </div>
   </nav>
 
-  <form action="">
+  <form action="cadastropaciente.php" method="post">
     <div class="form-group">
       <div class="accordion p-4" id="accordionExample">
         <div class="accordion-item">
@@ -260,20 +260,20 @@
             <div class="accordion-body">
               <div class="container" id="box1">
                 <label class="card-text">Nome Completo</label>
-                <input type="text" class="form-control" id="nome" aria-describedby="name">
+                <input type="text" class="form-control" id="nome" aria-describedby="name" name="nomePaciente">
                 <br>
                 <label class="card-text">Idade</label>
                 <br>
-                <input type="number" id="age" name="age" min="0" max="120">
+                <input type="number" id="age" name="idadePaciente" min="0" max="120">
                 <br>
                 <br>
                 <label class="card-text">Sexo</label>
                 <br>
-                <select name="genero" id="genero"
+                <select name="sexoPaciente" id="genero"
                   style="padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px;">
                   <option value="" disabled selected hidden></option>
-                  <option value="masculino">Masculino</option>
-                  <option value="feminino">Feminino</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
                 </select>
                 <br>
                 <br>
@@ -309,11 +309,11 @@
               <div class="accordion-body">
                 <div class="container" id="box1">
                   <label class="card-text">Nome Completo</label>
-                  <input type="text" class="form-control" id="nome" aria-describedby="name">
+                  <input type="text" class="form-control" id="nome" aria-describedby="name" name="nomeAcompanhante">
                   <br>
                   <label class="card-text">Idade</label>
                   <br>
-                  <input type="number" id="age" name="age" min="0" max="120">
+                  <input type="number" id="age" name="idadeAcompanhante" min="0" max="120">
                   <br>
                   <br>
                   <label class="card-text">Sexo</label>
@@ -379,7 +379,7 @@
 
     <div class="espaço_botao">
       <div class="botao">
-        <button type="button" class="btn btn-outline-primary btn-lg"
+        <button type="submit" class="btn btn-outline-primary btn-lg"
           onclick="window.location.href = 'situation.html'">Próximo</button>
       </div>
     </div>
@@ -392,14 +392,14 @@
   <script>
     document.getElementById('cpfRadio').addEventListener('click', function () {
       if (this.checked) {
-        document.getElementById('inputContainer').innerHTML = '<input type="text" id="cpfInput" placeholder="000.000.000-00">';
+        document.getElementById('inputContainer').innerHTML = '<input type="text" name="rgcpfPaciente" id="cpfInput" placeholder="000.000.000-00">';
         $('#cpfInput').inputmask('000.000.000-00');
       }
     });
 
     document.getElementById('rgRadio').addEventListener('click', function () {
       if (this.checked) {
-        document.getElementById('inputContainer').innerHTML = '<input type="text" id="rgInput" placeholder="00.000.000-0">';
+        document.getElementById('inputContainer').innerHTML = '<input type="text" name="rgcpfPaciente" id="rgInput" placeholder="00.000.000-0">';
         $('#rgInput').inputmask('00.000.000-0');
       }
     });

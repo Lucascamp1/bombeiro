@@ -1,6 +1,7 @@
 <?php
 include('protect.php');
 include('conexao.php');
+session_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -211,7 +212,7 @@ $stmtInfoPaciente->close();
 $conn->close(); // Fechar a conexão com o banco de dados após a conclusão
 
 // Redirecionar para a página desejada após a conclusão do processo
-header("Location: telahome.php?success=true");
+header("Location: home.php?success=true");
 exit();
 }
 ?>
