@@ -11,13 +11,4 @@
     $Updatestmt = $conn->prepare($Updatequery);
 
     $Updatestmt->execute();
-
-    $decisaoTransporte = $_POST['decisaoTransporte'];
-
-    $Insertquery = "INSERT INTO situacao_paciente (id_atendente, decisao_transporte) VALUES ($idAtendente, $decisaoTransporte)";
-
-    $Insertstmt = $conn->prepare($Insertquery);
-
-    $Insertstmt->execute();
-        header("Location: equipedeatendimento.html");
 ?>
