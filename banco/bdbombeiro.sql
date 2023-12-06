@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 06/12/2023 às 03:40
+-- Tempo de geração: 06/12/2023 às 03:50
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -42,8 +42,7 @@ CREATE TABLE `atendente` (
 --
 
 INSERT INTO `atendente` (`id_atendente`, `nome`, `cpf`, `email`, `senha`, `data_cadastro`, `tipo`) VALUES
-(22, 'Débora', '131.841.579-97', 'debora@gmail.com', '123', '2023-12-04 17:43:42', 'Administrador'),
-(23, 'Laerte', '921.025.149-00', 'campestrini.laerte@gmail.com', 'MaverikV8', '2023-12-04 22:04:56', 'Bombeiro');
+(22, 'Débora', '111.111.111-11', 'debora@gmail.com', '123', '2023-12-04 17:43:42', 'Administrador');
 
 -- --------------------------------------------------------
 
