@@ -9,7 +9,7 @@ session_start();
 <head>
   <meta charset=UTF-8>
   <!-- Linkagem -->
-  <title>Home</title>
+  <title>SA Bombeiro</title>
   <!-- Titulo -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"

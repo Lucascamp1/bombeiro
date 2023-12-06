@@ -9,7 +9,7 @@ include('conexao.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOAR</title>
+    <title>SA Bombeiro</title>
 
     <script src="/scripts/cadastro.js"></script>
 
